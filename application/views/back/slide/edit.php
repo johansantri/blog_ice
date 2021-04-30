@@ -16,10 +16,7 @@
           <div class="tile">
             <div class="tile-body">
               <div class="table-responsive">
-                <div class="button" style="text-align: right;">
-               
-               <a href="<?php echo site_url('slide/add') ?>" class="btn btn-outline-success"><i class="fas fa-plus"></i> Add Slide</a>
-                </div>
+              
                 <br>
 
 

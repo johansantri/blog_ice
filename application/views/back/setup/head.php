@@ -21,12 +21,15 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/jquery.tagsinput.css">
       <!-- Essential javascripts for application to work-->
     <script src="<?php echo base_url()?>assets/js/jquery-3.3.1.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/popper.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
             <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/dataTables.bootstrap.min.js"></script>
-   
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery.tagsinput.js"></script>
+
   </head>
   <body class="app sidebar-mini">

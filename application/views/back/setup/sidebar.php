@@ -17,7 +17,7 @@
             <li><a class="treeview-item" href="<?php echo base_url()?>slide"><i class="app-menu__icon fa fa-edit"></i> Slide</a></li>
           </ul>
         </li>
-        <li><a class="app-menu__item" href="<?php echo base_url()?>slide"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Charts</span></a></li>
+        <li><a class="app-menu__item" href="<?php echo base_url()?>kontent"><i class="app-menu__icon fa fa-sticky-note-o"></i><span class="app-menu__label">POST</span></a></li>
     
     
     
