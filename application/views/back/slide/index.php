@@ -18,7 +18,7 @@
               <div class="table-responsive">
                 <div class="button" style="text-align: right;">
                
-               <a href="<?php echo site_url('slide/add') ?>" class="btn btn-outline-success"><i class="fas fa-plus"></i> Add Slide</a>
+               <a href="<?php echo site_url('slide/add') ?>" class="btn btn-outline-success"><i class="fa fa-plus"></i> Add Slide</a>
                 </div>
                 <br>
                    <!-- DataTables -->
@@ -56,9 +56,9 @@
                      <?php echo $person->nama_kategori ?>
                     <td width="250">
                       <a href="<?php echo site_url('slide/edit/'.$person->id_slide) ?>"
-                       class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+                       class="btn btn-small"><i class="fa fa-edit"></i> Edit</a>
                       <a onclick="deleteConfirm('<?php echo site_url('slide/delete/'.$person->id_slide) ?>')"
-                       href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+                       href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
                     </td>
                   </tr>
                   <?php endforeach; ?>
