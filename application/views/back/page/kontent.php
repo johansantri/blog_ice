@@ -78,7 +78,7 @@
         </button>
       </div>
       <div class="modal-body">
-       <form method="post" action="kontent/insert" id="createForm">
+       <form method="post" action="kontent/insert" id="createForm" enctype="multipart/form-data" >
           <div class="modal-body">
            
         <div class="row">
@@ -138,7 +138,7 @@
 
         </div>
 
-
+       
              
           </div>
           <div class="modal-footer">
