@@ -72,7 +72,7 @@ function createKontent(){
                             },3000);
                         $("#submit").attr("disabled", true);
                     $("#exampleModalLong").modal('toggle');
-                    tkontent.ajax.reload(null,false);
+                    tbkontent.ajax.reload(null,false);
 
                 }else{
                     if (response.messages instanceof Object) {
@@ -100,9 +100,9 @@ function createKontent(){
 }
 
 //view list data
-var tkontent;
+var tbkontent;
 $(document).ready(function(){
-tkontent=$("#tkontent").DataTable({
+tbkontent=$("#tbkontent").DataTable({
     'ajax':'kontent/list_all',
     'orders':[]
 });
@@ -122,7 +122,7 @@ function kosong(){
         $('[name=title]').focus();
     }
 
-function updateBlog(id = null) 
+function updateKontent(id = null) 
 {
 
     if(id) {
@@ -225,7 +225,7 @@ $.ajax({
 
                             },3000);
               $("#updateModal").modal('toggle');
-              tkontent.ajax.reload(null,false);
+              tbkontent.ajax.reload(null,false);
               
                             } else {
                                 $('.text-danger').remove()

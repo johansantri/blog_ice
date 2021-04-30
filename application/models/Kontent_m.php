@@ -45,7 +45,7 @@ public function __construct(){
             
         
         $this->db->where('tb_kontent.id_kontent',$id);
-        $this->db->select('tb_kontent.id_kontent,tb_kontent.title,tb_kontent.meta,tb_kontent.description,tb_kontent.tags,tb_kontent.status,tb_kontent.create_ad,tb_kontent.update_ad,tb_user.nama_depan,tb_kategori.nama_kategori,tb_kategori.id_kategori,tb_sub_kategori.nama_sub,tb_sub_kategori.id_sub');
+        $this->db->select('tb_kontent.id_kontent,tb_kontent.title,tb_kontent.meta,tb_kontent.description,tb_kontent.tags,tb_kontent.status,tb_kontent.create_ad,tb_kontent.update_ad,tb_user.nama_user,tb_kategori.nama_kategori,tb_kategori.id_kategori,tb_sub_kategori.nama_sub,tb_sub_kategori.id_sub');
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_kontent.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_kontent.id_sub');
         $this->db->join('tb_user','tb_user.id_user=tb_kontent.id_user');
