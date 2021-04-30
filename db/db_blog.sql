@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 29, 2021 at 08:31 PM
+-- Generation Time: Apr 30, 2021 at 10:39 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -63,7 +63,8 @@ CREATE TABLE `tb_kategori` (
 INSERT INTO `tb_kategori` (`id_kategori`, `nama_kategori`, `slug_kategori`) VALUES
 (1, 'Teknologi', 'teknologi'),
 (2, 'Ekonomi', 'ekonomi'),
-(3, 'Hukum', 'hukum');
+(3, 'Hukum', 'hukum'),
+(4, 'Olahraga', 'olahraga');
 
 -- --------------------------------------------------------
 
@@ -73,17 +74,26 @@ INSERT INTO `tb_kategori` (`id_kategori`, `nama_kategori`, `slug_kategori`) VALU
 
 CREATE TABLE `tb_kontent` (
   `id_kontent` int(11) NOT NULL,
-  `nama_kontent` varchar(200) NOT NULL,
-  `slug_kontent` varchar(200) NOT NULL,
-  `abstrak` varchar(255) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `tag` varchar(200) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `slug_title` varchar(200) NOT NULL,
+  `meta` text NOT NULL,
+  `description` text NOT NULL,
+  `tags` varchar(200) NOT NULL,
   `image` varchar(200) NOT NULL,
   `id_kategori` int(11) NOT NULL,
+  `id_sub` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `create_ad` date NOT NULL,
+  `update_ad` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
   `status` enum('draft','post','delete','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_kontent`
+--
+
+INSERT INTO `tb_kontent` (`id_kontent`, `title`, `slug_title`, `meta`, `description`, `tags`, `image`, `id_kategori`, `id_sub`, `id_user`, `create_ad`, `update_ad`, `status`) VALUES
+(1, 'Memahami SEO dan SEM Bagi Pemula Digital Marketing', 'Memahami-SEO-dan-SEM-Bagi-Pemula-Digital-Marketing', 'SEO yang merupakan singkatan dari Search Engine Optimization atau optimasi mesin pencari adalah sebuah suatu strategi atau serangkaian teknik yang sistematis untuk menempatkan website atau blog berada di halaman utama SERP (Search Engine Result Page) dan potensial sesuai dengan keyword yang ditentukan', 'SEO yang merupakan singkatan dari Search Engine Optimization atau optimasi mesin pencari adalah sebuah suatu strategi atau serangkaian teknik yang sistematis untuk menempatkan website atau blog berada di halaman utama SERP (Search Engine Result Page) dan potensial sesuai dengan keyword yang ditentukan', 'seo, tag, marketing,', '', 1, 1, 2, '2021-04-01', '2021-04-01 00:00:00', 'draft');
 
 -- --------------------------------------------------------
 
@@ -180,7 +190,10 @@ CREATE TABLE `tb_sub_kategori` (
 --
 
 INSERT INTO `tb_sub_kategori` (`id_sub`, `nama_sub`, `slug_sub`, `id_kategori`) VALUES
-(1, 'sistem pakar', 'sistem-pakar', 1);
+(1, 'Sistem Pakar', 'sistem-pakar', 1),
+(2, 'Bola Voli', 'bola-voli', 4),
+(3, 'Devisit', 'devisit', 2),
+(4, 'Hukum Internasional', 'hukum-internasional', 3);
 
 -- --------------------------------------------------------
 
@@ -362,13 +375,13 @@ ALTER TABLE `tb_karyawan`
 -- AUTO_INCREMENT for table `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tb_kontent`
 --
 ALTER TABLE `tb_kontent`
-  MODIFY `id_kontent` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kontent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_pelanggan`
@@ -386,7 +399,7 @@ ALTER TABLE `tb_produk`
 -- AUTO_INCREMENT for table `tb_sub_kategori`
 --
 ALTER TABLE `tb_sub_kategori`
-  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tb_transaksi`
