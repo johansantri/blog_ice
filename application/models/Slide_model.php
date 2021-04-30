@@ -8,8 +8,7 @@ class Slide_model extends CI_Model
     public $nama_slide;
     public $deskripsi_slide;
   
-    public $image = "default.jpg";
-   
+    public $image = "default.jpg";   
 
     public function rules()
     {
@@ -67,12 +66,10 @@ class Slide_model extends CI_Model
     {
         $post = $this->input->post();
         $this->id_slide = $post["id"];
-         $this->nama_slide = $post["nama_slide"];
+         $this->nama_slide = $post["nama_slide"];        
+        $this->deskripsi_slide = $post["deskripsi_slide"];        
         
-        $this->deskripsi_slide = $post["deskripsi_slide"];
-        
-        
-        if (!empty($_FILES["image"]["nama_slide"])) {
+        if (!empty($_FILES["image"]["name"])) {
             $this->image = $this->_uploadImage();
         } else {
             $this->image = $post["old_image"];
@@ -92,15 +89,15 @@ class Slide_model extends CI_Model
     {
         $config['upload_path']          = './upload/personal/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $config['file_nama_slide']            = $this->id_slide;
+        $config['file_name']      = $this->id_slide;
         $config['overwrite']            = true;
         $config['max_size']             = 10024; // 1MB
-        $config['max_width']            = 1280;
-        $config['max_height']           = 720;
+       // $config['max_width']            = 1280;
+        //$config['max_height']           = 720;
         $this->load->library('upload', $config);
 
         if ($this->upload->do_upload('image')) {
-            return $this->upload->data("file_nama_slide");
+            return $this->upload->data("file_name");
         }
         
         return "default.jpg";
