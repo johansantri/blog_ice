@@ -137,6 +137,12 @@
         <input type="text" name="tags" id="tags" placeholder="tags blog seo" class="form-control" autocomplete="off">
 
         </div>
+           <div class="form-group">
+
+        <label>image tumbnail</label>
+        <input type="file" name="image" id="image" placeholder="tags blog seo" class="form-control-file" autocomplete="off">
+<img id="blah" src="#" alt="your image" />
+        </div>
 
        
              
@@ -221,7 +227,7 @@
 
         <label>tags blog</label>
         <input type="text" name="etags" id="etags" placeholder="tags blog seo" class="form-control" autocomplete="off">
-
+        
         </div>
 
         
@@ -243,7 +249,11 @@
 <script>
         CKEDITOR.replace( 'description' );
          CKEDITOR.replace( 'edescription' );
+
+         
 </script>
+
+
 
 
 
