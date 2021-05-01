@@ -50,54 +50,35 @@ function createKontent(){
  });
 
 
-    $("#createForm").unbind('submit').bind('submit',function(){
-        var form = $(this);
-        $(".text-danger").remove();
-            
-        $.ajax({
-            url:form.attr('action'),
-            type:form.attr('method'),
-            data:form.serialize(),
-            dataType:'json',
-            success:function(response){
-                if (response.success===true) {
-          CKclaer();
-                    $(".messages").html('<div class="alert alert-success alert-dismissible" role="alert">'+
-                    '<button type="button" class="close btn-sm" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>'+
-                    '<strong><span class="glyphicon glyphicon-exlamation-sign"></span></strong>'+response.messages+
-                    '</div>');
-                         setTimeout(function(){
-                               $(".messages").empty();
-                                $(".tag").remove();
-                            },3000);
-                        $("#submit").attr("disabled", true);
-                    $("#exampleModalLong").modal('toggle');
-                    tbkontent.ajax.reload(null,false);
-
-                }else{
-                    if (response.messages instanceof Object) {
-                        $.each(response.messages, function(index,value){
-                            var id = $("#"+index);
-                            id
-                            .closest('.form-group')
-                            .removeClass('has-error')
-                            .removeClass('has-success')
-                            .addClass(value.lenght>0?'has-error':'has-success')
-                            .after(value);
-                        });
-                    }else{
-                        $(".messages").html('<div class="alert alert-warning alert-dismissible" role="alert">'+
-                    '<button type="button" class="close btn-sm" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>'+
-                    '<strong><span class="glyphicon glyphicon-exlamation-sign"></span></strong>'+response.messages+
-                    '</div>');
-                    }
-                }
-
-            }
-        });
-        return false;
+    $('#createForm').on('submit', function (event) {
+  event.preventDefault();
+       var image =$('#image').attr('src');
+  var title = $('#title').val();
+   var meta = $('#meta').val();
+   var id_kategori = $('#id_kategori').val();
+   var id_sub = $('#id_sub').val();
+    var description = $('#description').val();
+     var tags = $('#tags').val();
+    
+       $.ajax({
+    url: 'kontent/insert',
+    type: 'POST',
+    dataType: 'json',
+    cache : false,
+    data: { title: title,id_kategori: id_kategori,id_sub: id_sub, meta: meta, description: description, tags: tags, image: image },
+  })
+    .done(function (data) {
+    console.log("success");
+    })
+    .fail(function () {
+      console.log("error");
+    })
+    .always(function () {
+      console.log("complete");
     });
-}
+   
+});
+};
 
 //view list data
 var tbkontent;
@@ -301,13 +282,15 @@ $.ajax({
             var reader = new FileReader();
             
             reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
+                $('#image').attr('src', e.target.result) 
+                        .width(150)
+                        .height(200);
+            };
             
             reader.readAsDataURL(input.files[0]);
         }
     }
     
-    $("#image").change(function(){
+    $("#blah").change(function(){
         readURL(this);
     });

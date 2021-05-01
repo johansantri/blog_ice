@@ -23,65 +23,48 @@ function __construct(){
 	}
 
  public function insert(){
-        
-            $valid = array('success' =>false,'messages' => array() );
-        $config = array(
-            array(
-                'field'     => 'title',
-                'label'     =>'title',
-                'rules'     =>'trim|required'
-            ),
-            array(
-                'field'     => 'meta',
-                'label'     =>'meta',
-                'rules'     =>'trim|required'
-            ),
-            array(
-                'field'     => 'description',
-                'label'     =>'description',
-                'rules'     =>'trim|required'
-            ),
-            array(
-                'field'     => 'tags',
-                'label'     =>'tags',
-                'rules'     =>'trim|required'
-            ),
-            array(
-                'field'     => 'id_kategori',
-                'label'     =>'kategori',
-                'rules'     =>'required'
-            ),
-            array(
-                'field'     => 'id_sub',
-                'label'     =>'sub',
-                'rules'     =>'required'
-            )
             
-         );
-
-        $this->form_validation->set_rules($config);
-        $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');
-        if ($this->form_validation->run() === true) {
-            $user=$this->Kontent_m->insert();
-            if ($user===true) {
-                $valid['success']=true;
-                $valid['messages']="success create data";
-            }else{
-                $valid['success']=false;
-                $valid['messages']="someting wrong...";
-            }
+           $this->load->library('form_validation');
+        $this->form_validation->set_rules('title', 'title', 'required|max_length[200]|min_length[3]');
+        $this->form_validation->set_rules('image', 'image kosong', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            echo "nama materi wajib di isi";
         }else{
-            $valid['success']=false;
-            foreach ($_POST as $key => $value) {
-                $valid['messages'][$key]=form_error($key);
-            }
+        $status="draft";   
+         $id_user= $this->session->userdata('id_user'); 
+        $title = $this->input->post('title', true);
+        $meta = $this->input->post('meta', true);
+        $description = $this->input->post('description', true);
+        $tags = $this->input->post('tags', true);
+        $image = $this->input->post('image');
+        $tanggal = $tes=date('Y-m-d h:i:s');
+        $id_kategori      = $this->input->post('id_kategori',true);
+        $id_sub     = $this->input->post('id_sub',true);
+         $slug = url_title($this->input->post('title'), 'dash', TRUE);
+        $image = str_replace('data:image/jpeg;base64,','', $image);
+        $image = base64_decode($image);
+        $filename = 'image_'.time().'.png';
+        file_put_contents(FCPATH.'/upload/'.$filename,$image);
+
+        $data = array(
+            'title' => $title,
+            'slug_title'=>$slug,
+            'meta' => $meta,
+            'description' => $description,
+            'tags' => $tags,          
+            'image' => $filename,
+            'create_ad'=>$tanggal,
+            'id_kategori'=>$id_kategori,
+            'status'=>$status,
+            'id_sub'=>$id_sub,
+            'id_user'=>$id_user,
+        );
+
+        $this->load->model('Kontent_m');
+        $res = $this->Kontent_m->insert($data);
+         header('Content-Type: application/json');
+        echo json_encode($res);
         }
-        $this->output
-        ->set_status_header(200)
-        ->set_content_type('application/json', 'utf-8')
-        ->set_output(json_encode($valid, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES))
-        ->_display();
-        exit();
         
 
     }

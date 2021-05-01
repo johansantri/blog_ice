@@ -6,32 +6,12 @@ public function __construct(){
     parent::__construct();
 }
   
-    public function insert()
+    public function insert($data)
     {   
-        $status="draft";
-        $update_ad=date("Y-m-d h:i:s");
-
-        
-         $slug = url_title($this->input->post('title'), 'dash', TRUE);
-        $data = array('title'       =>  $this->input->post('title',true) ,
-                        'slug_title' => $slug,
-                     'meta'         => $this->input->post('meta',true),
-                     'description'      => $this->input->post('description'),
-                     'tags'         => $this->input->post('tags',true),
-                     'status'       => $status,
-                    
-                     'id_kategori'      => $this->input->post('id_kategori',true),
-                     'id_sub'      => $this->input->post('id_sub',true),
-                     
-                    'id_user'        => $this->session->userdata('id_user'));
-
-        $sql=$this->db->insert('tb_kontent',$data);
-        if($sql===true){
-            return true;
-        }else{
-            return false;
-        }
+        $this->db->insert('tb_kontent', $data);
+        return $this->db->insert_id();
     }
+  
 
      
 
