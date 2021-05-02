@@ -1003,6 +1003,16 @@
                
               </div>
             </div>
+
+                <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/pradita-logo.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+               
+              </div>
+            </div>
           </div>
           </div>
         </div>
