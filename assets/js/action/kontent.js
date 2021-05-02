@@ -52,23 +52,28 @@ function createKontent(){
 
     $('#createForm').on('submit', function (event) {
   event.preventDefault();
-       var image =$('#image').attr('src');
-  var title = $('#title').val();
-   var meta = $('#meta').val();
-   var id_kategori = $('#id_kategori').val();
-   var id_sub = $('#id_sub').val();
+  var image='';
+    var image =$('#image').attr('src');
+    var title = $('#title').val();
+    var meta = $('#meta').val();
+    var id_kategori = $('#id_kategori').val();
+    var id_sub = $('#id_sub').val();
     var description = $('#description').val();
-     var tags = $('#tags').val();
+    var tags = $('#tags').val();
     
-       $.ajax({
-    url: 'kontent/insert',
-    type: 'POST',
-    dataType: 'json',
-    cache : false,
-    data: { title: title,id_kategori: id_kategori,id_sub: id_sub, meta: meta, description: description, tags: tags, image: image },
+  $.ajax({
+  url: 'kontent/insert',
+  type: 'POST',
+  dataType: 'json',
+  cache : false,
+  data: { title: title,id_kategori: id_kategori,id_sub: id_sub, meta: meta, description: description, tags: tags, image: image },
   })
     .done(function (data) {
     console.log("success");
+     $('#createForm')[0].reset();
+     $("#exampleModalLong").modal('toggle');
+       tbkontent.ajax.reload(null,false);
+       window.location.reload();
     })
     .fail(function () {
       console.log("error");
@@ -120,7 +125,7 @@ function updateKontent(id = null)
                $("#etitle").val(response.title);
                 $("#emeta").val(response.meta);
                $("#edescription").val(response.description);
-
+               $("#eimage").append('<img id="old_img" style="width: 200px; height: 200px;" src="./upload/'+response.image+'"></img>')
                 CKupdate();
                      CKEDITOR.instances['edescription'].setData(edescription);
 
@@ -283,7 +288,10 @@ $.ajax({
             
             reader.onload = function (e) {
                 $('#image').attr('src', e.target.result) 
-                        .width(150)
+                        .width(200)
+                        .height(200);
+                 $('#eimage').attr('src', e.target.result) 
+                        .width(200)
                         .height(200);
             };
             
@@ -294,3 +302,11 @@ $.ajax({
     $("#blah").change(function(){
         readURL(this);
     });
+
+     $("#eblah").change(function(){
+        readURL(this);
+    });
+
+    function bersih(){
+      window.location.reload();
+    }

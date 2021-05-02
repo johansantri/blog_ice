@@ -1,4 +1,11 @@
-
+<style >
+  @media (min-width: 768px) {
+  .modal-xl {
+    width: 100%;
+   max-width:100%;
+  }
+}
+</style>
 
 
 
@@ -69,7 +76,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Post</h5>
@@ -86,7 +93,7 @@
             <div class="form-group">
 
         <label>title </label>
-        <input type="text" name="title" id="title" placeholder="title  seo" class="form-control" autocomplete="off">
+        <input type="text" name="title" id="title" placeholder="title  seo" class="form-control" required autocomplete="off">
 
         </div>
    
@@ -96,7 +103,7 @@
                   <div class="form-group">
 
         <label>meta keyword</label>
-        <input type="text" name="meta" id="meta" placeholder="meta blog seo" class="form-control" autocomplete="off">
+        <input type="text" name="meta" id="meta" placeholder="meta blog seo" class="form-control" required autocomplete="off">
 
         </div>
           </div>
@@ -134,21 +141,21 @@
                <div class="form-group">
 
         <label>tags blog</label>
-        <input type="text" name="tags" id="tags" placeholder="tags blog seo" class="form-control" autocomplete="off">
+        <input type="text" required name="tags" id="tags" placeholder="tags blog seo" class="form-control" autocomplete="off">
 
         </div>
            <div class="form-group">
 
         <label>image tumbnail</label>
         <input type="file" id="blah" name="blah"  placeholder="tags blog seo" class="form-control-file" autocomplete="off">
-<img name="image" id="image" src="#" alt="your image" />
+<img name="image" id="image" src="#" alt="," />
         </div>
 
        
              
           </div>
           <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" onclick="bersih()">Close</button>
         <button type="submit" id="submit" class="btn btn-primary">Save changes</button>
       </div>
       </form>
@@ -163,7 +170,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Update Post</h5>
@@ -230,11 +237,16 @@
 
         </div>
 
-        
+          <div class="form-group">
+
+        <label>image tumbnail</label>
+        <input type="file" id="eblah" name="eblah"  placeholder="tags blog seo" class="form-control-file" autocomplete="off">
+<img name="eimage" id="eimage" src="#" alt="," />
+        </div>
              
           </div>
           <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" onclick="bersih()">Close</button>
         <button type="submit" id="submit" class="btn btn-primary">Save changes</button>
       </div>
       </form>
@@ -243,15 +255,31 @@
     </div>
   </div>
 </div>
-
+<script type="text/javascript" src="<?php echo base_url()?>assets/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>assets/ckfinder/ckfinder.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url('assets/js/action/kontent.js')?>"></script>
-<script>
-        CKEDITOR.replace( 'description' );
-         CKEDITOR.replace( 'edescription' );
 
+<script type="text/javascript">
+ $(document).ready(function(){
+ CKEDITOR.replace( 'description', {
+                              height: 300,
+                              filebrowserUploadUrl: '<?php echo base_url('kontent/ckm');?>',
+                              filebrowserBrowseUrl: '<?php echo base_url('kontent/bank');?>'
+                             });         
+           
+  CKEDITOR.replace( 'edescription', {
+                              height: 300,
+                              filebrowserUploadUrl: '<?php echo base_url('kontent/ckm');?>',
+                              filebrowserBrowseUrl: '<?php echo base_url('kontent/bank');?>'
+                             });  
 
+  })
 </script>
+
+
+
+
 
 
 

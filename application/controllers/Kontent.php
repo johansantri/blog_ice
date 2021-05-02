@@ -24,11 +24,15 @@ function __construct(){
 
  public function insert(){
             
-           $this->load->library('form_validation');
-        $this->form_validation->set_rules('title', 'title', 'required|max_length[200]|min_length[3]');
+$this->load->library('form_validation');
+$this->form_validation->set_rules('title', 'title', 'required|max_length[200]|min_length[3]');
+$this->form_validation->set_rules('meta', 'meta keyword', 'required|max_length[255]|min_length[3]');
+
+$this->form_validation->set_rules('description', 'description', 'required');
         $this->form_validation->set_rules('image', 'image kosong', 'required');
+         $this->form_validation->set_error_delimiters('<small class="text-danger control-label ">','</small>');
         if ($this->form_validation->run() == FALSE) {
-            echo "nama materi wajib di isi";
+            echo "*wajib di isi";
         }else{
         $status="draft";   
          $id_user= $this->session->userdata('id_user'); 
@@ -207,6 +211,62 @@ function __construct(){
         }
     }   
 
+  public function bank(){
 
+
+             
+                     
+                $img     = $this->Kontent_m->galery(); 
+               $data  = array('x' => 'Kontent',
+                             'img'=>$img,
+                            'isi'=>'back/page/bank' );
+                             
+            $this->load->view('back/setup/konek',$data);
+             
+        }
+
+      public function ckm(){
+    $config['upload_path'] = './upload/'; //path folder
+    $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+    $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
+    $config['max_size']=10024;
+
+    $this->upload->initialize($config);
+    if(!empty($_FILES['upload']['name'])){
+
+        if ($this->upload->do_upload('upload')){
+            $gbr = $this->upload->data();
+            //Compress Image
+            $config['image_library']='gd2';
+            $config['source_image']='./upload/'.$gbr['file_name'];
+            $config['create_thumb']= FALSE;
+            $config['maintain_ratio']= TRUE;
+            $config['quality']= '100%';
+            //$config['width']= 600;
+            //$config['height']= 400;
+            $config['new_image']= './upload/'.$gbr['file_name'];
+
+
+
+
+           
+            $this->load->library('image_lib', $config);
+           
+            $this->image_lib->resize();
+
+          
+             //$data = $this->upload->data();
+              $gambar=$gbr['file_name'];
+              $id=$this->session->userdata('id_user');
+              $this->Kontent_m->upload($gambar,$id);
+           echo "success, go to image info -> browser server";
+           
+        }
+                 
+    }else{
+        echo "not found";
+    }
+            
+}
 	
 }
