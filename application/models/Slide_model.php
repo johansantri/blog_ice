@@ -87,7 +87,7 @@ class Slide_model extends CI_Model
     
     private function _uploadImage()
     {
-        $config['upload_path']          = './upload/personal/';
+        $config['upload_path']          = './upload/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['file_name']      = $this->id_slide;
         $config['overwrite']            = true;
@@ -108,7 +108,7 @@ class Slide_model extends CI_Model
         $personal = $this->getById($id);
         if ($personal->image != "default.jpg") {
             $filenama_slide = explode(".", $personal->image)[0];
-            return array_map('unlink', glob(FCPATH."upload/personal/$filenama_slide.*"));
+            return array_map('unlink', glob(FCPATH."upload/$filenama_slide.*"));
         }
     }
 
