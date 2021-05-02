@@ -310,3 +310,55 @@ $.ajax({
     function bersih(){
       window.location.reload();
     }
+
+    function postKontent($id=null){
+    if ($id) {
+         
+         $('.text-danger').remove();
+        $.ajax({
+            url:'kontent/post_k'+'/'+$id,
+            type:'post',
+            dataType:'json',
+            success:function(response){
+                if (response.success===true) {
+                     $(".messages").html('<div class="alert alert-success alert-dismissible" role="alert">'+
+                                  '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+                                  '<strong> <span class="glyphicon glyphicon-ok-sign"></span> </strong>'+response.messages+
+                                '</div>');
+                                setTimeout(function(){
+                               $(".messages").empty();
+                            },3000);
+                                
+                            tbkontent.ajax.reload(null, false);
+                }
+               }
+            
+        });
+    }
+}
+
+  function deleteKontent($id=null){
+    if ($id) {
+         
+         $('.text-danger').remove();
+        $.ajax({
+            url:'kontent/delete_k'+'/'+$id,
+            type:'post',
+            dataType:'json',
+            success:function(response){
+                if (response.success===true) {
+                     $(".messages").html('<div class="alert alert-success alert-dismissible" role="alert">'+
+                                  '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+                                  '<strong> <span class="glyphicon glyphicon-ok-sign"></span> </strong>'+response.messages+
+                                '</div>');
+                                setTimeout(function(){
+                               $(".messages").empty();
+                            },3000);
+                                
+                            tbkontent.ajax.reload(null, false);
+                }
+               }
+            
+        });
+    }
+}

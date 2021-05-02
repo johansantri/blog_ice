@@ -98,7 +98,9 @@ $this->form_validation->set_rules('description', 'description', 'required');
             $button='<div class="btn-group">
                  
                  <a type="button" class="btn btn-outline-warning btn-sm" title="klick here on change" onclick="updateKontent('.$value['id_kontent'].')" data-toggle="modal" data-target="#updateModal">  <span class="fa fa-pencil-square-o">edit</span> </a>
-                 
+
+                   <a type="button" class="btn btn-outline-info btn-sm" title="klick here on post" onclick="postKontent('.$value['id_kontent'].')" >  <span class="fa fa-external-link-square">post</span> </a>
+                  <a type="button" class="btn btn-outline-danger btn-sm" title="klick here on delete" onclick="deleteKontent('.$value['id_kontent'].')" >  <span class="fa fa-times">delete</span> </a>
                  
                 </div>';
             $result['data'][$key]=array(
@@ -268,5 +270,45 @@ $this->form_validation->set_rules('description', 'description', 'required');
     }
             
 }
-	
+	  public function post_k($id = null)
+    {
+        
+        if($id) {
+            $validator = array('success' => false, 'messages' => array());
+ 
+           
+            $pos = $this->Kontent_m->post_kontent($id);
+            if($pos === true) {
+                $validator['success'] = true;
+                $validator['messages'] = "Successfully";
+            }
+            else {
+                $validator['success'] = true;
+                $validator['messages'] = "Successfully";
+            }
+ 
+            echo json_encode($validator);
+        }
+    }
+
+     public function delete_k($id = null)
+    {
+        
+        if($id) {
+            $validator = array('success' => false, 'messages' => array());
+ 
+           
+            $pos = $this->Kontent_m->delete_kontent($id);
+            if($pos === true) {
+                $validator['success'] = true;
+                $validator['messages'] = "Successfully";
+            }
+            else {
+                $validator['success'] = true;
+                $validator['messages'] = "Successfully";
+            }
+ 
+            echo json_encode($validator);
+        }
+    }
 }

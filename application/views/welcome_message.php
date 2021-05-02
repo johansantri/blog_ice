@@ -1054,8 +1054,8 @@
                         <div class="widget">
                             <h5 class="footer-title">ICE-I</h5>
               <p class="text-capitalize m-b20">Address: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
-               <p class="text-capitalize m-b20">Phone: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
-                <p class="text-capitalize m-b20">Mail: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
+               <p class="text-capitalize m-b20">Phone: 021-342344</p>
+                <p class="text-capitalize m-b20">Mail: info@ice.org</p>
                             <div class="subscribe-form m-b20">
                 <form class="subscription-form" action="http://educhamp.themetrades.com/demo/<?php echo base_url()?>assets/frontand/script/mailchamp.php" method="post">
                   <div class="ajax-message"></div>
