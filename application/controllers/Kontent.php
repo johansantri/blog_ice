@@ -26,7 +26,7 @@ function __construct(){
             
 $this->load->library('form_validation');
 $this->form_validation->set_rules('title', 'title', 'required|max_length[200]|min_length[3]');
-$this->form_validation->set_rules('meta', 'meta keyword', 'required|max_length[255]|min_length[3]');
+$this->form_validation->set_rules('meta', 'meta keyword', 'required|min_length[3]');
 
 $this->form_validation->set_rules('description', 'description', 'required');
         $this->form_validation->set_rules('image', 'image kosong', 'required');
@@ -47,7 +47,7 @@ $this->form_validation->set_rules('description', 'description', 'required');
          $slug = url_title($this->input->post('title'), 'dash', TRUE);
         $image = str_replace('data:image/jpeg;base64,','', $image);
         $image = base64_decode($image);
-        $filename = 'image_'.time().'.png';
+        $filename = 'image_'.time().'.jpg';
         file_put_contents(FCPATH.'/upload/'.$filename,$image);
 
         $data = array(
@@ -106,7 +106,7 @@ $this->form_validation->set_rules('description', 'description', 'required');
             $result['data'][$key]=array(
                 $no++,
                 $value['title'],
-                $value['meta'],
+                
                 $value['nama_kategori'],
                 $value['nama_sub'],             
                 $value['create_ad'],

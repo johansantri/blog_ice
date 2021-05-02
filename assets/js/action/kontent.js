@@ -128,7 +128,6 @@ function updateKontent(id = null)
                $("#eimage").append('<img id="old_img" style="width: 200px; height: 200px;" src="./upload/'+response.image+'"></img>')
                 CKupdate();
                      CKEDITOR.instances['edescription'].setData(edescription);
-
                      
 
   $(".all_kat").html('<select class="form-control ekategori" name="eid_kategori" id="eid_kategori" value=""  aria-label="Default select example">'+
@@ -165,7 +164,7 @@ $.ajax({
           })
 
  $('#eid_kategori').change(function(){
-  var eid_categori = $('#eid_kategori').val();
+  var eid_kategori = $('#eid_kategori').val();
   
   if(eid_kategori != '')
   {

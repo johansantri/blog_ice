@@ -40,7 +40,7 @@
                     <tr>
                       <th>#</th>
                       <th>title</th>
-                      <th>meta</th>
+                 
                       <th>kategori</th>
                        <th>sub kategori</th>
                      <th>waktu buat</th>

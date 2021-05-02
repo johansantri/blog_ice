@@ -32,7 +32,7 @@ public function __construct(){
     public function listAll(){
         /*$id = $this->session->userdata['id_user']; 
         $this->db->where('t_jurusan.id_user',$id);*/
-        $this->db->select('tb_kontent.id_kontent,tb_kontent.title,tb_kontent.meta,tb_kontent.status,tb_kontent.create_ad,tb_kontent.update_ad,tb_user.nama_user,tb_kategori.nama_kategori,tb_sub_kategori.nama_sub');
+        $this->db->select('tb_kontent.id_kontent,tb_kontent.title,tb_kontent.status,tb_kontent.create_ad,tb_kontent.update_ad,tb_user.nama_user,tb_kategori.nama_kategori,tb_sub_kategori.nama_sub');
         $this->db->where('tb_kontent.status != "delete"');
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_kontent.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_kontent.id_sub');
