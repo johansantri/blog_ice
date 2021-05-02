@@ -953,6 +953,64 @@
       </div>
       <!-- Recent News End -->
       
+         <!-- Popular Courses -->
+      <div class="section-area section-sp2 popular-courses-bx">
+                <div class="container">
+          <div class="row">
+            <div class="col-md-12 heading-bx left">
+              <h2 class="title-head">Partner <span>ICE-I</span></h2>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+            </div>
+          </div>
+          <div class="row">
+          <div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+            <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/ui.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+               
+              
+              </div>
+            </div>
+            <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/ut.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+                
+               
+              </div>
+            </div>
+            <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/uph.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+                
+              
+              </div>
+            </div>
+              <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/atma.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- Popular Courses END -->
+      
+
+
         </div>
     <!-- contact area END -->
     </div>
@@ -984,8 +1042,10 @@
                 <div class="row">
           <div class="col-lg-4 col-md-12 col-sm-12 footer-col-4">
                         <div class="widget">
-                            <h5 class="footer-title">Sign Up For A Newsletter</h5>
-              <p class="text-capitalize m-b20">Weekly Breaking news analysis and cutting edge advices on job searching.</p>
+                            <h5 class="footer-title">ICE-I</h5>
+              <p class="text-capitalize m-b20">Address: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
+               <p class="text-capitalize m-b20">Phone: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
+                <p class="text-capitalize m-b20">Mail: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
                             <div class="subscribe-form m-b20">
                 <form class="subscription-form" action="http://educhamp.themetrades.com/demo/<?php echo base_url()?>assets/frontand/script/mailchamp.php" method="post">
                   <div class="ajax-message"></div>
@@ -1053,9 +1113,19 @@
                     </div>
                 </div>
             </div>
+            
+          
         </div>
+
         <div  >
-           
+           <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center"> <a target="_blank" href="https://www.templateshub.net">Hak Cipta ©2021 semua dilindungi undang-undang</a></div>
+                </div>
+            </div>
+        </div>
+            
         </div>
     </footer>
     <!-- Footer END ==== -->
