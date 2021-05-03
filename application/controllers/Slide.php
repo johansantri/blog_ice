@@ -10,13 +10,13 @@ class Slide extends CI_Controller
         if(empty($this->session->userdata['email'])){
                 redirect(site_url().'auth/login');
             }
-        $this->load->model("Slide_model");
+        $this->load->model("Slide_m");
         $this->load->library('form_validation');
     }
 
     public function index()
     {
-        $personal= $this->Slide_model->getAll();
+        $personal= $this->Slide_m->getAll();
         $data  = array('x' => 'slide',
                              'personal'=>$personal,
                             'isi'=>'back/slide/index' );
@@ -29,8 +29,8 @@ class Slide extends CI_Controller
 
     public function add()
     {
-        $personal = $this->Slide_model;
-        $kategori = $this->Slide_model->getKategori();
+        $personal = $this->Slide_m;
+        $kategori = $this->Slide_m->getKategori();
         $validation = $this->form_validation;
         $validation->set_rules($personal->rules());
 
@@ -51,9 +51,9 @@ class Slide extends CI_Controller
     {
         if (!isset($id)) redirect('slide');
        
-        $personal = $this->Slide_model;
+        $personal = $this->Slide_m;
         $validation = $this->form_validation;
-        $kategori = $this->Slide_model->getKategori();
+        $kategori = $this->Slide_m->getKategori();
         $validation->set_rules($personal->rules());
 
         if ($validation->run()) {
@@ -78,7 +78,7 @@ class Slide extends CI_Controller
     {
         if (!isset($id)) show_404();
         
-        if ($this->Slide_model->delete($id)) {
+        if ($this->Slide_m->delete($id)) {
             redirect(site_url('Slide'));
         }
     }
