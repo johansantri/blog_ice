@@ -123,10 +123,10 @@ class Blog_m extends CI_Model
     
     private function _uploadImage()
     {
-        $config['upload_path']          = '/upload/';
+        $config['upload_path']          = './upload/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['file_name']            = $this->id_blog;
-        $config['overwrite']            = true;
+        $config['overwrite']            = TRUE;
         $config['max_size']             = 10024; // 1MB
         // $config['max_width']            = 1024;
         // $config['max_height']           = 768;

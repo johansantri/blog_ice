@@ -2,7 +2,7 @@
 
 class Slide_model extends CI_Model
 {
-    private $_table = "tb_slide";
+    private $table = "tb_slide";
 
     public $id_slide;
     public $nama_slide;
@@ -32,7 +32,7 @@ class Slide_model extends CI_Model
         $this->db->select('tb_slide.id_slide,tb_slide.nama_slide,tb_slide.deskripsi_slide,tb_slide.image,tb_kategori.nama_kategori');
         $this->db->join('tb_kategori','tb_slide.id_kategori=tb_kategori.id_kategori');
 
-        return $this->db->get($this->_table)->result();
+        return $this->db->get($this->table)->result();
     }
     public function getKategori()
     {
@@ -47,7 +47,7 @@ class Slide_model extends CI_Model
     {
         $this->db->select('tb_slide.id_slide,tb_slide.id_kategori,tb_slide.nama_slide,tb_slide.deskripsi_slide,tb_slide.image,tb_kategori.nama_kategori');
         $this->db->join('tb_kategori','tb_slide.id_kategori=tb_kategori.id_kategori');
-        return $this->db->get_where($this->_table, ["id_slide" => $id])->row();
+        return $this->db->get_where($this->table, ["id_slide" => $id])->row();
     }
 
     public function save()
@@ -59,7 +59,7 @@ class Slide_model extends CI_Model
         $this->deskripsi_slide = $post["deskripsi_slide"];
         $this->image = $this->_uploadImage();
         $this->id_kategori = $post["id_kategori"];
-        $this->db->insert($this->_table, $this);
+        $this->db->insert($this->table, $this);
     }
 
     public function update()
@@ -76,21 +76,25 @@ class Slide_model extends CI_Model
         }
         $this->id_kategori= $post["id_kategori"];
        
-        $this->db->update($this->_table, $this, array('id_slide' => $post['id']));
+        $this->db->update($this->table, $this, array('id_slide' => $post['id']));
     }
 
     public function delete($id)
     {
         $this->_deleteImage($id);
-        return $this->db->delete($this->_table, array("id_slide" => $id));
+        return $this->db->delete($this->table, array("id_slide" => $id));
     }
     
     private function _uploadImage()
     {
-        $config['upload_path']          = './upload/';
+        $image_path = realpath(APPPATH.'./public/');
+        @mkdir($image_path, 0777); 
+                @chmod($image_path,  0777);
+        $config['upload_path'] = $image_path;
+        //$config['upload_path']          = '/public/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
-        $config['file_name']      = $this->id_slide;
-        $config['overwrite']            = true;
+        $config['file_name']            = $this->id_slide;
+        $config['overwrite']            = TRUE;
         $config['max_size']             = 10024; // 1MB
        // $config['max_width']            = 1280;
         //$config['max_height']           = 720;
@@ -108,7 +112,7 @@ class Slide_model extends CI_Model
         $personal = $this->getById($id);
         if ($personal->image != "default.jpg") {
             $filenama_slide = explode(".", $personal->image)[0];
-            return array_map('unlink', glob(FCPATH."upload/$filenama_slide.*"));
+            return array_map('unlink', glob(FCPATH."public/$filenama_slide.*"));
         }
     }
 
