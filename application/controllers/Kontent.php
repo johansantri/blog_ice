@@ -232,7 +232,7 @@ $this->form_validation->set_rules('description', 'description', 'required');
     $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
     $config['encrypt_name'] = FALSE; //Enkripsi nama yang terupload
     $config['max_size']=10024;
-
+    $this->load->library('upload', $config);
     $this->upload->initialize($config);
     if(!empty($_FILES['upload']['name'])){
 
@@ -247,7 +247,6 @@ $this->form_validation->set_rules('description', 'description', 'required');
             //$config['width']= 600;
             //$config['height']= 400;
             $config['new_image']= './upload/'.$gbr['file_name'];
-
 
 
 

@@ -29,15 +29,7 @@ class Slide_m extends CI_Model
         ];
     }
 
-    /*public function getAll()
-    {
-        return $this->db->get($this->_table)->result();
-    }
-    
-    public function getById($id)
-    {
-        return $this->db->get_where($this->_table, ["id_slide" => $id])->row();
-    }*/
+  
 
     public function save()
     {
@@ -45,8 +37,9 @@ class Slide_m extends CI_Model
         $this->id_slide = uniqid();
         $this->nama_slide = $post["nama_slide"];
         $this->deskripsi_slide = $post["deskripsi_slide"];
-        $this->id_kategori = $post["id_kategori"];       
-        $this->image = $this->_uploadImage();       
+            
+        $this->image = $this->_uploadImage(); 
+        $this->id_kategori = $post["id_kategori"];         
         $this->db->insert($this->_table, $this);
     }
 
@@ -56,7 +49,7 @@ class Slide_m extends CI_Model
         $this->id_slide = $post["id"];
          $this->nama_slide = $post["nama_slide"];
         $this->deskripsi_slide = $post["deskripsi_slide"];
-        $this->id_kategori = $post["id_kategori"];
+       
        
         
         
@@ -66,7 +59,7 @@ class Slide_m extends CI_Model
             $this->image = $post["old_image"];
         }
 
-        
+         $this->id_kategori = $post["id_kategori"];
         $this->db->update($this->_table, $this, array('id_slide' => $post['id']));
     }
 
@@ -78,7 +71,7 @@ class Slide_m extends CI_Model
     
     private function _uploadImage()
     {
-        $config['upload_path']          = './upload/personal/';
+        $config['upload_path']          = './upload/slide/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['file_name']            = $this->id_slide;
         $config['overwrite']            = true;
@@ -99,7 +92,7 @@ class Slide_m extends CI_Model
         $personal = $this->getById($id);
         if ($personal->image != "default.jpg") {
             $filename = explode(".", $personal->image)[0];
-            return array_map('unlink', glob(FCPATH."upload/personal/$filename.*"));
+            return array_map('unlink', glob(FCPATH."upload/slide/$filename.*"));
         }
     }
 

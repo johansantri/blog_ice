@@ -50,7 +50,7 @@
                     </td>
                    
                     <td>
-                      <img src="<?php echo base_url('public/'.$person->image) ?>" width="64" />
+                      <img src="<?php echo base_url('upload/slide/'.$person->image) ?>" width="64" />
                     </td>
                     <td class="small">
                      <?php echo $person->nama_kategori ?>
