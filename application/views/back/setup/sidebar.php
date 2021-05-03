@@ -21,6 +21,5 @@
     
     
     
-        <li><a class="app-menu__item" href="<?php echo base_url()?>transaksi"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">Transaksi</span></a></li>
       </ul>
     </aside>
