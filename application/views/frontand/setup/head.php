@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <!-- Twitter meta-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:site" content="@pratikborsadiya">
-    <meta property="twitter:creator" content="@pratikborsadiya">
-    <!-- Open Graph Meta-->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Vali Admin">
-    <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme">
-    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
-    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
-    <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Vali Admin - Free Bootstrap 4 Admin Template</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Main CSS-->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/main.css">
-    <!-- Font-icon css-->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-       <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/jquery.tagsinput.css">
-      <!-- Essential javascripts for application to work-->
-    <script src="<?php echo base_url()?>assets/js/jquery-3.3.1.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/popper.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/dataTables.bootstrap.min.js"></script>
-   
-    <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery.tagsinput.js"></script>
 
-  </head>
-  <body class="app sidebar-mini">
+<head>
+
+  <!-- META ============================================= -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <meta name="robots" content="" />
+  
+  <!-- DESCRIPTION -->
+  <meta name="description" content="EduChamp : Education HTML Template" />
+  
+  <!-- OG -->
+  <meta property="og:title" content="EduChamp : Education HTML Template" />
+  <meta property="og:description" content="EduChamp : Education HTML Template" />
+  <meta property="og:image" content="" />
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- FAVICONS ICON ============================================= -->
+  <link rel="icon" href="<?php echo base_url()?>assets/frontand/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/frontand/images/favicon.png" />
+  
+  <!-- PAGE TITLE HERE ============================================= -->
+  <title>EduChamp : Education HTML Template </title>
+  
+  <!-- MOBILE SPECIFIC ============================================= -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!--[if lt IE 9]>
+  <script src="<?php echo base_url()?>assets/frontand/js/html5shiv.min.js"></script>
+  <script src="<?php echo base_url()?>assets/frontand/js/respond.min.js"></script>
+  <![endif]-->
+  
+  <!-- All PLUGINS CSS ============================================= -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/css/assets.css">
+  
+  <!-- TYPOGRAPHY ============================================= -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/css/typography.css">
+  
+  <!-- SHORTCODES ============================================= -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/css/shortcodes/shortcodes.css">
+  
+  <!-- STYLESHEETS ============================================= -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/css/style.css">
+  <link class="skin" rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/css/color/color-1.css">
+  
+  <!-- REVOLUTION SLIDER CSS ============================================= -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/vendors/revolution/css/layers.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/vendors/revolution/css/settings.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/frontand/vendors/revolution/css/navigation.css">
+  <!-- REVOLUTION SLIDER END -->  
+</head>
+<body id="bg">
+<div class="page-wraper">
+<div id="loading-icon-bx"></div>
