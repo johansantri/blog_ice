@@ -70,4 +70,13 @@ $this->load->model('Blog_m');
             redirect(site_url('blog'));
         }
     }
+
+     public function post($id=null)
+    {
+        if (!isset($id)) show_404();
+        
+        if ($this->Blog_m->postBlog($id)) {
+            redirect(site_url('blog'));
+        }
+    }
 }

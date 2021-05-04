@@ -48,7 +48,7 @@ class Blog_m extends CI_Model
     public function getAll()
     {
       $this->db->select('tb_blog.id_blog,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-        
+          $this->db->where('tb_blog.status != "delete"');
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
        // $this->db->from('tb_blog');
@@ -117,8 +117,11 @@ class Blog_m extends CI_Model
 
     public function delete($id)
     {
-        $this->_deleteImage($id);
-        return $this->db->delete($this->_table, array("id_blog" => $id));
+        if($id) {
+            $sql = "UPDATE tb_blog SET status ='delete' WHERE id_blog = ?";
+            $query = $this->db->query($sql, array($id));
+            return ($query === true) ? true : false;           
+        }
     }
     
     private function _uploadImage()
@@ -175,5 +178,13 @@ class Blog_m extends CI_Model
          
          
         
+    }
+
+     public function postBlog($id = null) {
+        if($id) {
+            $sql = "UPDATE tb_blog SET status ='post' WHERE id_blog = ?";
+            $query = $this->db->query($sql, array($id));
+            return ($query === true) ? true : false;           
+        }
     }
 }

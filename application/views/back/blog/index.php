@@ -35,12 +35,12 @@
                     <th>title</th>
                     <th>meta key</th>
                     <th>kategori</th>
-                     <th>sub kategori</th>
+                     <th>sub</th>
                       <th>status</th>
                        <th>buat</th>
                         <th>ubah</th>
-                    <th>Photo</th>                   
-                    <th>Action</th>
+                    <th>photo</th>                   
+                    <th>tindakan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -75,9 +75,11 @@
                     </td>
                     <td>
                       <a href="<?php echo site_url('blog/edit/'.$person->id_blog) ?>"
-                       class="btn btn-small text-warning"><i class="fa fa-edit"></i> </a>
+                       class="btn btn-small text-warning" data-toggle="tooltip" data-placement="top" title="Edit Artikel"><i class="fa fa-edit"></i> </a>
                       <a onclick="deleteConfirm('<?php echo site_url('blog/delete/'.$person->id_blog) ?>')"
-                       href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> </a>
+                       href="#!" class="btn btn-small text-danger" data-toggle="tooltip" data-placement="top" title="Hapus Artikel"><i class="fa fa-trash"></i> </a>
+                        <a onclick="postConfirm('<?php echo site_url('blog/post/'.$person->id_blog) ?>')"
+                       href="#!" class="btn btn-small text-info" data-toggle="tooltip" data-placement="top" title="Terbitkan Artikel"><i class="fa fa-eye"></i> </a>
                     </td>
                   </tr>
                   <?php endforeach; ?>
@@ -96,7 +98,7 @@
           <span aria-hidden="true">×</span>
         </button>
       </div>
-      <div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
+      <div class="modal-body">Artikel yang dihapus tidak akan bisa dikembalikan.</div>
       <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
         <a id="btn-delete" class="btn btn-danger" href="#">Delete</a>
@@ -104,6 +106,26 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Artikel akan di tampilkan.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a id="btn-post" class="btn btn-info" href="#">Post</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
               </div>
             </div>
           </div>
@@ -118,6 +140,10 @@
   function deleteConfirm(url){
     $('#btn-delete').attr('href', url);
     $('#deleteModal').modal();
+  }
+   function postConfirm(url){
+    $('#btn-post').attr('href', url);
+    $('#postModal').modal();
   }
  
     </script>

@@ -37,6 +37,7 @@ class Slide extends CI_Controller
         if ($validation->run()) {
             $personal->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
+            redirect(site_url('Slide'));
         }
 
         $data  = array('x' => 'slide',
