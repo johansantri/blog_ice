@@ -17,4 +17,31 @@ function __construct(){
                              
             $this->load->view('back/setup/konek',$data);
 	}
+
+	public function blogs()
+	{
+	  $data  = array('x' => 'Home',
+                             
+                            'isi'=>'back/page/blog' );
+                             
+            $this->load->view('back/setup/konek',$data);
+	}
+
+	public function details()
+	{
+	  $data  = array('x' => 'Home',
+                             
+                            'isi'=>'back/page/details' );
+                             
+            $this->load->view('back/setup/konek',$data);
+	}
+
+	public function categoris()
+	{
+	  $data  = array('x' => 'Home',
+                             
+                            'isi'=>'back/page/kategori' );
+                             
+            $this->load->view('back/setup/konek',$data);
+	}
 }

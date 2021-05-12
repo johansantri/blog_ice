@@ -13,8 +13,8 @@
                   <div class="feature-box-sm radius bg-white">
                     <i class="fa fa-bank text-primary"></i>
                   </div>
-                  <h4><a href="#">Kampus Terbaik Pilihan</a></h4>
-                  <a href="#" class="btn radius-xl">Lihat Lebih Banyak</a>
+                  <h4><a href="#">Best Industry Leaders</a></h4>
+                  <a href="#" class="btn radius-xl">View More</a>
                 </div>
               </div>
             </div>
@@ -27,8 +27,8 @@
                   <div class="feature-box-sm radius bg-white">
                     <i class="fa fa-book text-primary"></i>
                   </div>
-                  <h4><a href="#">Pelajari Kursus Online</a></h4>
-                  <a href="#" class="btn radius-xl">Lihat Lebih Banyak</a>
+                  <h4><a href="#">Learn Courses Online</a></h4>
+                  <a href="#" class="btn radius-xl">View More</a>
                 </div>
               </div>
             </div>
@@ -41,8 +41,8 @@
                   <div class="feature-box-sm radius bg-white">
                     <i class="fa fa-file-text-o text-primary"></i>
                   </div>
-                  <h4><a href="#">Perpustakaan & Toko Buku</a></h4>
-                  <a href="#" class="btn radius-xl">Lihat Lebih Banyak</a>
+                  <h4><a href="#">Book Library & Store</a></h4>
+                  <a href="#" class="btn radius-xl">View More</a>
                 </div>
               </div>
             </div>
@@ -232,18 +232,16 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center heading-bx">
-              <h2 class="title-head m-b0">Events ICE-I</h2>
-              <p class="m-b0">Indonesia Cyber Education Institute</p>
+              <h2 class="title-head m-b0">Upcoming <span>Events</span></h2>
+              <p class="m-b0">Upcoming Education Events To Feed Brain. </p>
             </div>
           </div>
           <div class="row">
           <div class="upcoming-event-carousel owl-carousel owl-btn-center-lr owl-btn-1 col-12 p-lr0  m-b30">
-            <?php foreach ($event as $key ) {?>
-            
             <div class="item">
               <div class="event-bx">
                 <div class="action-box">
-                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                  <img src="<?php echo base_url()?>assets/frontand/images/event/pic4.jpg" alt="">
                 </div>
                 <div class="info-bx d-flex">
                   <div>
@@ -253,7 +251,7 @@
                     </div>
                   </div>
                   <div class="event-info">
-                    <h4 class="event-title"><a href="<?php echo base_url()?><?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h4>
+                    <h4 class="event-title"><a href="#">Education Autumn Tour 2019</a></h4>
                     <ul class="media-post">
                       <li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
                       <li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
@@ -263,9 +261,52 @@
                 </div>
               </div>
             </div>
-          <?php };?>
-         
-           
+            <div class="item">
+              <div class="event-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/event/pic3.jpg" alt="">
+                </div>
+                <div class="info-bx d-flex">
+                  <div>
+                    <div class="event-time">
+                      <div class="event-date">29</div>
+                      <div class="event-month">October</div>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <h4 class="event-title"><a href="#">Education Autumn Tour 2019</a></h4>
+                    <ul class="media-post">
+                      <li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
+                      <li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="event-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/event/pic2.jpg" alt="">
+                </div>
+                <div class="info-bx d-flex">
+                  <div>
+                    <div class="event-time">
+                      <div class="event-date">29</div>
+                      <div class="event-month">October</div>
+                    </div>
+                  </div>
+                  <div class="event-info">
+                    <h4 class="event-title"><a href="#">Education Autumn Tour 2019</a></h4>
+                    <ul class="media-post">
+                      <li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
+                      <li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           </div>
           <div class="text-center">
@@ -280,28 +321,38 @@
           <div class="row">
             <div class="col-md-12 text-white heading-bx left">
               <h2 class="title-head text-uppercase">what people <span>say</span></h2>
-              <p>What is this ICE-I</p>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
             </div>
           </div>
           <div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-            <?php foreach ($people as $key ) {?>
-              
             <div class="item">
               <div class="testimonial-bx">
                 <div class="testimonial-thumb">
-                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                  <img src="<?php echo base_url()?>assets/frontand/images/testimonials/pic1.jpg" alt="">
                 </div>
                 <div class="testimonial-info">
-                  <h5 class="name"><?php echo $key->title;?></h5>
-                  
+                  <h5 class="name">Peter Packer</h5>
+                  <p>-Art Director</p>
                 </div>
                 <div class="testimonial-content">
-                  <p><?php echo $key->description;?></p>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
                 </div>
               </div>
             </div>
-          <?php };?>
-   
+            <div class="item">
+              <div class="testimonial-bx">
+                <div class="testimonial-thumb">
+                  <img src="<?php echo base_url()?>assets/frontand/images/testimonials/pic2.jpg" alt="">
+                </div>
+                <div class="testimonial-info">
+                  <h5 class="name">Peter Packer</h5>
+                  <p>-Art Director</p>
+                </div>
+                <div class="testimonial-content">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -390,24 +441,55 @@
           </div>
           <div class="row">
           <div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-            <?php foreach ($partner as $key ) {?>
-              
             <div class="item">
               <div class="cours-bx">
                 <div class="action-box">
-                  <img src="<?php echo base_url()?>upload/<?php echo $key->image; ?>" alt="">
-                  <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="btn">Read More</a>
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/ui.png" alt="">
+                  <a href="#" class="btn">Read More</a>
                 </div>
                
               
               </div>
             </div>
-          <?php }; ?>
-          
-          
-         
+            <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/ut.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+                
+               
+              </div>
+            </div>
+            <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/uph.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+                
+              
+              </div>
+            </div>
+              <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/atma.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+               
+              </div>
+            </div>
 
-         
+                <div class="item">
+              <div class="cours-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>assets/frontand/images/kampus/pradita-logo.png" alt="">
+                  <a href="#" class="btn">Read More</a>
+                </div>
+               
+              </div>
+            </div>
           </div>
           </div>
         </div>

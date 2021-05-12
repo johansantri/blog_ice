@@ -105,6 +105,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 text-center"> <a target="_blank" href="https://www.templateshub.net">Hak Cipta ©2021 semua dilindungi undang-undang</a></div>
+
                 </div>
             </div>
         </div>
@@ -113,6 +114,7 @@
     </footer>
     <!-- Footer END ==== -->
     <button class="back-to-top fa fa-chevron-up" ></button>
+
 </div>
 
 <!-- External JavaScripts -->
@@ -144,8 +146,11 @@
 <script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 <script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+
 <script>
 jQuery(document).ready(function() {
+$(".goog-te-banner").hide();
   var ttrevapi;
   var tpj =jQuery;
   if(tpj("#rev_slider_486_1").revolution == undefined){
@@ -230,6 +235,8 @@ jQuery(document).ready(function() {
     });
   }
 }); 
+
+$(".goog-te-banner").hide();
 </script>
 </body>
 

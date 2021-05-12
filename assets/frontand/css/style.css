@@ -976,6 +976,7 @@
 }
 .sticky-no .menu-bar {
     position: static !important;
+    /* position: static !important; */
 }
 .is-fixed .menu-bar {
     position: fixed;

@@ -1,6 +1,35 @@
 <!-- Header Top ==== -->
-    <header class="header rs-nav header-transparent">
-  
+    <header class="header rs-nav header-transparent ">
+      <div class="top-bar">
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+          <div class="topbar-left">
+            <ul>
+              <li><a href="faq-1.html"><i class="fa fa-question-circle"></i>Mengajukan Pertanyaan</a></li>
+              <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>info_icei@ut.ac.id</a></li>
+            </ul>
+          </div>
+          <div class="topbar-right">
+            <ul>
+              <li>
+               
+                 <div id="google_translate_element" ></div>
+                 <style type="text/css">
+                   .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    } 
+body {
+    top: 0px !important; 
+    }
+                 </style>
+              </li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="sticky-header navbar-expand-lg">
             <div class="menu-bar clearfix">
                 <div class="container clearfix">
@@ -13,10 +42,32 @@
             <span></span>
             <span></span>
             <span></span>
+
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ca,da,de,el,en,es,fr,it,ja,ko,nl,pl,pt,ru,sv,tl,id', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;}
+    div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span{color:red}
+    
+    div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span:hover{color:#ffffff}
+
+</style>
+
+
+<br>
+<br>
+<br>
           </button>
           <!-- Author Nav ==== -->
                     <div class="secondary-menu">
                         <div class="secondary-inner">
+                         
                             
             </div>
                     </div>
@@ -31,16 +82,13 @@
           <!-- Navigation Menu ==== -->
                     <div class="menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
             <div class="menu-logo">
-              <a href="index.html"><img src="<?php echo base_url()?>assets/frontand/images/LOGOICE.png" alt=""></a>
+              <a href="<?php echo base_url()?>"><img src="<?php echo base_url()?>assets/frontand/images/LOGOICE.png" alt=""></a>
             </div>
                         <ul class="nav navbar-nav"> 
-              <li class="active"><a href="javascript:;">Home <i class="fa fa-chevron-down"></i></a>
-                <ul class="sub-menu">
-                  <li><a href="index.html">Home 1</a></li>
-                  <li><a href="index-2.html">Home 2</a></li>
-                </ul>
+              <li class="active"><a href="<?php echo base_url()?>">HOME <i class="fa fa-chevron-home"></i></a>
+               
               </li>
-              <li><a href="javascript:;">Pages <i class="fa fa-chevron-down"></i></a>
+              <li><a href="javascript:;">PROFIL <i class="fa fa-chevron-down"></i></a>
                 <ul class="sub-menu">
                   <li><a href="javascript:;">About<i class="fa fa-angle-right"></i></a>
                     <ul class="sub-menu">
@@ -48,31 +96,31 @@
                       <li><a href="about-2.html">About 2</a></li>
                     </ul>
                   </li>
-                  <li><a href="javascript:;">Event<i class="fa fa-angle-right"></i></a>
+                  <li><a href="javascript:;">KONTAK<i class="fa fa-angle-right"></i></a>
                     <ul class="sub-menu">
                       <li><a href="event.html">Event</a></li>
                       <li><a href="events-details.html">Events Details</a></li>
                     </ul>
                   </li>
-                  <li><a href="javascript:;">FAQ's<i class="fa fa-angle-right"></i></a>
+                  <li><a href="javascript:;">KEGIATAN<i class="fa fa-angle-right"></i></a>
                     <ul class="sub-menu">
                       <li><a href="faq-1.html">FAQ's 1</a></li>
                       <li><a href="faq-2.html">FAQ's 2</a></li>
                     </ul>
                   </li>
-                  <li><a href="javascript:;">Contact Us<i class="fa fa-angle-right"></i></a>
+                  <li><a href="javascript:;">BERITA<i class="fa fa-angle-right"></i></a>
                     <ul class="sub-menu">
                       <li><a href="contact-1.html">Contact Us 1</a></li>
                       <li><a href="contact-2.html">Contact Us 2</a></li>
                     </ul>
                   </li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="portfolio.html">TENTANG ICE</a></li>
                   <li><a href="profile.html">Profile</a></li>
                   <li><a href="membership.html">Membership</a></li>
                   <li><a href="error-404.html">404 Page</a></li>
                 </ul>
               </li>
-              <li class="add-mega-menu"><a href="javascript:;">Our Courses <i class="fa fa-chevron-down"></i></a>
+              <li class="add-mega-menu"><a href="javascript:;">KEGIATAN<i class="fa fa-chevron-down"></i></a>
                 <ul class="sub-menu add-menu">
                   <li class="add-menu-left">
                     <h5 class="menu-adv-title">Our Courses</h5>
@@ -89,7 +137,7 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="javascript:;">Blog <i class="fa fa-chevron-down"></i></a>
+              <li><a href="javascript:;">BERITA <i class="fa fa-chevron-down"></i></a>
                 <ul class="sub-menu">
                   <li><a href="blog-classic-grid.html">Blog Classic</a></li>
                   <li><a href="blog-classic-sidebar.html">Blog Classic Sidebar</a></li>
@@ -98,7 +146,7 @@
                   <li><a href="blog-details.html">Blog Details</a></li>
                 </ul>
               </li>
-              <li class="nav-dashboard"><a href="javascript:;">Dashboard <i class="fa fa-chevron-down"></i></a>
+              <li class="nav-dashboard"><a href="javascript:;">TENTANG <i class="fa fa-chevron-down"></i></a>
                 <ul class="sub-menu">
                   <li><a href="admin/index.html">Dashboard</a></li>
                   <li><a href="admin/add-listing.html">Add Listing</a></li>
@@ -120,13 +168,17 @@
                       <li><a href="admin/mailbox-read.html">Mail Read</a></li>
                     </ul>
                   </li>
+
                 </ul>
               </li>
+
             </ul>
+           
             <div class="nav-social-link">
               <a href="javascript:;"><i class="fa fa-facebook"></i></a>
               <a href="javascript:;"><i class="fa fa-google-plus"></i></a>
               <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
+             
             </div>
                     </div>
           <!-- Navigation Menu END ==== -->
