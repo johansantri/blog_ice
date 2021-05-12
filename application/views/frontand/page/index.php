@@ -185,13 +185,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center text-white">
-              <h2>Online Courses To Learn</h2>
-              <h5>Own Your Feature Learning New Skills Online</h5>
+              <h2>Pelajari Kursus Online</h2>
+              <h5>Tingkatkan Kemampuan Anda Dengan Belajar Online</h5>
               <form class="cours-search">
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="What do you want to learn today? ">
                   <div class="input-group-append">
-                    <button class="btn" type="submit">Search</button> 
+                    <button class="btn" type="submit">Cari</button> 
                   </div>
                 </div>
               </form>
@@ -204,7 +204,7 @@
                   <div class="icon-box">
                     <h3><i class="ti-user"></i><span class="counter">5</span>M</h3>
                   </div>
-                  <span class="cours-search-text">Over 5 million student</span>
+                  <span class="cours-search-text">5 juta siswa kursus online</span>
                 </div>
               </div>
               <div class="col-md-4 col-sm-6">
@@ -212,7 +212,7 @@
                   <div class="icon-box">
                     <h3><i class="ti-book"></i><span class="counter">30</span>K</h3>
                   </div>
-                  <span class="cours-search-text">30,000 Courses.</span>
+                  <span class="cours-search-text">30,000 Matakuliah.</span>
                 </div>
               </div>
               <div class="col-md-4 col-sm-12">
@@ -312,8 +312,8 @@
                 <div class="container">
           <div class="row">
             <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">Recent <span>News</span></h2>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+              <h2 class="title-head">Berita <span>Terbaru</span></h2>
+              <p>Bacaan Terbaik Untuk Anda Pilih</p>
             </div>
           </div>
           <div class="recent-news-carousel owl-carousel owl-btn-1 col-12 p-lr0">
@@ -385,7 +385,7 @@
           <div class="row">
             <div class="col-md-12 heading-bx left">
               <h2 class="title-head">Partner <span>ICE-I</span></h2>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+              <p>Kampus mitra yang sudah bergabung bersama Indonesia Cyber Education Institute (ICE-I)</p>
             </div>
           </div>
           <div class="row">
@@ -396,7 +396,7 @@
               <div class="cours-bx">
                 <div class="action-box">
                   <img src="<?php echo base_url()?>upload/<?php echo $key->image; ?>" alt="">
-                  <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="btn">Read More</a>
+                  <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="btn">Selengakapnya</a>
                 </div>
                
               

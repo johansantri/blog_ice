@@ -46,7 +46,7 @@
             <div class="row">
               <div class="col-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="widget footer_widget">
-                  <h5 class="footer-title">Company</h5>
+                  <h5 class="footer-title">Perusahaan</h5>
                   <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-1.html">About</a></li>
@@ -57,7 +57,7 @@
               </div>
               <div class="col-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="widget footer_widget">
-                  <h5 class="footer-title">Get In Touch</h5>
+                  <h5 class="footer-title">Berhubungan</h5>
                   <ul>
                     <li><a href="http://educhamp.themetrades.com/admin/index.html">Dashboard</a></li>
                     <li><a href="blog-classic-grid.html">Blog</a></li>
@@ -68,7 +68,7 @@
               </div>
               <div class="col-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="widget footer_widget">
-                  <h5 class="footer-title">Courses</h5>
+                  <h5 class="footer-title">Kursus</h5>
                   <ul>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="courses-details.html">Details</a></li>
@@ -81,7 +81,7 @@
                     </div>
           <div class="col-12 col-lg-3 col-md-5 col-sm-12 footer-col-4">
                         <div class="widget widget_gallery gallery-grid-4">
-                            <h5 class="footer-title">Our Gallery</h5>
+                            <h5 class="footer-title">Galeri Kami</h5>
                             <ul class="magnific-image">
                 <li><a href="<?php echo base_url()?>assets/frontand/images/gallery/pic1.jpg" class="magnific-anchor"><img src="<?php echo base_url()?>assets/frontand/images/gallery/pic1.jpg" alt=""></a></li>
                 <li><a href="<?php echo base_url()?>assets/frontand/images/gallery/pic2.jpg" class="magnific-anchor"><img src="<?php echo base_url()?>assets/frontand/images/gallery/pic2.jpg" alt=""></a></li>

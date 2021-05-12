@@ -23,8 +23,8 @@ body {
     }
                  </style>
               </li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="register.html">Register</a></li>
+              <li><a href="<?php echo base_url()?>masuk">Login</a></li>
+              <li><a href="<?php echo base_url()?>daftar">Register</a></li>
             </ul>
           </div>
         </div>
@@ -146,30 +146,9 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
                   <li><a href="blog-details.html">Blog Details</a></li>
                 </ul>
               </li>
-              <li class="nav-dashboard"><a href="javascript:;">TENTANG <i class="fa fa-chevron-down"></i></a>
-                <ul class="sub-menu">
-                  <li><a href="admin/index.html">Dashboard</a></li>
-                  <li><a href="admin/add-listing.html">Add Listing</a></li>
-                  <li><a href="admin/bookmark.html">Bookmark</a></li>
-                  <li><a href="admin/courses.html">Courses</a></li>
-                  <li><a href="admin/review.html">Review</a></li>
-                  <li><a href="admin/teacher-profile.html">Teacher Profile</a></li>
-                  <li><a href="admin/user-profile.html">User Profile</a></li>
-                  <li><a href="javascript:;">Calendar<i class="fa fa-angle-right"></i></a>
-                    <ul class="sub-menu">
-                      <li><a href="admin/basic-calendar.html">Basic Calendar</a></li>
-                      <li><a href="admin/list-view-calendar.html">List View Calendar</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="javascript:;">Mailbox<i class="fa fa-angle-right"></i></a>
-                    <ul class="sub-menu">
-                      <li><a href="admin/mailbox.html">Mailbox</a></li>
-                      <li><a href="admin/mailbox-compose.html">Compose</a></li>
-                      <li><a href="admin/mailbox-read.html">Mail Read</a></li>
-                    </ul>
-                  </li>
-
-                </ul>
+              <li class="nav-dashboard"><?php foreach ($about as $key) {?>
+                <a href="<?php echo base_url()?><?php echo $key->slug_title?>">TENTANG <i class="fa fa-info-circle"></i></a>
+              <?php };?>
               </li>
 
             </ul>

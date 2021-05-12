@@ -18,11 +18,13 @@ class Home extends CI_Controller {
 			  $partner= $this->Blog_m->getAwal();
 			   $event= $this->Blog_m->getEvent();
 			      $people= $this->Blog_m->getPeople();
+			       $about= $this->Blog_m->getAbout();
 	  $data  = array('x' => 'Dasbord',
 	  	 					'slide'=>$slide,
                              'partner'=>$partner,
                              'event'=>$event,
                              'people'=>$people,
+                             'about'=>$about,
                             'isi'=>'frontand/page/index' );
                              
             $this->load->view('frontand/setup/konek',$data);
