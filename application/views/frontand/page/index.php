@@ -199,7 +199,7 @@
                     <i class="fa fa-bank text-primary"></i>
                   </div>
                   <h4><a href="#">Kampus Terbaik Pilihan</a></h4>
-                  <a href="#" class="btn radius-xl">Lihat Lebih Banyak</a>
+                  <a href="<?php echo base_url()?>partner" class="btn radius-xl">Lihat Lebih Banyak</a>
                 </div>
               </div>
             </div>
