@@ -93,11 +93,11 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
                   <li class="add-menu-left">
                     <h5 class="menu-adv-title">Kegiatan Kita</h5>
                     <ul>
-                      <li><a href="courses.html">Visi & Misi</a></li>
-                      <li><a href="courses-details.html">Struktur Organisasi</a></li>
-                      <li><a href="profile.html">Aturan</a></li>
-                      <li><a href="event.html">Persaratan</a></li>
-                      <li><a href="membership.html">Karir</a></li>
+                      <?php foreach ($profilmenu as $key ) {?>
+                      
+                      <li><a href="<?php echo base_url()?>profile/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></li>
+                     
+                    <?php };?>
                     </ul>
                   </li>
                   <li class="add-menu-right">

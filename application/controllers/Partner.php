@@ -19,12 +19,14 @@ class Partner extends CI_Controller {
 			   $event= $this->Blog_m->getEvent();
 			      $people= $this->Blog_m->getPeople();
 			       $about= $this->Blog_m->getAbout();
+			        $profilmenu= $this->Blog_m->getProfil();
 	  $data  = array('x' => 'Dasbord',
 	  	 					'slide'=>$slide,
                              'partner'=>$partner,
                              'event'=>$event,
                              'people'=>$people,
                              'about'=>$about,
+                              'profilmenu'=>$profilmenu,
                             'isi'=>'frontand/page/partner' );
                              
             $this->load->view('frontand/setup/konek',$data);

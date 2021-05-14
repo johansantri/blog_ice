@@ -19,12 +19,14 @@ class Home extends CI_Controller {
 			   $event= $this->Blog_m->getEvent();
 			      $people= $this->Blog_m->getPeople();
 			       $about= $this->Blog_m->getAbout();
+			        $profilmenu= $this->Blog_m->getProfil();
 	  $data  = array('x' => 'Dasbord',
 	  	 					'slide'=>$slide,
                              'partner'=>$partner,
                              'event'=>$event,
                              'people'=>$people,
                              'about'=>$about,
+                             'profilmenu'=>$profilmenu,
                             'isi'=>'frontand/page/index' );
                              
             $this->load->view('frontand/setup/konek',$data);
@@ -33,9 +35,10 @@ class Home extends CI_Controller {
 	public function faq()
 	{
 		 $about= $this->Blog_m->getAbout();
-
+		  $profilmenu= $this->Blog_m->getProfil();
 	  $data  = array('x' => 'Tanya Jawab',
 	  	 					  'about'=>$about,
+	  	 					   'profilmenu'=>$profilmenu,
                             'isi'=>'frontand/page/faq' );
                              
             $this->load->view('frontand/setup/konek',$data);
@@ -49,6 +52,8 @@ class Home extends CI_Controller {
 			   $event= $this->Blog_m->getEvent();*/
 			      $people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
+			        
+			          $profilmenu= $this->Blog_m->getProfil();
 			       $slug= $this->Blog_m->get_news($slug_title);
 					if (empty($slug))
 					{
@@ -61,6 +66,7 @@ class Home extends CI_Controller {
 				                             'people'=>$people,
 				                             'about'=>$about,
 				                             'slug'=>$slug,
+				                              'profilmenu'=>$profilmenu,
 				                            'isi'=>'frontand/page/about' );
 				                             
 				         $this->load->view('frontand/setup/konek',$data);
@@ -69,9 +75,10 @@ class Home extends CI_Controller {
 		public function contact()
 	{
 				        $about= $this->Blog_m->getAbout();
-
+				         $profilmenu= $this->Blog_m->getProfil();
 					  $data  = array('x' => 'kontak ICE',
 					  	 					        'about'=>$about,
+					  	 					         'profilmenu'=>$profilmenu,
 				                            'isi'=>'frontand/page/kontak' );
 				                             
 				         $this->load->view('frontand/setup/konek',$data);
