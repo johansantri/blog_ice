@@ -20,11 +20,11 @@
   <meta name="format-detection" content="telephone=no">
   
   <!-- FAVICONS ICON ============================================= -->
-  <link rel="icon" href="<?php echo base_url()?>assets/frontand/images/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/frontand/images/favicon.png" />
+  <link rel="icon" href="<?php echo base_url()?>assets/frontand/images/ice.ico" type="image/x-icon" />
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/frontand/images/ICE.png" />
   
   <!-- PAGE TITLE HERE ============================================= -->
-  <title>EduChamp : Education HTML Template </title>
+  <title>Indonesia Cyber Education Institute</title>
   
   <!-- MOBILE SPECIFIC ============================================= -->
   <meta name="viewport" content="width=device-width, initial-scale=1">

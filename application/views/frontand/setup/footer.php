@@ -16,7 +16,7 @@
               </ul>
             </div>
             <div class="pt-btn-join">
-              <a href="#" class="btn ">Join Now</a>
+              <a href="#" class="btn ">Bergabung Sekarang</a>
             </div>
           </div>
         </div>
@@ -26,9 +26,9 @@
           <div class="col-lg-4 col-md-12 col-sm-12 footer-col-4">
                         <div class="widget">
                             <h5 class="footer-title">ICE-I</h5>
-              <p class="text-capitalize m-b20">Address: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
-               <p class="text-capitalize m-b20">Phone: 021-342344</p>
-                <p class="text-capitalize m-b20">Mail: info@ice.org</p>
+              <p class="text-capitalize m-b20">Alamat: Jalan Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan 15437, Banten - Indonesia.</p>
+               <p class="text-capitalize m-b20">Telpon: 021-342344</p>
+                <p class="text-capitalize m-b20">Email: info@ice.ut.ac.id</p>
                             <div class="subscribe-form m-b20">
                 <form class="subscription-form" action="http://educhamp.themetrades.com/demo/<?php echo base_url()?>assets/frontand/script/mailchamp.php" method="post">
                   <div class="ajax-message"></div>
@@ -48,13 +48,15 @@
                 <div class="widget footer_widget">
                   <h5 class="footer-title">Perusahaan</h5>
                   <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-1.html">About</a></li>
-                    <li><a href="faq-1.html">FAQs</a></li>
-                    <li><a href="contact-1.html">Contact</a></li>
+                    <li><a href="index.html">Rumah</a></li>
+                    <li><a href="<?php echo base_url()?>home/about/<?php echo $key->slug_title?>">Tentang</a></li>
+                    <li><a href="<?php echo base_url()?>home/faq">Tanya Jawab</a></li>
+                    <li><a href="contact-1.html">Kontak</a></li>
                   </ul>
                 </div>
               </div>
+
+
               <div class="col-4 col-lg-4 col-md-4 col-sm-4">
                 <div class="widget footer_widget">
                   <h5 class="footer-title">Berhubungan</h5>

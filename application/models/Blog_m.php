@@ -242,4 +242,17 @@ class Blog_m extends CI_Model
             return ($query === true) ? true : false;           
         }
     }
+
+    public function get_news($slug_title = FALSE)
+{
+        if ($slug_title === FALSE)
+        {       
+
+                $query = $this->db->get('tb_blog');
+                return $query->result_array();
+        }
+
+        $query = $this->db->get_where('tb_blog', array('slug_title' => $slug_title));
+        return $query->row_array();
+}
 }

@@ -2330,11 +2330,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#391800', end
 	z-index: 1;
 }
 .our-story:after{
-	width:50%;
+	width:100%;
 	content:"";
 	height:100%;
 	position:absolute;
-	left:50%;
+	left:100%;
 	background-color:#fff;
 	top:0;
 	z-index: -1;

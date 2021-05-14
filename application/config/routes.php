@@ -54,5 +54,6 @@ $route['masuk'] = 'auth/login';
 $route['daftar'] = 'auth/sigup';
 $route['lupa'] = 'auth/forgot';
 $route['keluar'] = 'auth/logout';
+//$route['home/(:any)'] = 'home/about/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

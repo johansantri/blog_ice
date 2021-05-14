@@ -29,4 +29,41 @@ class Home extends CI_Controller {
                              
             $this->load->view('frontand/setup/konek',$data);
 	}
+
+	public function faq()
+	{
+		 $about= $this->Blog_m->getAbout();
+
+	  $data  = array('x' => 'Tanya Jawab',
+	  	 					  'about'=>$about,
+                            'isi'=>'frontand/page/faq' );
+                             
+            $this->load->view('frontand/setup/konek',$data);
+	}
+
+	public function about($slug_title=NULL)
+	{
+
+			/* $slide= $this->Slide_m->getAktif();
+			  $partner= $this->Blog_m->getAwal();
+			   $event= $this->Blog_m->getEvent();*/
+			      $people= $this->Blog_m->getPeople();
+			        $about= $this->Blog_m->getAbout();
+			       $slug= $this->Blog_m->get_news($slug_title);
+					if (empty($slug))
+					{
+					show_404();
+					}
+					  $data  = array('x' => 'about',
+					  	 					/*'slide'=>$slide,
+				                             'partner'=>$partner,
+				                             'event'=>$event,*/
+				                             'people'=>$people,
+				                             'about'=>$about,
+				                             'slug'=>$slug,
+				                            'isi'=>'frontand/page/about' );
+				                             
+				         $this->load->view('frontand/setup/konek',$data);
+					  //var_dump($data);
+					}
 }

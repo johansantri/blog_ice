@@ -23,8 +23,8 @@ body {
     }
                  </style>
               </li>
-              <li><a href="<?php echo base_url()?>masuk">Login</a></li>
-              <li><a href="<?php echo base_url()?>daftar">Register</a></li>
+              <li><a href="<?php echo base_url()?>masuk">Masuk</a></li>
+              <li><a href="<?php echo base_url()?>daftar">Mendaftar</a></li>
             </ul>
           </div>
         </div>
@@ -35,7 +35,7 @@ body {
                 <div class="container clearfix">
           <!-- Header Logo ==== -->
           <div class="menu-logo">
-            <a href="index.html"><img src="<?php echo base_url()?>assets/frontand/images/LOGOICE.png" alt=""></a>
+            <a href="<?php echo base_url()?>"><img src="<?php echo base_url()?>assets/frontand/images/LOGOICE.png" alt=""></a>
           </div>
           <!-- Mobile Nav Button ==== -->
                     <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +85,7 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
               <a href="<?php echo base_url()?>"><img src="<?php echo base_url()?>assets/frontand/images/LOGOICE.png" alt=""></a>
             </div>
                         <ul class="nav navbar-nav"> 
-              <li class="active"><a href="<?php echo base_url()?>">HOME <i class="fa fa-chevron-home"></i></a>
+              <li class="active"><a href="<?php echo base_url()?>">RUMAH <i class="fa fa-home"></i></a>
                
               </li>
               <li><a href="javascript:;">PROFIL <i class="fa fa-chevron-down"></i></a>
@@ -133,7 +133,7 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
                     </ul>
                   </li>
                   <li class="add-menu-right">
-                    <img src="<?php echo base_url()?>assets/frontand/images/adv/adv.jpg" alt=""/>
+                    <img src="<?php echo base_url()?>upload/609a5b3634d73.png" alt=""/>
                   </li>
                 </ul>
               </li>
@@ -147,9 +147,15 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
                 </ul>
               </li>
               <li class="nav-dashboard"><?php foreach ($about as $key) {?>
-                <a href="<?php echo base_url()?><?php echo $key->slug_title?>">TENTANG <i class="fa fa-info-circle"></i></a>
+                <a href="<?php echo base_url()?>home/about/<?php echo $key->slug_title?>">TENTANG <i class="fa fa-info-circle"></i></a>
               <?php };?>
               </li>
+
+               <li class="nav-dashboard"><?php foreach ($about as $key) {?>
+                <a href="<?php echo base_url()?>home/faq">Tanya Jawab <i class="fa fa-question"></i></a>
+              <?php };?>
+              </li>
+
 
             </ul>
            
