@@ -101,7 +101,7 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
                     </ul>
                   </li>
                   <li class="add-menu-right">
-                    <img src="<?php echo base_url()?>upload/609a5b3634d73.png" alt=""/>
+                    <img src="<?php echo base_url()?>assets/frontand/images/LOGOICE.png" alt=""/>
                   </li>
                 </ul>
               </li>
