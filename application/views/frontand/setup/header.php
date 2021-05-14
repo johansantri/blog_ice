@@ -88,36 +88,21 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
               <li class="active"><a href="<?php echo base_url()?>">RUMAH <i class="fa fa-home"></i></a>
                
               </li>
-              <li><a href="javascript:;">PROFIL <i class="fa fa-chevron-down"></i></a>
-                <ul class="sub-menu">
-                  <li><a href="javascript:;">About<i class="fa fa-angle-right"></i></a>
-                    <ul class="sub-menu">
-                      <li><a href="about-1.html">About 1</a></li>
-                      <li><a href="about-2.html">About 2</a></li>
+            <li class="add-mega-menu"><a href="javascript:;">PROFIL<i class="fa fa-chevron-down"></i></a>
+                <ul class="sub-menu add-menu">
+                  <li class="add-menu-left">
+                    <h5 class="menu-adv-title">Kegiatan Kita</h5>
+                    <ul>
+                      <li><a href="courses.html">Visi & Misi</a></li>
+                      <li><a href="courses-details.html">Struktur Organisasi</a></li>
+                      <li><a href="profile.html">Aturan</a></li>
+                      <li><a href="event.html">Persaratan</a></li>
+                      <li><a href="membership.html">Karir</a></li>
                     </ul>
                   </li>
-                  <li><a href="javascript:;">KONTAK<i class="fa fa-angle-right"></i></a>
-                    <ul class="sub-menu">
-                      <li><a href="event.html">Event</a></li>
-                      <li><a href="events-details.html">Events Details</a></li>
-                    </ul>
+                  <li class="add-menu-right">
+                    <img src="<?php echo base_url()?>upload/609a5b3634d73.png" alt=""/>
                   </li>
-                  <li><a href="javascript:;">KEGIATAN<i class="fa fa-angle-right"></i></a>
-                    <ul class="sub-menu">
-                      <li><a href="faq-1.html">FAQ's 1</a></li>
-                      <li><a href="faq-2.html">FAQ's 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="javascript:;">BERITA<i class="fa fa-angle-right"></i></a>
-                    <ul class="sub-menu">
-                      <li><a href="contact-1.html">Contact Us 1</a></li>
-                      <li><a href="contact-2.html">Contact Us 2</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="portfolio.html">TENTANG ICE</a></li>
-                  <li><a href="profile.html">Profile</a></li>
-                  <li><a href="membership.html">Membership</a></li>
-                  <li><a href="error-404.html">404 Page</a></li>
                 </ul>
               </li>
               <li class="add-mega-menu"><a href="javascript:;">KEGIATAN<i class="fa fa-chevron-down"></i></a>
@@ -133,7 +118,7 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
                     </ul>
                   </li>
                   <li class="add-menu-right">
-                    <img src="<?php echo base_url()?>upload/609a5b3634d73.png" alt=""/>
+                    <img src="<?php echo base_url()?>assets/frontand/images/adv/adv.jpg" alt=""/>
                   </li>
                 </ul>
               </li>
