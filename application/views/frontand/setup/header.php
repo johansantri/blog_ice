@@ -123,7 +123,7 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
               <li class="add-mega-menu"><a href="javascript:;">KEGIATAN<i class="fa fa-chevron-down"></i></a>
                 <ul class="sub-menu add-menu">
                   <li class="add-menu-left">
-                    <h5 class="menu-adv-title">Our Courses</h5>
+                    <h5 class="menu-adv-title">Kegiatan Kita</h5>
                     <ul>
                       <li><a href="courses.html">Courses </a></li>
                       <li><a href="courses-details.html">Courses Details</a></li>
