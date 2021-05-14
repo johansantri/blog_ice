@@ -51,7 +51,7 @@
                     <li><a href="index.html">Rumah</a></li>
                     <li><a href="<?php echo base_url()?>home/about/<?php echo $key->slug_title?>">Tentang</a></li>
                     <li><a href="<?php echo base_url()?>home/faq">Tanya Jawab</a></li>
-                    <li><a href="contact-1.html">Kontak</a></li>
+                    <li><a href="<?php echo base_url()?>home/contact">Kontak</a></li>
                   </ul>
                 </div>
               </div>

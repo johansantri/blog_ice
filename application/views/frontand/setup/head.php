@@ -21,7 +21,7 @@
   
   <!-- FAVICONS ICON ============================================= -->
   <link rel="icon" href="<?php echo base_url()?>assets/frontand/images/ice.ico" type="image/x-icon" />
-  <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/frontand/images/ICE.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url()?>assets/frontand/images/ice.png" />
   
   <!-- PAGE TITLE HERE ============================================= -->
   <title>Indonesia Cyber Education Institute</title>

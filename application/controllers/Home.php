@@ -66,4 +66,15 @@ class Home extends CI_Controller {
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);
 					}
+		public function contact()
+	{
+				        $about= $this->Blog_m->getAbout();
+
+					  $data  = array('x' => 'kontak ICE',
+					  	 					        'about'=>$about,
+				                            'isi'=>'frontand/page/kontak' );
+				                             
+				         $this->load->view('frontand/setup/konek',$data);
+					  //var_dump($data);
+					}
 }

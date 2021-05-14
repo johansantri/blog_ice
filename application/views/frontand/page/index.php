@@ -1,14 +1,20 @@
   
+  <style>
+.responsive {
+  width: 100%;
+  height: auto;
+}
+</style>
      <!-- Content -->
     <div class="page-content bg-white">
         <!-- Main Slider -->
-        <div class="rev-slider">
+        <div class="rev-slider responsive">
       <div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery36" data-source="gallery" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
         <!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
         <div id="rev_slider_486_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
           <ul>  <!-- SLIDE  -->
                <?php foreach ($slide as $key ) {?>
-            <li data-index="rs-100" 
+            <li  data-index="rs-100" 
             data-transition="parallaxvertical" 
             data-slotamount="default" 
             data-hideafterloop="0" 
@@ -31,7 +37,7 @@
             data-description="Science says that Women are generally happier">
 
               <!-- MAIN IMAGE -->
-              <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>" alt="" 
+              <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>" class="responsive" alt="" 
                 data-bgposition="center center" 
                 data-bgfit="cover" 
                 data-bgrepeat="no-repeat" 
@@ -129,7 +135,7 @@
                    <?php echo $key->deskripsi_slide;?>
               </div>
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption Newspaper-Button rev-btn " 
+           <!--    <div class="tp-caption Newspaper-Button rev-btn " 
                 id="slide-100-layer-5" 
                 data-x="['center','center','center','center']" 
                 data-hoffset="['90','80','75','90']" 
@@ -147,8 +153,8 @@
                 data-paddingright="[30,35,35,15]"
                 data-paddingbottom="[12,12,12,12]"
                 data-paddingleft="[30,35,35,15]"
-                style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;">SELENGKAPNYA </div>
-              <div class="tp-caption Newspaper-Button rev-btn" 
+                style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; background-color:var(--primary) !important; border:0; border-radius:30px; margin-right:5px;"> </div> -->
+            <!--   <div class="tp-caption Newspaper-Button rev-btn" 
                 id="slide-100-layer-6" 
                 data-x="['center','center','center','center']" 
                 data-hoffset="['-90','-80','-75','-90']" 
@@ -166,7 +172,7 @@
                 data-paddingright="[30,35,35,15]"
                 data-paddingbottom="[12,12,12,12]"
                 data-paddingleft="[30,35,35,15]"
-                style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;">HUBUNGI KAMI</div>
+                style="z-index: 8; white-space: nowrap; outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer; border-radius:30px;"></div> -->
             </li>
         <?php };?>
            
