@@ -31,7 +31,7 @@
                 </div>
                 <div class="info-bx">
                   <ul class="media-post">
-                    <li><a href="#"><i class="fa fa-calendar"></i>May 14 2019</a></li>
+                    <li><a href="#"><i class="fa fa-calendar"></i><?php echo $slug['create_ad'];?></a></li>
                     
                   </ul>
                   <h5 class="post-title"><a href="#"><?php echo $slug['title'];?>.</a></h5>
@@ -40,7 +40,18 @@
                   <div class="widget_tag_cloud">
                     <h6>TAGS</h6>
                     <div class="tagcloud"> 
-                      <a href="#"><?php echo $slug['tags'];?></a> 
+                      <!-- <a href="#"><?php echo $slug['tags'];?></a>  -->
+
+                      <?php
+                            $str = $slug['tags'];
+                            $people= (explode(",",$str));
+                            for($i = 0; $i < count($people); ++$i) {
+                            echo "&nbsp;";
+                            echo "<a href='tag/$people[$i]' class='tag-blue tag'>#".$people[$i]."</a>";  
+                            echo "&nbsp;";
+                            }
+
+                            ?> 
                      
                     </div>
                   </div>
@@ -55,108 +66,7 @@
                   <div class="ttr-divider bg-gray"><i class="icon-dot c-square"></i></div>
                 </div>
               </div>
-              <div class="clear" id="comment-list">
-                <div class="comments-area" id="comments">
-                  <h2 class="comments-title">8 Comments</h2>
-                  <div class="clearfix m-b20">
-                    <!-- comment list END -->
-                    <ol class="comment-list">
-                      <li class="comment">
-                        <div class="comment-body">
-                          <div class="comment-author vcard"> <img  class="avatar photo" src="assets/images/testimonials/pic1.jpg" alt=""> <cite class="fn">John Doe</cite> <span class="says">says:</span> </div>
-                          <div class="comment-meta"> <a href="#">December 02, 2019 at 10:45 am</a> </div>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neqnsectetur adipiscing elit. Nam viae neqnsectetur adipiscing elit.
-                            Nam vitae neque vitae sapien malesuada aliquet. </p>
-                          <div class="reply"> <a href="#" class="comment-reply-link">Reply</a> </div>
-                        </div>
-                        <ol class="children">
-                          <li class="comment odd parent">
-                            <div class="comment-body">
-                              <div class="comment-author vcard"> <img  class="avatar photo" src="assets/images/testimonials/pic2.jpg" alt=""> <cite class="fn">John Doe</cite> <span class="says">says:</span> </div>
-                              <div class="comment-meta"> <a href="#">December 02, 2019 at 10:45 am</a> </div>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neque vitae sapien malesuada aliquet. 
-                                In viverra dictum justo in vehicula. Fusce et massa eu ante ornare molestie. Sed vestibulum sem felis, 
-                                ac elementum ligula blandit ac.</p>
-                              <div class="reply"> <a href="#" class="comment-reply-link">Reply</a> </div>
-                            </div>
-                            <ol class="children">
-                              <li class="comment odd parent">
-                                <div class="comment-body">
-                                  <div class="comment-author vcard"> <img  class="avatar photo" src="assets/images/testimonials/pic3.jpg" alt=""> <cite class="fn">John Doe</cite> <span class="says">says:</span> </div>
-                                  <div class="comment-meta"> <a href="#">December 02, 2019 at 10:45 am</a> </div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neque vitae sapien malesuada aliquet. 
-                                    In viverra dictum justo in vehicula. Fusce et massa eu ante ornare molestie. Sed vestibulum sem felis, 
-                                    ac elementum ligula blandit ac.</p>
-                                  <div class="reply"> <a href="#" class="comment-reply-link">Reply</a> </div>
-                                </div>
-                              </li>
-                            </ol>
-                            <!-- list END -->
-                          </li>
-                        </ol>
-                        <!-- list END -->
-                      </li>
-                      <li class="comment">
-                        <div class="comment-body">
-                          <div class="comment-author vcard"> <img  class="avatar photo" src="assets/images/testimonials/pic1.jpg" alt=""> <cite class="fn">John Doe</cite> <span class="says">says:</span> </div>
-                          <div class="comment-meta"> <a href="#">December 02, 2019 at 10:45 am</a> </div>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neque vitae sapien malesuada aliquet. 
-                            In viverra dictum justo in vehicula. Fusce et massa eu ante ornare molestie. Sed vestibulum sem felis, 
-                            ac elementum ligula blandit ac.</p>
-                          <div class="reply"> <a href="#" class="comment-reply-link">Reply</a> </div>
-                        </div>
-                      </li>
-                      <li class="comment">
-                        <div class="comment-body">
-                          <div class="comment-author vcard"> <img  class="avatar photo" src="assets/images/testimonials/pic2.jpg" alt=""> <cite class="fn">John Doe</cite> <span class="says">says:</span> </div>
-                          <div class="comment-meta"> <a href="#">December 02, 2019 at 10:45 am</a> </div>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neque vitae sapien malesuada aliquet. 
-                            In viverra dictum justo in vehicula. Fusce et massa eu ante ornare molestie. Sed vestibulum sem felis, 
-                            ac elementum ligula blandit ac.</p>
-                          <div class="reply"> <a href="#" class="comment-reply-link">Reply</a> </div>
-                        </div>
-                      </li>
-                      <li class="comment">
-                        <div class="comment-body">
-                          <div class="comment-author vcard"> <img  class="avatar photo" src="assets/images/testimonials/pic3.jpg" alt=""> <cite class="fn">John Doe</cite> <span class="says">says:</span> </div>
-                          <div class="comment-meta"> <a href="#">December 02, 2019 at 10:45 am</a> </div>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae neque vitae sapien malesuada aliquet. 
-                            In viverra dictum justo in vehicula. Fusce et massa eu ante ornare molestie. Sed vestibulum sem felis, 
-                            ac elementum ligula blandit ac.</p>
-                          <div class="reply"> <a href="#" class="comment-reply-link">Reply</a> </div>
-                        </div>
-                      </li>
-                    </ol>
-                    <!-- comment list END -->
-                    <!-- Form -->
-                    <div class="comment-respond" id="respond">
-                      <h4 class="comment-reply-title" id="reply-title">Leave a Reply <small> <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a> </small> </h4>
-                      <form class="comment-form" id="commentform" method="post">
-                        <p class="comment-form-author">
-                          <label for="author">Name <span class="required">*</span></label>
-                          <input type="text" value="" name="Author"  placeholder="Author" id="author">
-                        </p>
-                        <p class="comment-form-email">
-                          <label for="email">Email <span class="required">*</span></label>
-                          <input type="text" value="" placeholder="Email" name="email" id="email">
-                        </p>
-                        <p class="comment-form-url">
-                          <label for="url">Website</label>
-                          <input type="text"  value=""  placeholder="Website"  name="url" id="url">
-                        </p>
-                        <p class="comment-form-comment">
-                          <label for="comment">Comment</label>
-                          <textarea rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
-                        </p>
-                        <p class="form-submit">
-                          <input type="submit" value="Submit Comment" class="submit" id="submit" name="submit">
-                        </p>
-                      </form>
-                    </div>
-                    <!-- Form -->
-                  </div>
-                </div>
-              </div>
+           
               <!-- blog END -->
             </div>
             <!-- Left part END -->
@@ -245,29 +155,7 @@
                     <li><div><a href="#"><img src="assets/images/gallery/pic4.jpg" alt=""></a></div></li>
                   </ul>
                 </div>
-                <div class="widget widget_tag_cloud">
-                  <h6 class="widget-title">Tags</h6>
-                  <div class="tagcloud"> 
-                    <a href="#">Design</a> 
-                    <a href="#">User interface</a> 
-                    <a href="#">SEO</a> 
-                    <a href="#">WordPress</a> 
-                    <a href="#">Development</a> 
-                    <a href="#">Joomla</a> 
-                    <a href="#">Design</a> 
-                    <a href="#">User interface</a> 
-                    <a href="#">SEO</a> 
-                    <a href="#">WordPress</a> 
-                    <a href="#">Development</a> 
-                    <a href="#">Joomla</a> 
-                    <a href="#">Design</a> 
-                    <a href="#">User interface</a> 
-                    <a href="#">SEO</a> 
-                    <a href="#">WordPress</a> 
-                    <a href="#">Development</a> 
-                    <a href="#">Joomla</a> 
-                  </div>
-                </div>
+              
               </aside>
             </div>
             <!-- Side bar END -->

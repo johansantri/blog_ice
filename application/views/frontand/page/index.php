@@ -252,8 +252,8 @@
                 <div class="container">
           <div class="row">
             <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">Popular <span>Courses</span></h2>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+              <h2 class="title-head">Kursus <span>Populer</span></h2>
+              <p>Kursus pilihan yang banyak peminat di ICE-I</p>
             </div>
           </div>
           <div class="row">
@@ -428,7 +428,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center heading-bx">
-              <h2 class="title-head m-b0">Events ICE-I</h2>
+              <h2 class="title-head m-b0">Kegiatan ICE-I</h2>
               <p class="m-b0">Indonesia Cyber Education Institute</p>
             </div>
           </div>
@@ -513,63 +513,30 @@
             </div>
           </div>
           <div class="recent-news-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+
+               <?php foreach ($berita as $key ) {?>
             <div class="item">
               <div class="recent-news">
                 <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/blog/latest-blog/pic1.jpg" alt="">
+                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="" style="max-width:115%; max-height:100%; height:280px">
                 </div>
                 <div class="info-bx">
                   <ul class="media-post">
-                    <li><a href="#"><i class="fa fa-calendar"></i>Jan 02 2019</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i>By William</a></li>
+                    <li><a href="#"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
+                    
                   </ul>
-                  <h5 class="post-title"><a href="blog-details.html">This Story Behind Education Will Haunt You Forever.</a></h5>
-                  <p>Knowing that, you’ve optimised your pages countless amount of times, written tons.</p>
+                  <h5 class="post-title"><a href="blog-details.html"><?php echo $key->title;?></a></h5>
+                  <p><?php echo substr($key->meta, 0,100). '...'?>.</p>
                   <div class="post-extra">
-                    <a href="#" class="btn-link">READ MORE</a>
-                    <a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>20 Comment</a>
+                    <a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
+                  
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
-              <div class="recent-news">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/blog/latest-blog/pic2.jpg" alt="">
-                </div>
-                <div class="info-bx">
-                  <ul class="media-post">
-                    <li><a href="#"><i class="fa fa-calendar"></i>Feb 05 2019</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i>By John</a></li>
-                  </ul>
-                  <h5 class="post-title"><a href="blog-details.html">What Will Education Be Like In The Next 50 Years?</a></h5>
-                  <p>As desperate as you are right now, you have done everything you can on your.</p>
-                  <div class="post-extra">
-                    <a href="#" class="btn-link">READ MORE</a>
-                    <a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>14 Comment</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="recent-news">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/blog/latest-blog/pic3.jpg" alt="">
-                </div>
-                <div class="info-bx">
-                  <ul class="media-post">
-                    <li><a href="#"><i class="fa fa-calendar"></i>April 14 2019</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i>By George</a></li>
-                  </ul>
-                  <h5 class="post-title"><a href="blog-details.html">Master The Skills Of Education And Be.</a></h5>
-                  <p>You will see in the guide all my years of valuable experience together with.</p>
-                  <div class="post-extra">
-                    <a href="#" class="btn-link">READ MORE</a>
-                    <a href="#" class="comments-bx"><i class="fa fa-comments-o"></i>23 Comment</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php };?>
+
+       
           </div>
         </div>
       </div>
@@ -580,7 +547,7 @@
                 <div class="container">
           <div class="row">
             <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">Partner <span>ICE-I</span></h2>
+              <h2 class="title-head">Mitra <span>ICE-I</span></h2>
               <p>Kampus mitra yang sudah bergabung bersama Indonesia Cyber Education Institute (ICE-I)</p>
             </div>
           </div>
