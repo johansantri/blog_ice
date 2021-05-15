@@ -235,7 +235,18 @@
         </div>
             </div>
             <!-- Our Services END -->
-      
+        <!-- Our Story ==== -->
+      <div class="section-area bg-gray section-sp1 our-story">
+        <div class="container">
+          <div class="row align-items-center d-flex">
+            <div class="col-md-12 heading-bx">
+               <img src="upload/manfaat ice.png" alt=""/>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+      <!-- Our Story END ==== -->
       <!-- Popular Courses -->
       <div class="section-area section-sp2 popular-courses-bx">
                 <div class="container">

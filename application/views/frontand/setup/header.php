@@ -122,14 +122,8 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
                   </li>
                 </ul>
               </li>
-              <li><a href="javascript:;">BERITA <i class="fa fa-chevron-down"></i></a>
-                <ul class="sub-menu">
-                  <li><a href="blog-classic-grid.html">Blog Classic</a></li>
-                  <li><a href="blog-classic-sidebar.html">Blog Classic Sidebar</a></li>
-                  <li><a href="blog-list-sidebar.html">Blog List Sidebar</a></li>
-                  <li><a href="blog-standard-sidebar.html">Blog Standard Sidebar</a></li>
-                  <li><a href="blog-details.html">Blog Details</a></li>
-                </ul>
+              <li><a href="<?php echo base_url()?>berita">BERITA <i class="fa fa-newspaper-o"></i></a>
+             
               </li>
               <li class="nav-dashboard"><?php foreach ($about as $key) {?>
                 <a href="<?php echo base_url()?>home/about/<?php echo $key->slug_title?>">TENTANG <i class="fa fa-info-circle"></i></a>
