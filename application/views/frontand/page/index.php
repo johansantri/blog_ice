@@ -502,10 +502,10 @@
                 </div>
                 <div class="info-bx">
                   <ul class="media-post">
-                    <li><a href="#"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
+                    <li><a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
                     
                   </ul>
-                  <h5 class="post-title"><a href="blog-details.html"><?php echo $key->title;?></a></h5>
+                  <h5 class="post-title"><a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h5>
                   <p><?php echo substr($key->meta, 0,100). '...'?>.</p>
                   <div class="post-extra">
                     <a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>

@@ -21,6 +21,7 @@ class Home extends CI_Controller {
 			       $about= $this->Blog_m->getAbout();
 			        $berita= $this->Blog_m->getBerita();
 			        $profilmenu= $this->Blog_m->getProfil();
+			         $kegiatanmenu= $this->Blog_m->getKegiatan();
 	  $data  = array('x' => 'Dasbord',
 	  	 					'slide'=>$slide,
                              'partner'=>$partner,
@@ -29,6 +30,7 @@ class Home extends CI_Controller {
                              'people'=>$people,
                              'about'=>$about,
                              'profilmenu'=>$profilmenu,
+                              'kegiatanmenu'=>$kegiatanmenu,
                             'isi'=>'frontand/page/index' );
                              
             $this->load->view('frontand/setup/konek',$data);
@@ -45,6 +47,7 @@ class Home extends CI_Controller {
 			        $berita= $this->Blog_m->getBerita();
 			        $profilmenu= $this->Blog_m->getProfil();
 			        $kursus= $this->Blog_m->getKursus();
+			        $kegiatanmenu= $this->Blog_m->getKegiatan();
 	  $data  = array('x' => 'kursus',
 	  	 					'slide'=>$slide,
                              'partner'=>$partner,
@@ -53,6 +56,7 @@ class Home extends CI_Controller {
                              'people'=>$people,
                              'about'=>$about,
                              'kursus'=>$kursus,
+                               'kegiatanmenu'=>$kegiatanmenu,
                              'profilmenu'=>$profilmenu,
                             'isi'=>'frontand/page/kursus' );
                              
@@ -81,7 +85,7 @@ class Home extends CI_Controller {
 			   $event= $this->Blog_m->getEvent();*/
 			      $people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
-			        
+			             $kegiatanmenu= $this->Blog_m->getKegiatan();
 			          $profilmenu= $this->Blog_m->getProfil();
 			       $slug= $this->Blog_m->get_news($slug_title);
 					if (empty($slug))
@@ -95,6 +99,7 @@ class Home extends CI_Controller {
 				                             'people'=>$people,
 				                             'about'=>$about,
 				                             'slug'=>$slug,
+				                               'kegiatanmenu'=>$kegiatanmenu,
 				                              'profilmenu'=>$profilmenu,
 				                            'isi'=>'frontand/page/about' );
 				                             
@@ -108,7 +113,7 @@ class Home extends CI_Controller {
 			
 			      $people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
-			        
+			          $kegiatanmenu= $this->Blog_m->getKegiatan();
 			          $profilmenu= $this->Blog_m->getProfil();
 			       $slug= $this->Blog_m->get_news($slug_title);
 					if (empty($slug))
@@ -121,6 +126,7 @@ class Home extends CI_Controller {
 				                             'about'=>$about,
 				                             'slug'=>$slug,
 				                              'profilmenu'=>$profilmenu,
+				                                'kegiatanmenu'=>$kegiatanmenu,
 				                            'isi'=>'frontand/page/profile' );
 				                             
 				         $this->load->view('frontand/setup/konek',$data);
@@ -138,4 +144,6 @@ class Home extends CI_Controller {
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);
 					}
+
+
 }
