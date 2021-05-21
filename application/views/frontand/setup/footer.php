@@ -48,7 +48,7 @@
                 <div class="widget footer_widget">
                   <h5 class="footer-title">Perusahaan</h5>
                   <ul>
-                    <li><a href="index.html">Rumah</a></li>
+                    <li><a href="<?php echo base_url()?>">Rumah</a></li>
                     <li><a href="<?php echo base_url()?>home/about/<?php echo $key->slug_title?>">Tentang</a></li>
                     <li><a href="<?php echo base_url()?>home/faq">Tanya Jawab</a></li>
                     <li><a href="<?php echo base_url()?>home/contact">Kontak</a></li>
@@ -61,8 +61,8 @@
                 <div class="widget footer_widget">
                   <h5 class="footer-title">Berhubungan</h5>
                   <ul>
-                    <li><a href="http://educhamp.themetrades.com/admin/index.html">Dashboard</a></li>
-                    <li><a href="blog-classic-grid.html">Blog</a></li>
+                    <li><a href="<?php echo base_url()?>">Dashboard</a></li>
+                    <li><a href="<?php echo base_url()?>berita">Berita</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="event.html">Event</a></li>
                   </ul>

@@ -34,6 +34,33 @@ class Home extends CI_Controller {
             $this->load->view('frontand/setup/konek',$data);
 	}
 
+		public function kursus()
+	{
+
+			 $slide= $this->Slide_m->getAktif();
+			  $partner= $this->Blog_m->getAwal();
+			   $event= $this->Blog_m->getEvent();
+			      $people= $this->Blog_m->getPeople();
+			       $about= $this->Blog_m->getAbout();
+			        $berita= $this->Blog_m->getBerita();
+			        $profilmenu= $this->Blog_m->getProfil();
+			        $kursus= $this->Blog_m->getKursus();
+	  $data  = array('x' => 'kursus',
+	  	 					'slide'=>$slide,
+                             'partner'=>$partner,
+                             'berita'=>$berita,
+                             'event'=>$event,
+                             'people'=>$people,
+                             'about'=>$about,
+                             'kursus'=>$kursus,
+                             'profilmenu'=>$profilmenu,
+                            'isi'=>'frontand/page/kursus' );
+                             
+            $this->load->view('frontand/setup/konek',$data);
+	}
+
+	
+
 	public function faq()
 	{
 		 $about= $this->Blog_m->getAbout();

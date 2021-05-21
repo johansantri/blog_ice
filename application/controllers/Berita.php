@@ -40,6 +40,8 @@ class Berita extends CI_Controller {
 			/* $slide= $this->Slide_m->getAktif();
 			  $partner= $this->Blog_m->getAwal();
 			   $event= $this->Blog_m->getEvent();*/
+			     $profilmenu= $this->Blog_m->getProfil();
+			     $berita= $this->Blog_m->getBerita();
 			      $people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
 			       $slug= $this->Blog_m->get_news($slug_title);
@@ -52,7 +54,9 @@ class Berita extends CI_Controller {
 				                             'partner'=>$partner,
 				                             'event'=>$event,*/
 				                             'people'=>$people,
+				                                  'berita'=>$berita,
 				                             'about'=>$about,
+				                             'profilmenu'=>$profilmenu,
 				                             'slug'=>$slug,
 				                            'isi'=>'frontand/page/berita_detail' );
 				                             

@@ -41,58 +41,17 @@
 				</div>
 			</div>
 			<!-- Our Story END ==== -->
-			<!-- Our Status ==== -->
-			<div class="section-area content-inner section-sp1">
-                <div class="container">
-                    <div class="section-content">
-                         <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                                <div class="counter-style-1">
-                                    <div class="text-primary">
-										<span class="counter">3000</span><span>+</span>
-									</div>
-									<span class="counter-text">Completed Projects</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                                <div class="counter-style-1">
-									<div class="text-black">
-										<span class="counter">2500</span><span>+</span>
-									</div>
-									<span class="counter-text">Happy Clients</span>
-								</div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                                <div class="counter-style-1">
-									<div class="text-primary">
-										<span class="counter">1500</span><span>+</span>
-									</div>
-									<span class="counter-text">Questions Answered</span>
-								</div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 m-b30">
-                                <div class="counter-style-1">
-									<div class="text-black">
-										<span class="counter">1000</span><span>+</span>
-									</div>
-									<span class="counter-text">Ordered Coffee's</span>
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<!-- Our Status END ==== -->
+
 			<!-- About Content ==== -->
 			<div class="section-area section-sp2 bg-fix ovbl-dark join-bx text-center" style="background-image:url(assets/images/background/bg1.jpg);">
                 <div class="container">
 					<div class="row">
 						<div class="col-md-12">
 							<div class="join-content-bx text-white">
-								<h2>Learn a new skill online on <br/> your time</h2>
-								<h4><span class="counter">57,000 </span> Online Courses</h4>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								<a href="#" class="btn button-md">Join Now</a>
+								<h2>Pelajari Keterampilan baru <br/> Dengan berbagai waktu</h2>
+								<h4><span class="counter">57,000 </span> Kursus Online </h4>
+								<p>Untuk mendapatkan pengalaman baru, ilmu baru dan sesuai dengan ke butuhan anda saat ini, segera bergabung bersama Indonesia Cyber Eduction Institute (ICE-I).</p>
+								<a href="#" class="btn button-md">Bergabung Sekarang</a>
 							</div>
 						</div>
 					</div>
@@ -104,8 +63,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12 heading-bx left">
-							   <h2 class="title-head text-uppercase">what people <span>say</span></h2>
-              <p>What is this ICE-I</p>
+							   <h2 class="title-head text-uppercase">Apa Kata Mereka Tentang <span>ICE-I</span></h2>
+              <p>ICE-I itu adalah</p>
 						</div>
 					</div>
 					<div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">

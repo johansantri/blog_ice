@@ -15,7 +15,7 @@ class Slide_m extends CI_Model
         return [
             ['field' => 'nama_slide',
             'label' => 'nama_slide',
-            'rules' => 'required|max_length[200]'],
+            'rules' => 'required'],
 
           
             
@@ -25,7 +25,7 @@ class Slide_m extends CI_Model
 
             ['field' => 'id_kategori',
             'label' => 'kategori',
-            'rules' => 'required|max_length[200]']
+            'rules' => 'required']
         ];
     }
 

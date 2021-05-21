@@ -9,35 +9,15 @@
     <div class="page-content bg-white">
         <!-- Main Slider -->
         <div class="rev-slider responsive">
-      <div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="news-gallery36" data-source="gallery" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+      <div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper " data-alias="news-gallery36" data-source="gallery" >
         <!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
-        <div id="rev_slider_486_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+        <div id="rev_slider_486_1" class="rev_slider "  data-version="5.3.0.2">
           <ul>  <!-- SLIDE  -->
                <?php foreach ($slide as $key ) {?>
-            <li  data-index="rs-100" 
-            data-transition="parallaxvertical" 
-            data-slotamount="default" 
-            data-hideafterloop="0" 
-            data-hideslideonmobile="off" 
-            data-easein="default" 
-            data-easeout="default" 
-            data-masterspeed="default" 
-            data-thumb="error-404.html" 
-            data-rotate="0" 
-            data-fstransition="fade" 
-            data-fsmasterspeed="1500" 
-            data-fsslotamount="7" 
-            data-saveperformance="off" 
-            data-title="A STUDY ON HAPPINESS" 
-            data-param1="" data-param2="" 
-            data-param3="" data-param4="" 
-            data-param5="" data-param6="" 
-            data-param7="" data-param8="" 
-            data-param9="" data-param10="" 
-            data-description="Science says that Women are generally happier">
+            <li  >
 
               <!-- MAIN IMAGE -->
-              <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>" class="responsive" alt="" 
+              <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>"  alt="" 
                 data-bgposition="center center" 
                 data-bgfit="cover" 
                 data-bgrepeat="no-repeat" 
@@ -49,7 +29,7 @@
                    
                 
               <!-- LAYER NR. 1 -->
-              <div class="tp-caption tp-shape tp-shapewrapper " 
+            <!--   <div class="tp-caption tp-shape tp-shapewrapper " 
                 id="slide-100-layer-1" 
                 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
                 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
@@ -66,9 +46,9 @@
                 data-paddingright="[0,0,0,0]"
                 data-paddingbottom="[0,0,0,0]"
                 data-paddingleft="[0,0,0,0]"
-                style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>  
+                style="z-index: 5;background-color:rgba(2, 0, 11, 0.80);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>  --> 
               <!-- LAYER NR. 2 -->
-              <div class="tp-caption Newspaper-Title   tp-resizeme" 
+           <!--    <div class="tp-caption Newspaper-Title   tp-resizeme" 
                 id="slide-100-layer-2" 
                 data-x="['center','center','center','center']" 
                 data-hoffset="['0','0','0','0']" 
@@ -89,10 +69,10 @@
                 data-paddingleft="[0,0,0,0]"
                 style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;">
                   <?php echo $key->nama_slide;?>
-              </div>
+              </div> -->
 
               <!-- LAYER NR. 3 -->
-              <div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
+            <!--   <div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
                 id="slide-100-layer-3" 
                 data-x="['center','center','center','center']" 
                 data-hoffset="['0','0','0','0']" 
@@ -111,10 +91,10 @@
                 data-paddingleft="[0,0,0,0]"
                 style="z-index: 7; white-space: nowrap; color:#fff; font-family:rubik; font-size:18px; font-weight:400;">
                  
-              </div>
+              </div> -->
               
               <!-- LAYER NR. 3 -->
-              <div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
+            <!--   <div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
                 id="slide-100-layer-4" 
                 data-x="['center','center','center','center']" 
                 data-hoffset="['0','0','0','0']" 
@@ -133,7 +113,7 @@
                 data-paddingleft="[0,0,0,0]"
                 style="z-index: 7; text-transform:capitalize; white-space: unset; color:#fff; font-family:rubik; font-size:18px; line-height:28px; font-weight:400;">
                    <?php echo $key->deskripsi_slide;?>
-              </div>
+              </div> -->
               <!-- LAYER NR. 4 -->
            <!--    <div class="tp-caption Newspaper-Button rev-btn " 
                 id="slide-100-layer-5" 
@@ -212,8 +192,8 @@
                   <div class="feature-box-sm radius bg-white">
                     <i class="fa fa-book text-primary"></i>
                   </div>
-                  <h4><a href="#">Pelajari Kursus Online</a></h4>
-                  <a href="#" class="btn radius-xl">Lihat Lebih Banyak</a>
+                  <h4><a href="<?php echo base_url()?>home/faq">Pelajari Kursus Online</a></h4>
+                  <a href="<?php echo base_url()?>home/faq" class="btn radius-xl">Lihat Lebih Banyak</a>
                 </div>
               </div>
             </div>
