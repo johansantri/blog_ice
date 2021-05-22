@@ -4,16 +4,13 @@
       <div class="container">
         <div class="row d-flex justify-content-between">
           <div class="topbar-left">
-            <ul>
-              <li><a href="faq-1.html"><i class="fa fa-question-circle"></i>Mengajukan Pertanyaan</a></li>
-              <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>info_icei@ut.ac.id</a></li>
-            </ul>
+          
           </div>
           <div class="topbar-right">
             <ul>
               <li>
                
-                 <div id="google_translate_element" ></div>
+                 
                  <style type="text/css">
                    .goog-te-banner-frame.skiptranslate {
     display: none !important;
@@ -23,8 +20,7 @@ body {
     }
                  </style>
               </li>
-              <li><a href="<?php echo base_url()?>masuk">Masuk</a></li>
-              <li><a href="<?php echo base_url()?>daftar">Mendaftar</a></li>
+              
             </ul>
           </div>
         </div>
@@ -80,11 +76,11 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
             <span id="search-remove"><i class="ti-close"></i></span>
                     </div>
           <!-- Navigation Menu ==== -->
-                    <div class="menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
+                    <div class="menu-links navbar-collapse collapse justify-content-start "  id="menuDropdown">
             <div class="menu-logo">
               <a href="<?php echo base_url()?>"><img src="<?php echo base_url()?>assets/frontand/images/LOGOICE.png" alt=""></a>
             </div>
-                        <ul class="nav navbar-nav"> 
+                        <ul class="nav navbar-nav "> 
               <li class="active"><a href="<?php echo base_url()?>">RUMAH <i class="fa fa-home"></i></a>
                
               </li>
@@ -143,7 +139,10 @@ div#google_translate_element div.goog-te-gadget-simple{background-color:#ffffff;
               <a href="javascript:;"><i class="fa fa-facebook"></i></a>
               <a href="javascript:;"><i class="fa fa-google-plus"></i></a>
               <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
-             
+            <a href="<?php echo base_url()?>masuk"><i class="fa fa-sign-in"></i></a>
+            <a href="<?php echo base_url()?>daftar"><i class="fa fa-external-link"></i></a>
+            <div id="google_translate_element" ></div>
+
             </div>
                     </div>
           <!-- Navigation Menu END ==== -->
