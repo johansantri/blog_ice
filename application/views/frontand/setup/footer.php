@@ -205,7 +205,7 @@ $(".goog-te-banner").hide();
         visible_area:"80%",
         presize:false
       },
-      responsiveLevels:[1240,1024,778,480],
+      
       visibilityLevels:[1240,1024,778,480],
       gridwidth:[1240,1024,778,480],
       gridheight:[768,600,600,600],

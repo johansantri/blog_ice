@@ -17,7 +17,7 @@
             <li  >
 
               <!-- MAIN IMAGE -->
-              <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>"  alt="" 
+              <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>"  class="responsive" alt="" 
                 data-bgposition="center center" 
                 data-bgfit="cover" 
                 data-bgrepeat="no-repeat" 
