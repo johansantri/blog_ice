@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 21, 2021 at 10:40 AM
+-- Generation Time: May 22, 2021 at 08:39 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -57,7 +57,9 @@ INSERT INTO `tb_blog` (`id_blog`, `title`, `slug_title`, `meta`, `description`, 
 ('60a76b29e5a5b', 'Prof. Ojat Darojat, Dip. Mgt., M.Bus., Ph.D.', 'prof-ojat-darojat-dip-mgt-mbus-phd', 'Prof. Ojat Darojat, Dip. Mgt., M.Bus., Ph.D.', '<p>&ldquo;ICE Institute juga sebagai jawaban bagi program Kementerian Pendidikan dan Kebudayaan yaitu Kampus Merdeka, yang mana ICE Institute akan menjadi contoh bagi perguruan tinggi lain dalam menerapkan program Kampus Merdeka di perguruan tinggi Indonesia,&rdquo;</p>\r\n\r\n<p><strong>Rektor Universitas Terbuka</strong></p>\r\n', 'Prof. Ojat Darojat, Dip. Mgt., M.Bus., Ph.D.,ICEI', 9, 11, 2, 'post', '2021-05-21 08:11:26', '2021-05-21 08:11:26', '60a76b29e5a5b.JPG'),
 ('60a76c9cc1ea2', ' Prof. Ir. Nizam, M.Sc., DIC, Ph.D., IPU, Asean Eng.', 'prof-ir-nizam-msc-dic-phd-ipu-asean-eng', ' Prof. Ir. Nizam, M.Sc., DIC, Ph.D., IPU, Asean Eng.', '<p>&ldquo;Harapan di masa mendatang, ICE Institute bisa menjadi marketplace pembelajar yang tidak terbatas di tingkat nasional saja. Namun dapat berkembang di tingkat regional hingga Internasional sehingga dapat memfasilitasi seluruh mahasiswa Indonesia tanpa adanya batesan tertentu,&rdquo;</p>\r\n\r\n<p><strong>Direktur Jenderal Pendidikan Tinggi</strong></p>\r\n', 'nizam,dirjenDikti,ICEI', 9, 11, 2, 'post', '2021-05-21 08:17:37', '2021-05-21 08:17:37', '60a76c9cc1ea2.JPG'),
 ('60a76dc339a41', 'Nadiem Anwar Makarim, B.A., M.B.A', 'nadiem-anwar-makarim-ba-mba', 'Nadiem Anwar Makarim, B.A., M.B.A', '<p>Ubah Sistem Pendidikan dengan Teknologi</p>\r\n\r\n<p><strong>Menteri Pendidikan dan Kebudayaan</strong></p>\r\n', 'Nadiem Anwar Makarim, B.A., M.B.A,ICE,ICEI', 9, 11, 2, 'post', '2021-05-21 08:22:33', '2021-05-21 08:22:33', '60a76dc339a41.jpg'),
-('60a76f2a25c91', 'Universitas Terbuka', 'universitas-terbuka', 'Universitas Terbuka Merupakan Partner dari ICE-Institute', '<p><strong>Universitas Terbuka</strong> <strong>(UT)</strong> adalah Perguruan Tinggi Negeri (PTN) ke-45 di Indonesia yang menerapkan sistem belajar terbuka dan jarak jauh. Sistem belajar ini terbukti efektif untuk meningkatkan daya jangkau dan pemerataan kesempatan pendidikan tinggi yang berkualitas bagi semua warga negara Indonesia, termasuk mereka yang tinggal di daerah-daerah terpencil, baik di seluruh nusantara maupun di berbagai belahan dunia.</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost/blog_ice/upload/ICON_UT.jpg\" /></p>\r\n\r\n<h2>Sistem Terbuka &amp; Fleksibel</h2>\r\n\r\n<p>Perkembangan ilmu pengetahuan dan teknologi yang demikian cepat menuntut kita untuk terus meningkatkan potensi sumber daya manusia (SDM) yang menunjang produktivitas. Namun, keterbatasan tempat dan waktu menjadi kendala utama bagi banyak orang dalam mengembangkan diri dan meningkatkan karier.</p>\r\n\r\n<p>Sejak diresmikan pada tahun 1984, UT mendapatkan mandat dari pemerintah untuk memberikan kesempatan yang sangat luas kepada semua warga negara Indonesia, baik yang baru lulus SLTA maupun yang sudah bekerja untuk mengikuti pendidikan tinggi tanpa memandang latar belakang sosial, ekonomi, umur, dan tempat tinggal mereka. Sistem pembelajaran UT memungkinkan belajar yang fleksibel kepada mereka yang menginginkan untuk mengikuti sistem pendidikan tinggi dengan metode jarak jauh.</p>\r\n\r\n<p>Tanpa memandang kondisi mahasiswa, sistem belajar terbuka dan jarak jauh yang diterapkan UT membantu pencapaian tujuan belajar karena;</p>\r\n\r\n<ul>\r\n	<li>tidak ada pembatasan jangka waktu penyelesaian studi dan tidak memberlakukan sistem drop out</li>\r\n	<li>tidak ada pembatasan, baik tahun kelulusan ijazah SLTA maupun umur</li>\r\n	<li>waktu pendaftaran (registrasi) leluasa sepanjang tahun</li>\r\n	<li>ruang, waktu, dan tempat belajar yang fleksibel sesuai dengan kondisi mahasiswa</li>\r\n	<li>penggunaan materi belajar multimedia, termasuk bahan belajar cetak baik yang dilengkapi dengan kaset audio dan video/CD, CD-ROM, siaran radio dan TV, maupun bahan belajar berbasis komputer dan internet.</li>\r\n</ul>\r\n\r\n<p>Dengan jumlah mahasiswa aktif lebih dari 350.000, UT tergolong dalam &ldquo;The Top Ten Mega University of the World&rdquo; dan salah satu anggota sekaligus pendiri &ldquo;The Global Mega-University Network (GMUNET). GMUNET didirikan pada tahun 2003 merupakan jaringan universitas terbuka seluruh dunia dengan jumlah mahasiswa yang terdaftar lebih dari 100.000 orang.</p>\r\n', 'UT,ICEI,ICE,Partner', 10, 12, 2, 'post', '2021-05-21 08:28:50', '2021-05-21 08:28:50', '60a76f2a25c91.png');
+('60a76f2a25c91', 'Universitas Terbuka', 'universitas-terbuka', 'Universitas Terbuka Merupakan Partner dari ICE-Institute', '<p><strong>Universitas Terbuka</strong> <strong>(UT)</strong> adalah Perguruan Tinggi Negeri (PTN) ke-45 di Indonesia yang menerapkan sistem belajar terbuka dan jarak jauh. Sistem belajar ini terbukti efektif untuk meningkatkan daya jangkau dan pemerataan kesempatan pendidikan tinggi yang berkualitas bagi semua warga negara Indonesia, termasuk mereka yang tinggal di daerah-daerah terpencil, baik di seluruh nusantara maupun di berbagai belahan dunia.</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost/blog_ice/upload/ICON_UT.jpg\" /></p>\r\n\r\n<h2>Sistem Terbuka &amp; Fleksibel</h2>\r\n\r\n<p>Perkembangan ilmu pengetahuan dan teknologi yang demikian cepat menuntut kita untuk terus meningkatkan potensi sumber daya manusia (SDM) yang menunjang produktivitas. Namun, keterbatasan tempat dan waktu menjadi kendala utama bagi banyak orang dalam mengembangkan diri dan meningkatkan karier.</p>\r\n\r\n<p>Sejak diresmikan pada tahun 1984, UT mendapatkan mandat dari pemerintah untuk memberikan kesempatan yang sangat luas kepada semua warga negara Indonesia, baik yang baru lulus SLTA maupun yang sudah bekerja untuk mengikuti pendidikan tinggi tanpa memandang latar belakang sosial, ekonomi, umur, dan tempat tinggal mereka. Sistem pembelajaran UT memungkinkan belajar yang fleksibel kepada mereka yang menginginkan untuk mengikuti sistem pendidikan tinggi dengan metode jarak jauh.</p>\r\n\r\n<p>Tanpa memandang kondisi mahasiswa, sistem belajar terbuka dan jarak jauh yang diterapkan UT membantu pencapaian tujuan belajar karena;</p>\r\n\r\n<ul>\r\n	<li>tidak ada pembatasan jangka waktu penyelesaian studi dan tidak memberlakukan sistem drop out</li>\r\n	<li>tidak ada pembatasan, baik tahun kelulusan ijazah SLTA maupun umur</li>\r\n	<li>waktu pendaftaran (registrasi) leluasa sepanjang tahun</li>\r\n	<li>ruang, waktu, dan tempat belajar yang fleksibel sesuai dengan kondisi mahasiswa</li>\r\n	<li>penggunaan materi belajar multimedia, termasuk bahan belajar cetak baik yang dilengkapi dengan kaset audio dan video/CD, CD-ROM, siaran radio dan TV, maupun bahan belajar berbasis komputer dan internet.</li>\r\n</ul>\r\n\r\n<p>Dengan jumlah mahasiswa aktif lebih dari 350.000, UT tergolong dalam &ldquo;The Top Ten Mega University of the World&rdquo; dan salah satu anggota sekaligus pendiri &ldquo;The Global Mega-University Network (GMUNET). GMUNET didirikan pada tahun 2003 merupakan jaringan universitas terbuka seluruh dunia dengan jumlah mahasiswa yang terdaftar lebih dari 100.000 orang.</p>\r\n', 'UT,ICEI,ICE,Partner', 10, 12, 2, 'post', '2021-05-21 08:28:50', '2021-05-21 08:28:50', '60a76f2a25c91.png'),
+('60a8a3424b2aa', 'Struktur ICE-Institute', 'struktur-ice-institute', 'Struktur ICE-Institute', '<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost/blog_ice/upload/struktur_ICE.png\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost/blog_ice/upload/Anggota_ICE.png\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n', 'strukturICE,ICE-I', 6, 13, 2, 'post', '2021-05-22 06:23:05', '2021-05-22 06:23:05', '60a8a3424b2aa.png'),
+('60a8a5fd695e5', 'Universitas Indonesia', 'universitas-indonesia', 'Universitas Indonesia, ICE-I', '<p>Universitas Indonesia disingkat sebagai UI, adalah sebuah perguruan tinggi di Indonesia. Kampus utamanya terletak di bagian Utara dari Depok, Jawa Barat tepat di perbatasan antara Depok dengan wilayah Jakarta Selatan, sementara kampus utama lainnya terdapat di Salemba, Jakarta Pusat.</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost/blog_ice/upload/universidad_indonesia_edificio_administrativo_434945-800x600.jpg\" /></p>\r\n', 'ice,universitasIndonesia', 10, 12, 2, 'post', '2021-05-22 06:34:42', '2021-05-22 06:34:42', '60a8a5fd695e5.png');
 
 -- --------------------------------------------------------
 
@@ -77,7 +79,10 @@ CREATE TABLE `tb_galery` (
 --
 
 INSERT INTO `tb_galery` (`id_galery`, `nama_galery`, `image`, `id_user`) VALUES
-(4, '', 'ICON_UT.jpg', 2);
+(4, '', 'ICON_UT.jpg', 2),
+(5, '', 'struktur_ICE.png', 2),
+(6, '', 'Anggota_ICE.png', 2),
+(7, '', 'universidad_indonesia_edificio_administrativo_434945-800x600.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -260,7 +265,8 @@ INSERT INTO `tb_sub_kategori` (`id_sub`, `nama_sub`, `slug_sub`, `id_kategori`) 
 (9, 'Perjanjian Kerja Sama ICE-I', 'perjanjian-kerja-sama-ice-i', 8),
 (10, 'Webinar', 'webinar', 7),
 (11, 'Kata Mereka', 'kata-mereka', 9),
-(12, 'ICE-I Pratner', 'ice-i-pratner', 10);
+(12, 'ICE-I Pratner', 'ice-i-pratner', 10),
+(13, 'Struktur', 'struktur', 6);
 
 -- --------------------------------------------------------
 
@@ -448,7 +454,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_galery`
 --
 ALTER TABLE `tb_galery`
-  MODIFY `id_galery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_galery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_karyawan`
@@ -484,7 +490,7 @@ ALTER TABLE `tb_produk`
 -- AUTO_INCREMENT for table `tb_sub_kategori`
 --
 ALTER TABLE `tb_sub_kategori`
-  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tb_transaksi`
