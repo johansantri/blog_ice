@@ -11,13 +11,13 @@
   <meta name="robots" content="" />
   
   <!-- DESCRIPTION -->
-  <meta name="description" content="EduChamp : Education HTML Template" />
+  <meta name="description" content="Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia." />
   
   <!-- OG -->
-  <meta property="og:title" content="EduChamp : Education HTML Template" />
-  <meta property="og:description" content="EduChamp : Education HTML Template" />
-  <meta property="og:image" content="" />
-  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="Indonesia Cyber Education Institute" />
+  <meta property="og:description" content="Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia." />
+  <meta property="og:image" content="<?php echo base_url()?>assets/frontand/images/ice.png" />
+  <meta name="format-detection" content="telephone=0812 5050 4200">
   
   <!-- FAVICONS ICON ============================================= -->
   <link rel="icon" href="<?php echo base_url()?>assets/frontand/images/ice.ico" type="image/x-icon" />

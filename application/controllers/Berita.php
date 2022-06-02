@@ -18,6 +18,7 @@ class Berita extends CI_Controller {
 			  $berita= $this->Blog_m->getBerita();
 			   $event= $this->Blog_m->getEvent();
 			      $people= $this->Blog_m->getPeople();
+      		$unduh= $this->Blog_m->getUnduh();
 			       $about= $this->Blog_m->getAbout();
 			        $profilmenu= $this->Blog_m->getProfil();
 			        	 $kegiatanmenu= $this->Blog_m->getKegiatan();
@@ -26,6 +27,7 @@ class Berita extends CI_Controller {
                              'berita'=>$berita,
                              'event'=>$event,
                              'people'=>$people,
+                     		 'unduh'=>$unduh,
                              'about'=>$about,
                               'kegiatanmenu'=>$kegiatanmenu,
                               'profilmenu'=>$profilmenu,
@@ -44,6 +46,7 @@ class Berita extends CI_Controller {
 			   $event= $this->Blog_m->getEvent();*/
 			     $profilmenu= $this->Blog_m->getProfil();
 			     $berita= $this->Blog_m->getBerita();
+     			 $unduh= $this->Blog_m->getUnduh();
 			      $people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
 			       $slug= $this->Blog_m->get_news($slug_title);
@@ -59,6 +62,7 @@ class Berita extends CI_Controller {
 				                             'people'=>$people,
 				                                  'berita'=>$berita,
 				                             'about'=>$about,
+                                    		 'unduh'=>$unduh,
 				                             'profilmenu'=>$profilmenu,
 				                               'kegiatanmenu'=>$kegiatanmenu,
 				                             'slug'=>$slug,
@@ -67,5 +71,42 @@ class Berita extends CI_Controller {
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);
 					}
+
+	public function tags($tags)
+	{
+			if (empty($tags))
+					{
+					redirect(site_url().'berita');
+					}
+	
+			       $tag= $this->Blog_m->get_tg($tags);
+    				$unduh= $this->Blog_m->getUnduh();
+			     	$profilmenu= $this->Blog_m->getProfil();
+			    	$berita= $this->Blog_m->getBerita();
+			      	$people= $this->Blog_m->getPeople();
+			        $about= $this->Blog_m->getAbout();
+			      
+			        $kegiatanmenu= $this->Blog_m->getKegiatan();
+					if (empty($tags))
+					{
+					show_404();
+					}
+					  $data  = array('x' => 'kegiatan',
+					  	 					/*'slide'=>$slide,
+				                             'partner'=>$partner,
+				                             'event'=>$event,*/
+				                             'people'=>$people,
+				                              'berita'=>$berita,
+				                             'about'=>$about,
+				                             'profilmenu'=>$profilmenu,
+				                             'tag'=>$tag,
+                                   			  'unduh'=>$unduh,
+				                              'kegiatanmenu'=>$kegiatanmenu,
+				                            'isi'=>'frontand/page/tags' );
+				                             
+				         $this->load->view('frontand/setup/konek',$data);
+					}
+
+
 	
 }

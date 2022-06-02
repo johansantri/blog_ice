@@ -32,13 +32,13 @@
                 </div>
                 <div class="ttr-post-info">
                   <ul class="media-post">
-                    <li><a href="<?php echo base_url()?>bertia/berita_read/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
-                    <li><a href="#"><i class="fa fa-user"></i>By William</a></li>
+                    <li><a href="<?php echo base_url()?>bertia/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
+                    <li><a href="https://icei.ac.id/"><i class="fa fa-user"></i>By ICE-I</a></li>
                   </ul>
-                  <h5 class="post-title"><a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>"><?php echo $key->title;?>.</a></h5>
+                  <h5 class="post-title"><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?>.</a></h5>
                   <p><?php echo $key->meta;?></p>
                   <div class="post-extra">
-                    <a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
+                    <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
                    
                   </div>
                 </div>
@@ -67,23 +67,28 @@
                     </form>
                   </div>
                 </div>
-                <div class="widget recent-posts-entry">
+               <div class="widget recent-posts-entry">
                   <h6 class="widget-title">Recent Posts</h6>
                   <div class="widget-post-bx">
-               
-            
+
+                     <?php foreach ($unduh as $key ) {?>
+
                     <div class="widget-post clearfix">
-                      <div class="ttr-post-media"> <img src="assets/images/blog/recent-blog/pic3.jpg" width="200" height="160" alt=""> </div>
+                      <div class="ttr-post-media"> <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" width="200" height="143" alt=""> </div>
                       <div class="ttr-post-info">
                         <div class="ttr-post-header">
-                          <h6 class="post-title"><a href="blog-details.html">Eliminate Your Fears And Doubts About Education.</a></h6>
+                          <h6 class="post-title"><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?>.</a></h6>
                         </div>
                         <ul class="media-post">
-                          <li><a href="#"><i class="fa fa-calendar"></i>June 12 2019</a></li>
-                          <li><a href="#"><i class="fa fa-comments-o"></i>27 Comment</a></li>
+                          <li><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
+                      
                         </ul>
                       </div>
                     </div>
+
+                  <?php };?>
+        
+            
                   </div>
                 </div>
                 <div class="widget widget-newslatter">
@@ -114,29 +119,7 @@
                     <li><div><a href="#"><img src="assets/images/gallery/pic4.jpg" alt=""></a></div></li>
                   </ul>
                 </div>
-                <div class="widget widget_tag_cloud">
-                  <h6 class="widget-title">Tags</h6>
-                  <div class="tagcloud"> 
-                    <a href="#">Design</a> 
-                    <a href="#">User interface</a> 
-                    <a href="#">SEO</a> 
-                    <a href="#">WordPress</a> 
-                    <a href="#">Development</a> 
-                    <a href="#">Joomla</a> 
-                    <a href="#">Design</a> 
-                    <a href="#">User interface</a> 
-                    <a href="#">SEO</a> 
-                    <a href="#">WordPress</a> 
-                    <a href="#">Development</a> 
-                    <a href="#">Joomla</a> 
-                    <a href="#">Design</a> 
-                    <a href="#">User interface</a> 
-                    <a href="#">SEO</a> 
-                    <a href="#">WordPress</a> 
-                    <a href="#">Development</a> 
-                    <a href="#">Joomla</a> 
-                  </div>
-                </div>
+             
               </aside>
             </div>
             <!-- Side bar END -->

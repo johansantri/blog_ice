@@ -50,10 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="utility">
               <div class="animated-checkbox">
                 
-                 <p class="semibold-text mb-2"><a href="<?php echo base_url()?>daftar" >Create Acount ?</a></p>
+                
                
               </div>
-              <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Forgot Password ?</a></p>
+             
             </div>
           </div>
           <div class="form-group btn-container">

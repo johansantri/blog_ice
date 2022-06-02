@@ -2,7 +2,7 @@
   <style>
 .responsive {
   width: 100%;
-  height: auto;
+  height: 110%;
 }
 </style>
      <!-- Content -->
@@ -15,16 +15,26 @@
           <ul>  <!-- SLIDE  -->
                <?php foreach ($slide as $key ) {?>
             <li  >
-
+			
               <!-- MAIN IMAGE -->
-              <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>"  class="responsive" alt="" 
+             
+              <a href="<?php echo base_url()?>berita/tags/<?php echo $key->nama_slide;?>">
+                <img src="<?php echo base_url()?>upload/slide/<?php echo $key->image;?>"  class="responsive" alt="<?php echo $key->nama_slide;?>" 
                 data-bgposition="center center" 
                 data-bgfit="cover" 
                 data-bgrepeat="no-repeat" 
                 data-bgparallax="10" 
                 class="rev-slidebg" 
                 data-no-retina />
+            </a>
 
+            
+            
+            
+            
+            
+            
+            
 
                    
                 
@@ -159,218 +169,136 @@
             <!-- SLIDE  -->
           </ul>
         </div><!-- END REVOLUTION SLIDER -->  
+   
       </div>  
     </div>  
         <!-- Main Slider -->
-
+    
     <div class="content-block">
             
-      <!-- Our Services -->
-      <div class="section-area content-inner service-info-bx">
-                <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="service-bx">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/our-services/pic1.jpg" alt="">
-                </div>
-                <div class="info-bx text-center">
-                  <div class="feature-box-sm radius bg-white">
-                    <i class="fa fa-bank text-primary"></i>
-                  </div>
-                  <h4><a href="#">Kampus Terbaik Pilihan</a></h4>
-                  <a href="<?php echo base_url()?>partner" class="btn radius-xl">Lihat Lebih Banyak</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="service-bx">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/our-services/pic2.jpg" alt="">
-                </div>
-                <div class="info-bx text-center">
-                  <div class="feature-box-sm radius bg-white">
-                    <i class="fa fa-book text-primary"></i>
-                  </div>
-                  <h4><a href="<?php echo base_url()?>home/faq">Pelajari Kursus Online</a></h4>
-                  <a href="<?php echo base_url()?>home/faq" class="btn radius-xl">Lihat Lebih Banyak</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="service-bx m-b0">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/our-services/pic3.jpg" alt="">
-                </div>
-                <div class="info-bx text-center">
-                  <div class="feature-box-sm radius bg-white">
-                    <i class="fa fa-file-text-o text-primary"></i>
-                  </div>
-                  <h4><a href="#">Perpustakaan & Toko Buku</a></h4>
-                  <a href="#" class="btn radius-xl">Lihat Lebih Banyak</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="container">
+          <marquee width="100%" direction="left" height="20px" style="text-align: center; ">
+              <?php foreach ($berita as $key ) {?>
+        <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="badge badge-info" >&nbsp; &nbsp; #<?php echo $key->title;?></a>
+              <?php };?>
+        </marquee>
         </div>
-            </div>
-            <!-- Our Services END -->
+   
+   
+    
         <!-- Our Story ==== -->
       <div class="section-area bg-gray section-sp1 our-story">
         <div class="container">
-          <div class="row align-items-center d-flex">
-            <div class="col-md-12 heading-bx">
-               <img src="upload/manfaat ice.png" alt=""/>
-            </div>
-         
-          </div>
+       
+  <div class="alert alert-warning" role="alert">
+  <h4 class="alert-heading">Manfaat ICE-Institute</h4>
+  <p>ICE-Institute dari berbagai elements.</p>
+ 
+</div>
+              
+              <div class="row">
+
+              
+      
+              
+
+              <div class="col-md-4">
+              <div class="card border-dark" >
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-building-o fa-5x" aria-hidden="true"></i>
+              </h5>
+                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Pemerintahan</h6>
+                  <p class="card-text">Pemerataan kualitas pendidikan tinggi. Mempercepat peningkatan APK. Perluasan akses pendidikan. Akuntabilitas pendidikan tinggi di indonesia. Internationalisasi dan koenktivitas pendidikan tinggi di indonesia.</p>
+                
+                </div>
+              </div>
+              </div>
+
+
+               
+
+
+              <div class="col-md-4">
+              <div class="card border-warning" >
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-users fa-5x" aria-hidden="true"></i>
+              </h5>
+                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Masyarakat</h6>
+                  <p class="card-text" >Memiliki akses pendidikan yang lebih murah dan bermutu. Memperoleh peluang untuk belajar sepanjang hayat (upskilling, reskilling, peningkatan karir). Meningkatnya tingkat kepercayaan di pendidikan tinggi.</p>
+                
+                </div>
+              </div>
+              </div>
+
+              <div class="col-md-4">
+              <div class="card border-success " >
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-btc fa-5x" aria-hidden="true"></i>
+              </h5>
+                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Pengguna Lulusan</h6>
+                  <p class="card-text">Pemanfaatan Blockchain tecnology untuk penulusan dalam proses recruitment.</p>
+               
+                </div>
+              </div>
+              </div>
+
+
+
+              
+              </div>
+
+              <div class="row">
+             
+              <div class="col-md-4">
+            
+                <div class="card border-danger" >
+                <div class="card-body">
+                <h5 class="card-title" style="text-align:center;"><i class="fa fa-university fa-5x" aria-hidden="true"></i>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Perguruan Tinggi Asal</h6>
+                <p class="card-text">Mengatasi Keterbatasan sumber daya (SDM, Teknologi, fasilitas). Memungkinkan adanya transfer knowledge antar SDM. Pemerataan Kualitas Pendidikan. Meningkatakan Inovasi Berbasis Kearifan local, memungkinkan terjadinya alih kredit dan pertukaran matakuliah.</p>
+              
+                </div>
+                </div>
+
+              </div>
+
+
+              <div class="col-md-4">
+              <div class="card border-info" >
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-home fa-5x" aria-hidden="true"></i>
+              </h5>
+                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Perguruan Tinggi Penyelengara</h6>
+                  <p class="card-text">Perluasan akses. Penjaminan mutu konten. Penyetaraan dan pengakuan mutu. Peningkatan citra perguruan tinggi. Peningkatan kredibilitas perguruan tinggi. Terbukanya peluang kerjasama dengan berbagai pihak. Memanfaatkan fasilitas teknologi maju (learning analitycs blockchain technology untuk ledger). Meningkatkan diseminasi ilmu pengetahuan. Pemerataan kualitas pendidikan</p>
+                
+                </div>
+              </div>
+              </div>
+
+              <div class="col-md-4">
+              <div class="card border-secondary" >
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-user fa-5x" aria-hidden="true"></i>
+              </h5>
+                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Mahasiswa Peserta</h6>
+                  <p class="card-text">Memiliki akses pendidikan bermutu yang lebih luas dan fleksibel. Membangun jejaring. Meningkatkan daya saing mahasiswa, dan kepercayaan diri. Memperluas digital experience dan digital horizon.</p>
+                 
+                </div>
+              </div>
+              </div>
         </div>
       </div>
       <!-- Our Story END ==== -->
-      <!-- Popular Courses -->
-      <div class="section-area section-sp2 popular-courses-bx">
-                <div class="container">
-          <div class="row">
-            <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">Kursus <span>Populer</span></h2>
-              <p>Kursus pilihan yang banyak peminat di ICE-I</p>
-            </div>
-          </div>
-          <div class="row">
-          <div class="courses-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-            <div class="item">
-              <div class="cours-bx">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/courses/pic1.jpg" alt="">
-                  <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="info-bx text-center">
-                  <h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-                  <span>Programming</span>
-                </div>
-                <div class="cours-more-info">
-                  <div class="review">
-                    <span>3 Review</span>
-                    <ul class="cours-star">
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                    </ul>
-                  </div>
-                  <div class="price">
-                    <del>$190</del>
-                    <h5>$120</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="cours-bx">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/courses/pic2.jpg" alt="">
-                  <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="info-bx text-center">
-                  <h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-                  <span>Programming</span>
-                </div>
-                <div class="cours-more-info">
-                  <div class="review">
-                    <span>3 Review</span>
-                    <ul class="cours-star">
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                    </ul>
-                  </div>
-                  <div class="price">
-                    <del>$190</del>
-                    <h5>$120</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="cours-bx">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/courses/pic3.jpg" alt="">
-                  <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="info-bx text-center">
-                  <h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-                  <span>Programming</span>
-                </div>
-                <div class="cours-more-info">
-                  <div class="review">
-                    <span>3 Review</span>
-                    <ul class="cours-star">
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                    </ul>
-                  </div>
-                  <div class="price">
-                    <del>$190</del>
-                    <h5>$120</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="cours-bx">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>assets/frontand/images/courses/pic4.jpg" alt="">
-                  <a href="#" class="btn">Read More</a>
-                </div>
-                <div class="info-bx text-center">
-                  <h5><a href="#">Introduction EduChamp – LMS plugin</a></h5>
-                  <span>Programming</span>
-                </div>
-                <div class="cours-more-info">
-                  <div class="review">
-                    <span>3 Review</span>
-                    <ul class="cours-star">
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li class="active"><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                      <li><i class="fa fa-star"></i></li>
-                    </ul>
-                  </div>
-                  <div class="price">
-                    <del>$190</del>
-                    <h5>$120</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-      <!-- Popular Courses END -->
-      
+     
       <!-- Form -->
       <div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(<?php echo base_url()?>assets/frontand/images/background/bg1.jpg);">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center text-white">
-              <h2>Pelajari Kursus Online</h2>
-              <h5>Tingkatkan Kemampuan Anda Dengan Belajar Online</h5>
-              <form class="cours-search">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="What do you want to learn today? ">
-                  <div class="input-group-append">
-                    <button class="btn" type="submit">Cari</button> 
-                  </div>
-                </div>
-              </form>
+              <h2>Kuliah Online</h2>
+              <h5>Kapan lagi bisa merasakan belajar di kampus impian</h5>
+             
             </div>
           </div>
           <div class="mw800 m-auto">
@@ -378,32 +306,31 @@
               <div class="col-md-4 col-sm-6">
                 <div class="cours-search-bx m-b30">
                   <div class="icon-box">
-                    <h3><i class="ti-user"></i><span class="counter">5</span>M</h3>
+                    <h3><i class="ti-user"></i><span class="counter">5</span>K</h3>
                   </div>
-                  <span class="cours-search-text">5 juta siswa kursus online</span>
+                  <span class="cours-search-text">Mahasiswa kuliah online</span>
                 </div>
               </div>
               <div class="col-md-4 col-sm-6">
                 <div class="cours-search-bx m-b30">
                   <div class="icon-box">
-                    <h3><i class="ti-book"></i><span class="counter">30</span>K</h3>
+                    <h3><i class="ti-book"></i><span class="counter">300 </span>+</h3>
                   </div>
-                  <span class="cours-search-text">30,000 Matakuliah.</span>
+                  <span class="cours-search-text"> Matakuliah</span>
                 </div>
               </div>
               <div class="col-md-4 col-sm-12">
                 <div class="cours-search-bx m-b30">
                   <div class="icon-box">
-                    <h3><i class="ti-layout-list-post"></i><span class="counter">20</span>K</h3>
+                    <h3><i class="ti-layout-list-post"></i><span class="counter">250 </span>+</h3>
                   </div>
-                  <span class="cours-search-text">Learn Anythink Online.</span>
+                  <span class="cours-search-text">Dosen Online</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Form END -->
       <div class="section-area section-sp2">
         <div class="container">
           <div class="row">
@@ -423,18 +350,15 @@
                 </div>
                 <div class="info-bx d-flex">
                   <div>
-                    <div class="event-time">
-                      <div class="event-date">29</div>
-                      <div class="event-month">October</div>
-                    </div>
+                 
                   </div>
                   <div class="event-info">
-                    <h4 class="event-title"><a href="<?php echo base_url()?><?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h4>
+                    <h4 class="event-title"><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h4>
                     <ul class="media-post">
-                      <li><a href="#"><i class="fa fa-clock-o"></i> 7:00am 8:00am</a></li>
-                      <li><a href="#"><i class="fa fa-map-marker"></i> Berlin, Germany</a></li>
+                      
+                  
                     </ul>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the..</p>
+                    
                   </div>
                 </div>
               </div>
@@ -445,7 +369,7 @@
           </div>
           </div>
           <div class="text-center">
-            <a href="#" class="btn">View All Event</a>
+           
           </div>
         </div>
       </div>
@@ -455,8 +379,8 @@
                 <div class="container">
           <div class="row">
             <div class="col-md-12 text-white heading-bx left">
-              <h2 class="title-head text-uppercase">what people <span>say</span></h2>
-              <p>What is this ICE-I</p>
+              <h2 class="title-head text-uppercase">apa kata <span>mereka</span></h2>
+              <p>Tentang ICE-I</p>
             </div>
           </div>
           <div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
@@ -502,13 +426,13 @@
                 </div>
                 <div class="info-bx">
                   <ul class="media-post">
-                    <li><a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
+                    <li><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
                     
                   </ul>
-                  <h5 class="post-title"><a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h5>
+                  <h5 class="post-title"><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h5>
                   <p><?php echo substr($key->meta, 0,100). '...'?>.</p>
                   <div class="post-extra">
-                    <a href="<?php echo base_url()?>berita/berita_read/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
+                    <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
                   
                   </div>
                 </div>

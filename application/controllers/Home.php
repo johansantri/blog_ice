@@ -67,11 +67,13 @@ class Home extends CI_Controller {
 
 	public function faq()
 	{
+      $kegiatanmenu= $this->Blog_m->getKegiatan();
 		 $about= $this->Blog_m->getAbout();
 		  $profilmenu= $this->Blog_m->getProfil();
 	  $data  = array('x' => 'Tanya Jawab',
 	  	 					  'about'=>$about,
 	  	 					   'profilmenu'=>$profilmenu,
+                        'kegiatanmenu'=>$kegiatanmenu,
                             'isi'=>'frontand/page/faq' );
                              
             $this->load->view('frontand/setup/konek',$data);
@@ -135,10 +137,12 @@ class Home extends CI_Controller {
 		public function contact()
 	{
 				        $about= $this->Blog_m->getAbout();
+           $kegiatanmenu= $this->Blog_m->getKegiatan();
 				         $profilmenu= $this->Blog_m->getProfil();
 					  $data  = array('x' => 'kontak ICE',
 					  	 					        'about'=>$about,
 					  	 					         'profilmenu'=>$profilmenu,
+                                        'kegiatanmenu'=>$kegiatanmenu,
 				                            'isi'=>'frontand/page/kontak' );
 				                             
 				         $this->load->view('frontand/setup/konek',$data);

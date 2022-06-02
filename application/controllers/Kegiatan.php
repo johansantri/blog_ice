@@ -13,7 +13,7 @@ class Kegiatan extends CI_Controller {
 
 	public function index()
 	{
-
+			$unduh= $this->Blog_m->getUnduh();
 			 $slide= $this->Slide_m->getAktif();
 			  $partner= $this->Blog_m->getAwal();
 			   $event= $this->Blog_m->getEvent();
@@ -29,6 +29,7 @@ class Kegiatan extends CI_Controller {
                              'event'=>$event,
                              'people'=>$people,
                              'about'=>$about,
+                     		'unduh'=>$unduh,
                              'profilmenu'=>$profilmenu,
                               'kegiatanmenu'=>$kegiatanmenu,
                             'isi'=>'frontand/page/kegiatan' );
@@ -68,4 +69,39 @@ class Kegiatan extends CI_Controller {
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);
 					}
+
+	public function tags($tags=NULL)
+	{
+
+	
+			       $tag= $this->Blog_m->get_tg($tags);
+    				$unduh= $this->Blog_m->getUnduh();
+			     	$profilmenu= $this->Blog_m->getProfil();
+			    	$berita= $this->Blog_m->getBerita();
+			      	$people= $this->Blog_m->getPeople();
+			        $about= $this->Blog_m->getAbout();
+			      
+			        $kegiatanmenu= $this->Blog_m->getKegiatan();
+					if (empty($tags))
+					{
+					show_404();
+					}
+					  $data  = array('x' => 'kegiatan',
+					  	 					/*'slide'=>$slide,
+				                             'partner'=>$partner,
+				                             'event'=>$event,*/
+				                             'people'=>$people,
+				                              'berita'=>$berita,
+				                             'about'=>$about,
+				                             'profilmenu'=>$profilmenu,
+				                             'tag'=>$tag,
+                                   			  'unduh'=>$unduh,
+				                              'kegiatanmenu'=>$kegiatanmenu,
+				                            'isi'=>'frontand/page/tags' );
+				                             
+				         $this->load->view('frontand/setup/konek',$data);
+					}
+
+
+
 }

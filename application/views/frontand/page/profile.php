@@ -1,4 +1,3 @@
-
 	
 
 
@@ -51,7 +50,7 @@
 								<h2>Pelajari Keterampilan baru <br/> Dengan berbagai waktu</h2>
 								<h4><span class="counter">57,000 </span> Kursus Online </h4>
 								<p>Untuk mendapatkan pengalaman baru, ilmu baru dan sesuai dengan ke butuhan anda saat ini, segera bergabung bersama Indonesia Cyber Eduction Institute (ICE-I).</p>
-								<a href="#" class="btn button-md">Bergabung Sekarang</a>
+								<a href="https://icei.ac.id/" class="btn button-md">Bergabung Sekarang</a>
 							</div>
 						</div>
 					</div>

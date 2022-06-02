@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://10.198.58.39/blog_ice/';
+//$config['base_url'] = 'https://info-icei.ut.ac.id/';
 $config['base_url'] = 'http://localhost/blog_ice/';
 
 /*
