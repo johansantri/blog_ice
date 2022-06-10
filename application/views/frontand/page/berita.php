@@ -17,6 +17,42 @@
         </ul>
       </div>
     </div>
+
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-6">
+
+        <small style="color:red">Info</small>
+        <h1 class="alert-heading" style="color:red">Berita</h1>
+        <style>
+        .warna {
+          color: red;
+        }
+        </style>
+        </div>
+              <div class="col-md-6">
+              <small style="color:red;  font-weight: bold;">ICE-Insitute in Members.</small>
+              <br>
+              <br>
+              
+              <div class="row">
+                <div class="col-sm-4">
+                <i class="fa fa-user fa-lg warna" aria-hidden="true"> 5 K</i><br>
+                <small>Mahasiswa</small>
+                </div>
+                <div class="col-sm-4">
+                <i class="fa fa-book fa-lg warna" aria-hidden="true"> 300 +</i><br>
+                <small>Matakuliah</small>
+                </div>
+                <div class="col-sm-4">
+                <i class="fa fa-users fa-lg warna" aria-hidden="true"> 250 +</i><br>
+                <small>Dosen</small>  
+              </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
     <!-- Breadcrumb row END -->
         <!-- contact area -->
          <div class="content-block">
@@ -24,32 +60,112 @@
         <div class="container">
           <div class="row">
             <!-- Left part start -->
+           
             <div class="col-lg-8">
-              <?php foreach ($berita as $key ) {?>
-              <div class="blog-post blog-md clearfix">
-                <div class="ttr-post-media"> 
-                  <a href="#"><img src="<?php echo base_url()?>upload/<?php echo $key->image; ?>" alt=""></a> 
+            
+            <div class="row">
+                <!--card--> 
+                <?php foreach ($berita as $key ) {?>
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+               <small> <i class="fa fa-calendar"></i> &nbsp; <?php echo $key->create_ad;?></small>
+               
+                  <p class="card-title"><?php echo substr($key->title, 0,50). '...'?></p>
+                  <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><img style="border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $key->image; ?>" alt=""></a>
+                <br>
+                  <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
                 </div>
-                <div class="ttr-post-info">
-                  <ul class="media-post">
-                    <li><a href="<?php echo base_url()?>bertia/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
-                    <li><a href="https://icei.ac.id/"><i class="fa fa-user"></i>By ICE-I</a></li>
-                  </ul>
-                  <h5 class="post-title"><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?>.</a></h5>
-                  <p><?php echo $key->meta;?></p>
-                  <div class="post-extra">
-                    <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
-                   
+                
+              </div>
+            </div>
+            <?php };?>
+
+
+             <!--end card--> 
+            </div>
+           
+        
+
+            <br>
+            <br>
+            <br>
+
+
+            <div class="container" >
+      <div class="row">
+        <div class="col-md-6">
+
+        <small style="color:red">Kegiatan</small>
+        <h1 class="alert-heading" style="color:red">ICE Institute</h1>
+        <style>
+        .warna {
+          color: red;
+        }
+        </style>
+        </div>
+             
+        <small style="color:black;  font-weight: bold;">ICE Institute sebagai marketplace matakuliah daring menjadi wadah para pakar, peneliti, pengajar dan pelajar untuk berbagi wawasan sesuai dengan keahlian mereka untuk disampaikan kepada kepada khalayak umum.
+
+Mengusung tema MERDEKA BELAJAR UNTUK SEMUA, webinar yang dikemas dalam Cyber Education Forum (CEF) menjadi agenda rutin dari ICE Institute yang diselenggarakan setiap bulannya.
+
+Webinar terbuka untuk umum, tidak dipungut biaya dan setiap peserta berhak atas sertifikat di setiap penyelenggaraannya. </small>
+
+
+
+
+
+<div class="section-area section-sp2">
+        <div class="container">
+         
+          <div class="row">
+          <div class="upcoming-event-carousel owl-carousel owl-btn-center-lr owl-btn-1 col-8 p-lr0  m-b30">
+            <?php foreach ($event as $key ) {?>
+            
+            <div class="item">
+              <div class="event-bx">
+                <div class="action-box">
+                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                </div>
+                <div class="info-bx d-flex">
+                  <div>
+                 
+                  </div>
+                  <div class="event-info">
+                    <p ><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></p>
+                    <ul class="media-post">
+                      
+                  
+                    </ul>
+                    
                   </div>
                 </div>
               </div>
-                <?php };?>
+            </div>
+          <?php };?>
+         
+           
+          </div>
+          </div>
+          <div class="text-center">
+           
+          </div>
+        </div>
+      </div>
 
-           
-        
-           
+
+        </div>
+    </div>
+
+
   
             </div>
+
+
+
+            
+
+     
             <!-- Left part END -->
             <!-- Side bar start -->
             <div class="col-lg-4 sticky-top">
@@ -106,19 +222,7 @@
                     </form>
                   </div>
                 </div>
-                <div class="widget widget_gallery gallery-grid-4">
-                  <h6 class="widget-title">Our Gallery</h6>
-                  <ul>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic2.jpg" alt=""></a></div></li>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic1.jpg" alt=""></a></div></li>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic5.jpg" alt=""></a></div></li>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic7.jpg" alt=""></a></div></li>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic8.jpg" alt=""></a></div></li>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic9.jpg" alt=""></a></div></li>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic3.jpg" alt=""></a></div></li>
-                    <li><div><a href="#"><img src="assets/images/gallery/pic4.jpg" alt=""></a></div></li>
-                  </ul>
-                </div>
+                
              
               </aside>
             </div>
