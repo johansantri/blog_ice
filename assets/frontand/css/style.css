@@ -2072,38 +2072,8 @@ button.back-to-top {
 .courses-carousel .item{
 	padding:15px;
 }
-.courses-carousel .owl-nav{
-	position: absolute;
-    top: -70px;
-    right: 10px;
-}
-.testimonial-carousel .owl-nav{
-	position: absolute;
-    top: -80px;
-    right: -5px;
-}
-.recent-news-carousel .owl-nav{
-	position: absolute;
-    top: -80px;
-    right: -5px;
-}
-.courses-carousel .owl-nav .owl-next,
-.courses-carousel .owl-nav .owl-prev,
-.recent-news-carousel .owl-nav .owl-next,
-.recent-news-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next,
-.testimonial-carousel .owl-nav .owl-prev{
-	background-color:var(--primary);
-	margin: 0 5px !important;
-}
-.courses-carousel .owl-nav .owl-next:hover,
-.courses-carousel .owl-nav .owl-prev:hover,
-.recent-news-carousel .owl-nav .owl-next:hover,
-.recent-news-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover,
-.testimonial-carousel .owl-nav .owl-prev:hover{
-	background-color:var(--sc-primary);
-}
+
+
 /* Online Cours */
 .online-cours h2{
 	font-size:45px;

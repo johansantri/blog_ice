@@ -5,10 +5,11 @@
   height: 110%;
 }
 </style>
-     <!-- Content -->
-    <div class="page-content bg-white">
-        <!-- Main Slider -->
-        <div class="rev-slider responsive">
+
+<div class="container">
+
+  <!-- Main Slider -->
+  <div class="rev-slider responsive">
       <div id="rev_slider_486_1_wrapper" class="rev_slider_wrapper " data-alias="news-gallery36" data-source="gallery" >
         <!-- START REVOLUTION SLIDER 5.3.0.2 fullwidth mode -->
         <div id="rev_slider_486_1" class="rev_slider "  data-version="5.3.0.2">
@@ -173,6 +174,11 @@
       </div>  
     </div>  
         <!-- Main Slider -->
+</div>
+
+     <!-- Content -->
+    <div class="page-content bg-white">
+      
     
     <div class="content-block">
             
@@ -190,269 +196,31 @@
       <div class="section-area bg-gray section-sp1 our-story">
         <div class="container">
        
-  <div class="alert alert-warning" role="alert">
-  <h4 class="alert-heading">Manfaat ICE-Institute</h4>
-  <p>ICE-Institute dari berbagai elements.</p>
- 
-</div>
-              
-              <div class="row">
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-6">
 
-              
-      
-              
-
-              <div class="col-md-4">
-              <div class="card border-dark" >
-                <div class="card-body">
-                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-building-o fa-5x" aria-hidden="true"></i>
-              </h5>
-                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Pemerintahan</h6>
-                  <p class="card-text">Pemerataan kualitas pendidikan tinggi. Mempercepat peningkatan APK. Perluasan akses pendidikan. Akuntabilitas pendidikan tinggi di indonesia. Internationalisasi dan koenktivitas pendidikan tinggi di indonesia.</p>
-                
-                </div>
-              </div>
-              </div>
-
-
-               
-
-
-              <div class="col-md-4">
-              <div class="card border-warning" >
-                <div class="card-body">
-                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-users fa-5x" aria-hidden="true"></i>
-              </h5>
-                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Masyarakat</h6>
-                  <p class="card-text" >Memiliki akses pendidikan yang lebih murah dan bermutu. Memperoleh peluang untuk belajar sepanjang hayat (upskilling, reskilling, peningkatan karir). Meningkatnya tingkat kepercayaan di pendidikan tinggi.</p>
-                
-                </div>
-              </div>
-              </div>
-
-              <div class="col-md-4">
-              <div class="card border-success " >
-                <div class="card-body">
-                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-btc fa-5x" aria-hidden="true"></i>
-              </h5>
-                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Pengguna Lulusan</h6>
-                  <p class="card-text">Pemanfaatan Blockchain tecnology untuk penulusan dalam proses recruitment.</p>
-               
-                </div>
-              </div>
-              </div>
-
-
-
-              
-              </div>
-
-              <div class="row">
-             
-              <div class="col-md-4">
-            
-                <div class="card border-danger" >
-                <div class="card-body">
-                <h5 class="card-title" style="text-align:center;"><i class="fa fa-university fa-5x" aria-hidden="true"></i>
-                </h5>
-                <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Perguruan Tinggi Asal</h6>
-                <p class="card-text">Mengatasi Keterbatasan sumber daya (SDM, Teknologi, fasilitas). Memungkinkan adanya transfer knowledge antar SDM. Pemerataan Kualitas Pendidikan. Meningkatakan Inovasi Berbasis Kearifan local, memungkinkan terjadinya alih kredit dan pertukaran matakuliah.</p>
-              
-                </div>
-                </div>
-
-              </div>
-
-
-              <div class="col-md-4">
-              <div class="card border-info" >
-                <div class="card-body">
-                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-home fa-5x" aria-hidden="true"></i>
-              </h5>
-                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Perguruan Tinggi Penyelengara</h6>
-                  <p class="card-text">Perluasan akses. Penjaminan mutu konten. Penyetaraan dan pengakuan mutu. Peningkatan citra perguruan tinggi. Peningkatan kredibilitas perguruan tinggi. Terbukanya peluang kerjasama dengan berbagai pihak. Memanfaatkan fasilitas teknologi maju (learning analitycs blockchain technology untuk ledger). Meningkatkan diseminasi ilmu pengetahuan. Pemerataan kualitas pendidikan</p>
-                
-                </div>
-              </div>
-              </div>
-
-              <div class="col-md-4">
-              <div class="card border-secondary" >
-                <div class="card-body">
-                  <h5 class="card-title" style="text-align:center;"><i class="fa fa-user fa-5x" aria-hidden="true"></i>
-              </h5>
-                  <h6 class="card-subtitle mb-2 text-muted" style="text-align:center">Mahasiswa Peserta</h6>
-                  <p class="card-text">Memiliki akses pendidikan bermutu yang lebih luas dan fleksibel. Membangun jejaring. Meningkatkan daya saing mahasiswa, dan kepercayaan diri. Memperluas digital experience dan digital horizon.</p>
-                 
-                </div>
-              </div>
+        <small style="color:red">Tentang</small>
+        <h1 class="alert-heading" style="color:red">ICE-Institute</h1>
+        </div>
+              <div class="col-md-6">
+              <small>Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia. Tujuan utama dari ICE Institute adalah untuk memfasilitasi penyediaan pendidikan berkualitas sekaligus menjamin kualitas layanan pembelajaran daring dan pendidikan jarak jauh.</small>
+              <br>
+              <button type="button" class="btn btn-danger  btn-sm">Baca Selengkapnya</button>
               </div>
         </div>
-      </div>
-      <!-- Our Story END ==== -->
-     
-      <!-- Form -->
-      <div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(<?php echo base_url()?>assets/frontand/images/background/bg1.jpg);">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center text-white">
-              <h2>Kuliah Online</h2>
-              <h5>Kapan lagi bisa merasakan belajar di kampus impian</h5>
-             
-            </div>
-          </div>
-          <div class="mw800 m-auto">
-            <div class="row">
-              <div class="col-md-4 col-sm-6">
-                <div class="cours-search-bx m-b30">
-                  <div class="icon-box">
-                    <h3><i class="ti-user"></i><span class="counter">5</span>K</h3>
-                  </div>
-                  <span class="cours-search-text">Mahasiswa kuliah online</span>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="cours-search-bx m-b30">
-                  <div class="icon-box">
-                    <h3><i class="ti-book"></i><span class="counter">300 </span>+</h3>
-                  </div>
-                  <span class="cours-search-text"> Matakuliah</span>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-12">
-                <div class="cours-search-bx m-b30">
-                  <div class="icon-box">
-                    <h3><i class="ti-layout-list-post"></i><span class="counter">250 </span>+</h3>
-                  </div>
-                  <span class="cours-search-text">Dosen Online</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-area section-sp2">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center heading-bx">
-              <h2 class="title-head m-b0">Kegiatan ICE-I</h2>
-              <p class="m-b0">Indonesia Cyber Education Institute</p>
-            </div>
-          </div>
-          <div class="row">
-          <div class="upcoming-event-carousel owl-carousel owl-btn-center-lr owl-btn-1 col-12 p-lr0  m-b30">
-            <?php foreach ($event as $key ) {?>
-            
-            <div class="item">
-              <div class="event-bx">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
-                </div>
-                <div class="info-bx d-flex">
-                  <div>
-                 
-                  </div>
-                  <div class="event-info">
-                    <h4 class="event-title"><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h4>
-                    <ul class="media-post">
-                      
-                  
-                    </ul>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          <?php };?>
-         
-           
-          </div>
-          </div>
-          <div class="text-center">
-           
-          </div>
-        </div>
-      </div>
-      
-      <!-- Testimonials -->
-      <div class="section-area section-sp2 bg-fix ovbl-dark" style="background-image:url(<?php echo base_url()?>assets/frontand/images/background/bg1.jpg);">
-                <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-white heading-bx left">
-              <h2 class="title-head text-uppercase">apa kata <span>mereka</span></h2>
-              <p>Tentang ICE-I</p>
-            </div>
-          </div>
-          <div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-            <?php foreach ($people as $key ) {?>
+    </div>
               
-            <div class="item">
-              <div class="testimonial-bx">
-                <div class="testimonial-thumb">
-                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
-                </div>
-                <div class="testimonial-info">
-                  <h5 class="name"><?php echo $key->title;?></h5>
-                  
-                </div>
-                <div class="testimonial-content">
-                  <p><?php echo $key->description;?></p>
-                </div>
-              </div>
-            </div>
-          <?php };?>
-   
-          </div>
-        </div>
-      </div>
-      <!-- Testimonials END -->
-      
-      <!-- Recent News -->
-      <div class="section-area section-sp2">
-                <div class="container">
-          <div class="row">
-            <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">Berita <span>Terbaru</span></h2>
-              <p>Bacaan Terbaik Untuk Anda Pilih</p>
-            </div>
-          </div>
-          <div class="recent-news-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+      <br>
 
-               <?php foreach ($berita as $key ) {?>
-            <div class="item">
-              <div class="recent-news">
-                <div class="action-box">
-                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="" style="max-width:115%; max-height:100%; height:280px">
-                </div>
-                <div class="info-bx">
-                  <ul class="media-post">
-                    <li><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><i class="fa fa-calendar"></i><?php echo $key->create_ad;?></a></li>
-                    
-                  </ul>
-                  <h5 class="post-title"><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></h5>
-                  <p><?php echo substr($key->meta, 0,100). '...'?>.</p>
-                  <div class="post-extra">
-                    <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya</a>
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
-            <?php };?>
 
-       
-          </div>
-        </div>
-      </div>
-      <!-- Recent News End -->
-      
-         <!-- Popular Courses -->
+                    <!-- Popular Courses -->
       <div class="section-area section-sp2 popular-courses-bx">
                 <div class="container">
           <div class="row">
             <div class="col-md-12 heading-bx left">
-              <h2 class="title-head">Mitra <span>ICE-I</span></h2>
-              <p>Kampus mitra yang sudah bergabung bersama Indonesia Cyber Education Institute (ICE-I)</p>
+            
+              
             </div>
           </div>
           <div class="row">
@@ -480,6 +248,222 @@
         </div>
       </div>
       <!-- Popular Courses END -->
+
+         <!-- visi misi -->
+         <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+   
+    <h1 style="color:red; text-align: center;">Visi</h1>
+    <small>Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia. Tujuan utama dari ICE Institute adalah untuk memfasilitasi penyediaan pendidikan berkualitas sekaligus menjamin kualitas layanan pembelajaran daring dan pendidikan jarak jauh.</small>
+    </div>
+    <div class="col-md-6">
+      <h1 style="color:red; text-align: center;"> Misi</h1>
+    <small>Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia. Tujuan utama dari ICE Institute adalah untuk memfasilitasi penyediaan pendidikan berkualitas sekaligus menjamin kualitas layanan pembelajaran daring dan pendidikan jarak jauh.</small>
+    <br>
+   
+    </div>
+              </div>
+
+  </div>
+</div>
+         <!-- end visi misi --> 
+
+
+     
+      <!-- Form -->
+      <div class="section-area section-sp1 ovpr-dark bg-fix online-cours" style="background-image:url(<?php echo base_url()?>assets/frontand/images/background/bg1.jpg);">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center text-white">
+          
+             
+            </div>
+          </div>
+          <div class="mw800 m-auto">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="cours-search-bx m-b30">
+                  <div class="icon-box">
+                    <h3><i class="ti-user"></i><span class="counter">5</span>K</h3>
+                  </div>
+                  <span class="cours-search-text">Mahasiswa </span>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="cours-search-bx m-b30">
+                  <div class="icon-box">
+                    <h3><i class="ti-book"></i><span class="counter">300 </span>+</h3>
+                  </div>
+                  <span class="cours-search-text"> Matakuliah</span>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="cours-search-bx m-b30">
+                  <div class="icon-box">
+                    <h3><i class="ti-layout-list-post"></i><span class="counter">250 </span>+</h3>
+                  </div>
+                  <span class="cours-search-text">Dosen </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <br>
+            <br>
+
+
+      <div class="container" >
+      <div class="row">
+        <div class="col-md-6">
+
+        <small style="color:red">Matakuliah</small>
+        <h1 class="alert-heading" style="color:red">ICE-Institute</h1>
+        </div>
+              <div class="col-md-6">
+              <small>Di Ice Institute anda bisa memilih berbagai mantakuliah pilihan dari berbagai kampus terbaik didalam negeri maupun luar negeri</small>
+              <br>
+             
+              </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+       
+      </div>
+    </div>
+  </div>
+
+
+  
+
+</div>
+<br>
+
+    <div class="row">
+    <div class="col-md-12 text-center heading-bx">
+    <button type="button" class="btn btn-outline-danger">Selengkapnya</button>
+    
+    </div>
+          </div>
+
+
+            </div>
+
+
+  <!-- Recent News -->
+  <div class="section-area section-sp2">
+                <div class="container">
+          <div class="row">
+            <div class="col-md-12 heading-bx left">
+            <small style="color:red">Info</small>
+        <h1 class="alert-heading" style="color:red">Berita</h1>
+            </div>
+          </div>
+          <div class="recent-news-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+
+               <?php foreach ($berita as $key ) {?>
+            <div class="item">
+              <div class="recent-news">
+                <div class="action-box">
+              <ul class="media-post">
+                <li>
+                <small> <?php echo $key->create_ad;?></small>
+               <p ><a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" style="color:red;"><?php echo substr($key->title, 0,80). '...'?></a></p>
+                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="" style="max-width:100%; max-height:100%; height:280px">
+               </li>
+               </ul>
+                </div>
+                <div class="info-bx">
+                
+                 
+                  <small><?php echo substr($key->meta, 0,100). '...'?>.</small>
+                  <div class="post-extra">
+                    <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="btn-link">Baca Selengkapnya ></a>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <?php };?>
+
+       
+          </div>
+        </div>
+      </div>
+      <!-- Recent News End -->
+
+
+
+
+
+      
+      <!-- Testimonials -->
+      <div class="section-area section-sp2  " >
+                <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-dark heading-bx left">
+              <small class="title" style="color:red;">Apa  </small> <span style="color:red; font-weight: bold; font-size: 20px;">Kata Mereka</span>
+              
+            </div>
+          </div>
+          <div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
+            <?php foreach ($people as $key ) {?>
+              
+            <div class="item" sytyle="background-color: A9A9A9;">
+              <div class="testimonial-bx " >
+                <div class="testimonial-thumb">
+                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                </div>
+                <div class="testimonial-info">
+                  <h5 class="name" style="color:red;"><?php echo $key->title;?></h5>
+                  
+                </div>
+                <div class="testimonial-content">
+                  <p><?php echo $key->description;?></p>
+                </div>
+              </div>
+            </div>
+          <?php };?>
+   
+          </div>
+        </div>
+      </div>
+      <!-- Testimonials END -->
+      
+    
+      
+     
       
 
 
