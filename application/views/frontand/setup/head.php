@@ -19,6 +19,7 @@
   <meta property="og:description" content="Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia." />
   <meta property="og:image" content="<?php echo base_url()?>assets/frontand/images/ice.png" />
   <meta name="format-detection" content="telephone=0812 5050 4200">
+  <title>ICE Institute</title>
     <link rel="stylesheet" href="./assets/new/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
