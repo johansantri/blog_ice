@@ -63,8 +63,8 @@
                           <div>
                             <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
                                 <span class="font-darker-grotesque"><?php echo $key->create_ad;?></span>
-                                <a href="" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
-                                    <h4 class="h-20"><?php echo $key->title;?></h4>
+                                <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
+                                    <h5 class="h-20"><?php echo substr($key->title, 0,80). '...'?></h5>
                                 </a>
                                 <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin</span></span>
                             </div>
@@ -129,7 +129,7 @@
                             <div class="border-2 border-gray-200 bg-gray-50 p-6 rounded-b-3xl">
                                 <div class="pt-2">
                                     <p class="text-center font-darker-grotesque"><span class="font-bold">Giveaway</span> xxxxxx xx xxxxx</p>
-                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">ttttttttttttt</h5>
+                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">buku</h5>
                                 </div>
                                 <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
                                 <div class="flex items-center justify-center my-3">
