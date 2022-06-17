@@ -15,7 +15,7 @@ class Berita extends CI_Controller {
 	{
 
 			 $slide= $this->Slide_m->getAktif();
-			  $berita= $this->Blog_m->getBerita();
+			  $berita= $this->Blog_m->getBeritaa();
 			   $event= $this->Blog_m->getEvent();
 			      $people= $this->Blog_m->getPeople();
       		$unduh= $this->Blog_m->getUnduh();
