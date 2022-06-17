@@ -16,7 +16,7 @@
             </div>
             <div class=" w-full">
                 <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
-                    <div class="hero-slide w-full h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover" style="background-image: url('./assets/new/images/college-student.png')"></div>
+                    <div class="hero-slide w-full h-40 lg:h-[100vh] rounded-[17px] lg:rounded-[25px] bg-cover" style="background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>')"></div>
                 </div>
             </div>
             <hr>
@@ -27,10 +27,10 @@
                 <div class="w-full lg:w-fit">
                     <div class="relative">
                         <div class="flex justify-between">
-                            <span class="font-darker-grotesque">April, 02 2002</span>
+                            <span class="font-darker-grotesque"><?php echo $slug['create_ad'];?></span>
                             <span class="font-darker-grotesque">oleh <span class="font-bold">admin</span></span>
                         </div>
-                        <h1 class="font-darker-grotesque text-4xl text-red-primary font-bold mt-4 lg:mt-12">Lorem Ipsum Dolor Sit Amet</h1>
+                        <h1 class="font-darker-grotesque text-4xl text-red-primary font-bold mt-4 lg:mt-12"><?php echo $slug['title'];?></h1>
 
                         <div class="flex items-center justify-between mt-8 lg:mt-24">
                             <ul class="flex items-center gap-x-4 lg:gap-x-5 mt-3">
@@ -41,17 +41,26 @@
                                 <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-linkedin"></i></a></li>
                             </ul>
                             <ul class="flex items-center gap-x-4">
-                                <li><img class="h-4" src="./assets/new/images/bookmart-icon.png" alt=""></li>
-                                <li><img class="h-4" src="./assets/new/images/flag-icon.png" alt=""></li>
+                                <li><img class="h-4" src="<?php echo base_url()?>assets/new/images/bookmart-icon.png" alt=""></li>
+                                <li><img class="h-4" src="<?php echo base_url()?>/assets/new/images/flag-icon.png" alt=""></li>
                             </ul>
                         </div>
                         <div class="-mt-3 font-darker-grotesque">
-                            <p class="mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit neque, ullamcorper at iaculis et, elementum eu nulla. Proin hendrerit orci sapien, sed dignissim velit viverra at. Pellentesque lacus mi, bibendum sed euismod eget, maximus in mauris. Pellentesque luctus lectus eu urna varius, sed tristique justo vestibulum. Fusce ac est rutrum, rutrum sem at, eleifend tortor. Sed finibus augue ut magna maximus malesuada. In in arcu placerat, ultrices est non, scelerisque nisi. Aenean sagittis euismod lobortis. Suspendisse euismod rhoncus tortor, in semper odio. Donec fermentum, nisl id accumsan sollicitudin, quam purus tempor diam, vitae cursus mi est eu nisi. Morbi dictum, felis ac convallis aliquam, arcu justo iaculis metus, nec porttitor nulla metus sit amet neque. Suspendisse ut ex nec ante vestibulum convallis varius in dui. Cras fringilla, velit sit amet dignissim semper, nulla risus finibus sapien, in laoreet massa magna nec tellus. Sed sagittis eu eros iaculis vehicula. Ut venenatis suscipit sagittis. Pellentesque aliquam pretium faucibus.</p>
-                            <p class="mt-8">Donec tempus felis in quam tristique, non semper metus consequat. In faucibus efficitur dui, sed porta velit fringilla a. Aliquam id posuere augue. Mauris suscipit eu sem vel viverra. Nam consectetur dapibus libero id mattis. Sed aliquam ipsum in dapibus tristique. Vivamus non vehicula tortor.</p>
-                            <p class="mt-8">Morbi vitae nisi rutrum dui semper blandit. Nulla a ex scelerisque, iaculis sapien vestibulum, placerat nibh. Nullam iaculis dolor id turpis mollis, sed euismod ligula iaculis. Nam vitae massa quam. Morbi gravida ultrices nibh vel aliquet. Aenean efficitur dictum euismod. Fusce vulputate iaculis enim a elementum. Aenean sed tincidunt leo, vel mollis nibh. Nunc iaculis eu neque non aliquet. Integer maximus venenatis nunc, eu viverra ipsum iaculis eu. Proin consectetur nibh ut euismod placerat.</p>
-                            <p class="mt-8">Morbi cursus sagittis turpis at sollicitudin. Nunc rhoncus, orci et tempus vestibulum, lectus elit dapibus odio, egestas aliquet velit enim sit amet ligula. Nunc porttitor, tellus eu egestas ornare, justo lectus aliquet neque, at rutrum augue lectus sed nunc. Morbi ornare pretium pharetra. Duis eu ante egestas, auctor leo accumsan, pellentesque libero. Etiam erat enim, pharetra vel rutrum et, mollis id ex. Aliquam dapibus ultrices ipsum. Suspendisse potenti. Duis sit amet sollicitudin sapien. Aliquam bibendum dignissim pretium. Etiam metus lorem, semper eu elit et, condimentum tincidunt diam. Nulla vitae tincidunt massa. Quisque malesuada dui sit amet risus iaculis facilisis. Integer laoreet pretium nulla, id dignissim neque aliquet accumsan.</p>
+                            <p class="mt-8"><?php echo $slug['description'];?>.</p>
+                           
                             <hr class="mt-12 lg:mt-24">
+                             <!-- <a href="#"><?php echo $slug['tags'];?></a>  -->
 
+                  <?php
+                        $str = $slug['tags'];
+                        $people= (explode(",",$str));
+                        for($i = 0; $i < count($people); ++$i) {
+                        echo "&nbsp;";
+                        echo "<a href='tags/$people[$i]' class='tag-blue tag'>#".$people[$i]."</a>";  
+                        echo "&nbsp;";
+                        }
+
+                        ?> 
                             <div class="bg-gray-50 rounded-2xl mt-10 py-4 px-4 lg:px-12">
                                 <h4 class="font-bold text-red-primary text-xl font-darker-grotesque">Beri Komentar</h4>
                                 <textarea name="" id="" style="box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .25);" class="h-36 mt-4 w-full p-3 focus:outline-none font-darker-grotesque placeholder:font-darker-grotesque rounded-xl" placeholder="Tulis tanggapan anda..." cols="30" rows="10"></textarea>
@@ -90,7 +99,7 @@
                                 <div>
                                                                             <div class="flex items-start gap-x-3 mt-12">
                                             <div class="w-10/12 flex gap-x-5 items-start">
-                                                <img src="./assets/new/images/photo-profile.png" class="h-12 w-12 object-cover object-center rounded-full" alt="">
+                                                <img src="<?php echo base_url()?>assets/new/images/photo-profile.png" class="h-12 w-12 object-cover object-center rounded-full" alt="">
                                                 <div>
                                                     <h4 class="font-darker-grotesque">ABCDE</h4>
                                                     <p class="font-darker-grotesque">Bacaan yang sangat bagus</p>
@@ -116,7 +125,7 @@
                                         </div>
                                                                             <div class="flex items-start gap-x-3 mt-12">
                                             <div class="w-10/12 flex gap-x-5 items-start">
-                                                <img src="./assets/new/images/photo-profile.png" class="h-12 w-12 object-cover object-center rounded-full" alt="">
+                                                <img src="<?php echo base_url()?>assets/new/images/photo-profile.png" class="h-12 w-12 object-cover object-center rounded-full" alt="">
                                                 <div>
                                                     <h4 class="font-darker-grotesque">ABCDE</h4>
                                                     <p class="font-darker-grotesque">Bacaan yang sangat bagus</p>
@@ -190,7 +199,7 @@
                                 </div>
                                 <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="./assets/new/images/book.png" class="w-full" alt="book">
+                                    <img src="<?php echo base_url()?>assets/new/images/book.png" class="w-full" alt="book">
                                 </div>
                                 <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
                                 <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>
