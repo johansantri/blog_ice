@@ -100,6 +100,32 @@ Tangerang Selatan </li>
         });
     </script>
 
+
+<script>
+        $(document).ready(function() {
+            new Flickity('.hero-wrapper', {
+                wrapAround: true,
+                pageDots: false,
+                prevNextButtons: false,
+                autoPlay: 1500
+            });
+
+            $('.news-wrap').slick({
+                rows: 2,
+                wrapAround: false,
+                slidesToShow: 2,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                responsive: [{
+                    breakpoint: 1023,
+                    settings: {
+                        rows: 1,
+                        slidesToShow: 1,
+                    }
+                }]
+            });
+        })
+    </script>
 </body>
 
 </html>
