@@ -1,0 +1,158 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "DEMO API",
+    "description": "Api Documentation for DEMO API Project",
+    "termsOfService": "http://swagger.io/terms/",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://demo-api.maturcode.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "person",
+      "description": "API for Person"
+    }
+  ],
+  "paths": {
+    "/persons": {
+      "get": {
+        "tags": [
+          "person"
+        ],
+        "summary": "Get all persons",
+        "parameters": [
+          {
+            "name": "first_name",
+            "in": "query",
+            "description": "Get persons data by first name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "last_name",
+            "in": "query",
+            "description": "Get persons data by last name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "domicile_address",
+            "in": "query",
+            "description": "Get persons data by domicile address",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "registration_date",
+            "in": "query",
+            "description": "Get persons data by registration date",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {}
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "person"
+        ],
+        "summary": "Store new person",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "photo",
+                  "first_name",
+                  "last_name",
+                  "date_of_birth",
+                  "domicile_address",
+                  "registration_date"
+                ],
+                "properties": {
+                  "photo": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "Person photo"
+                  },
+                  "first_name": {
+                    "type": "string",
+                    "description": "First name person"
+                  },
+                  "last_name": {
+                    "type": "string",
+                    "description": "Last name person"
+                  },
+                  "date_of_birth": {
+                    "type": "string",
+                    "description": "Birth date person",
+                    "format": "date"
+                  },
+                  "domicile_address": {
+                    "type": "string",
+                    "description": "Domicile address person"
+                  },
+                  "registration_date": {
+                    "type": "string",
+                    "format": "date",
+                    "description": "Registration date person"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "successfull operation"
+          }
+        }
+      }
+    },
+    "/persons/{id}": {
+      "get": {
+        "tags": [
+          "person"
+        ],
+        "summary": "Find person",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "person_id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successfull operation",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}

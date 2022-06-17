@@ -1,0 +1,96 @@
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#companies-loved-wrapper button {
+  background: #888;
+  border-radius: 100%;
+}
+
+#companies-loved-wrapper button.slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 12px;
+  content: "\f054";
+}
+
+#companies-loved-wrapper button.slick-prev::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 12px;
+  content: "\f053";
+}
+
+.news-wrap button {
+  background: #888 !important;
+  border-radius: 100% !important;
+}
+
+.news-wrap button:hover {
+  background: #888;
+  border-radius: 100%;
+}
+
+.news-wrap button.slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 12px;
+  content: "\f054";
+}
+
+.news-wrap button.slick-prev::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 12px;
+  content: "\f053";
+}
+
+
+@media screen and (max-width: 1023px) {
+  #companies-loved-wrapper button.slick-next {
+    right: -10px;
+  }
+
+  #companies-loved-wrapper button.slick-prev {
+    left: -10px;
+  }
+
+  .news-wrap button.slick-next {
+    right: -10px !important;
+  }
+
+  .news-wrap button.slick-prev {
+    left: -10px !important;
+  }
+
+  .nav-hidden {
+    display: none;
+  }
+}
+
+#testimonial-wrap button {
+  background: #888;
+  border-radius: 100%;
+}
+
+#testimonial-wrap button.slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 12px;
+  content: "\f054";
+}
+
+#testimonial-wrap button.slick-next {
+  right: 10px;
+}
+
+#testimonial-wrap button.slick-prev {
+  left: 10px;
+}
+
+#testimonial-wrap button.slick-prev::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 12px;
+  content: "\f053";
+}

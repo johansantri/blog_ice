@@ -1,347 +1,105 @@
- <!-- FOOTER -->
 
- <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+        <div class="bg-gray-50 lg:rounded-t-[10rem] rounded-t-[4rem] pt-10">
+<div class="container px-5 lg:px-20 mx-auto flex flex-col lg:flex-row mt-12 lg:mt-24">
+    <div class="w-full lg:w-5/6">
+        <h4 class="font-bold font-darker-grotesque">ICE Institute</h4>
+        <ul class="mt-1">
+            <li class="-mt-1 font-darker-grotesque">Universitas Terbuka</li>
+            <li class="-mt-1 font-darker-grotesque">Gedung Serba Guna 1st Floor
+            </li>
+            <li class="-mt-1 font-darker-grotesque">Jl. Cabe Raya Pondok Cabe, Pamulang,
+Tangerang Selatan </li>
+            <li class="-mt-1 font-darker-grotesque">Banten - 15437</li>
+        </ul>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-  
-    
-      .text-fot {
-        font-size: 1.125rem;
-        color:black;
-      
-      }
-      @media only screen and (max-width: 600px){
-      .text-fot {
-        display:block;
-        margin:0 auto;
-        text-align: center;
-        color:black;
-      }
-      }
-
-     
-
-  
-
-    
-
-      .img-fot {
-        font-size: 1.125rem;
-      
-      }
-      @media only screen and (max-width: 600px){
-      .img-fot {
-        display:block;
-        margin:0 auto;
-       
-      }
-      }
-
-      .garis {
-        border-left: 2px solid red;
-        border-left-color: red;
-        border-left-style: solid;
-        border-left-width: 2px;
-        text-align: left;
-        padding-left: 35px;
-      
-      }
-
-      @media only screen and (max-width: 600px){
-      .garis {
-        border-left: 0px solid red;
-        border-left-color: red;
-        border-left-style: solid;
-        border-left-width: 0px;
-       
-      
-       
-        
-      }
-      }
-
-      
-      .sosial {    
-            
-        
-        text-align: left;
-       
-      
-      }
-
-      @media only screen and (max-width: 600px){
-      .sosial {
-       
-        justify-content: center!important;
-       
-      
-       
-        
-      }
-      }
-
-      .navbar .megamenu{ padding: 1rem; }
-/* ============ desktop view ============ */
-@media all and (min-width: 992px) {
-	
-	.navbar .has-megamenu{position:static!important;}
-	.navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
-	
-}	
-/* ============ desktop view .end// ============ */
-
-
-/* ============ mobile view ============ */
-@media(max-width: 991px){
-	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
-		overflow-y: auto;
-	    max-height: 90vh;
-	    margin-top:10px;
-	}
-}
-/* ============ mobile view .end// ============ */
-
-
-
-
-    </style>
- <div class="container">
-    <footer >
-    
-    
-      <div class="d-flex justify-content-between py-4 my-4 border-top">
-        <div class="row">
-          <div class="col-sm-8 ">
-            
-            
-            <a href="#" ><img class="img-fot"  src="https://icei.ac.id/static/comprehensive/images/logo.3a535928f907.png" style=" height: 40px;  border-style: none; "></a><br> <br>
-        
-            <p class="text-fot" style="font-size:small;">ICE Institute adalah tempat dimana kamu dapat belajar dimanapun dan kapanpun di kampus yang kamu sukai! Sekarang kamu dapat belajar dari semua universitas-universitas terbaik di Indonesia</p>
-            <p class="text-fot" style="font-size:small; font-weight: bold; color: red;"> 
-              <a href="https://icei.ac.id" style="color: red; text-decoration: none;">Beranda</a>  -  
-              <a href="https://icei.ac.id/tracks/about/" style="color: red; text-decoration: none;">Tentang ICE Institute</a> - 
-              <a href="https://icei.ac.id/courses" style="color: red; text-decoration: none;">Matakuliah</a> - 
-              <a href="https://icei.ac.id/#partners" style="color: red; text-decoration: none;">Universitas</a> - 
-              <a href="https://icei.ac.id/faq" style="color: red; text-decoration: none;">FAQ</a> - 
-              <a href="https://icei.ac.id/hubungi-kami/" style="color: red; text-decoration: none;">Hubungi Kami</a> - 
-             
-              <a href="<?php echo base_url()?>peta" style="color: red; text-decoration: none;">Peta Situs</a></p> 
-          
-              
-              
-      </div>
-      
-      <div class="col-sm-4 ">
-       
-        
-        <div class="garis text-fot ">
-          <br>
-        <h5 class="text-fot" style="color: red;  font-weight: bold;">Alamat</h5>
-        <p class="text-fot" style="font-size:small;" > ICE Institute<br>
-          Universitas Terbuka<br>
-          Gedung Serba Guna 1st Floor<br>
-          Jl. Cabe Raya Pondok Cabe, Pamulang,<br>
-          Tangerang Selatan - 15437<br>
-                  
-          <i class="fa fa-phone" aria-hidden="true"> </i> 0812 5050 4200 <br>
-         <i class="fa fa-envelope"></i><span style="color: red;"> sekretariat@icei.ac.id</span>  <br>
-          <i class="fa fa-globe"></i> <span style="color: red;"> www.icei.ac.id </span> </p>
-
-
-          <div class="sosial text-fot" style="display:flex;justify-content: flex-start;">
-            <div>
-            <a href="https://www.facebook.com/ice.institut">
-            <img style="max-width:35px;" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-128.png">
-            <a>
-            </div>
-            &nbsp;
-            <div>
-            <a href="https://twitter.com/ice_institute_">
-            <img style="max-width:35px;" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-128.png">
-            <a>
-            </div>
-            &nbsp;
-            <div>
-            <a href="https://www.instagram.com/ice.institute/">
-            <img style="max-width:35px;" src="https://cdn0.iconfinder.com/data/icons/social-media-circle-6/1024/instagram-128.png">
-            <a>
-            </div>
-            &nbsp;
-            <div>
-            <a href="https://www.youtube.com/channel/UC2tFtypIqAUXk3FK6V4a5cg">
-            <img style="max-width:35px;" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/youtube3-128.png">
-            <a>
-            </div>
-            &nbsp;
-            <div>
-            <a href="https://www.linkedin.com/in/ice-institute-9372b1218">
-            <img style="max-width:35px;" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-128.png">
-            <a>
-            </div>
-            &nbsp;
-            <div>
-            <a href="https://api.whatsapp.com/send/?phone=6281250504200&text&app_absent=0">
-            <img style="max-width:35px;" src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Whatsapp-128.png">
-            <a>
-            </div>
-            </div>
-        </div>
-      </div>
-
-
-     
+        <ul class="mt-3">
+            <li class="-mt-1 font-darker-grotesque"><i class="mr-2 zmdi zmdi-phone"></i> 0812 5050 4200</li>
+            <li class="-mt-1 underline font-darker-grotesque"><a href=""><i class="mr-2 zmdi zmdi-email"></i>sekretariat@icei.ac.id</a></li>
+            <li class="-mt-1 font-darker-grotesque"><a href=""><i class="mr-2 zmdi zmdi-globe-alt"></i> www.icei.ac.id</a></li>
+        </ul>
     </div>
-    
-      </div>
-   
-      
-      <div class="col-sm-12">
-     
-        &nbsp; &nbsp; &nbsp;
-        <p style=" margin:auto;max-width:1140px;text-align: center;font-weight:400;color:red;font-size:12px;" >&copy; 2021 ICE Institute. All rights reserved</p>
-      </div>
-    </footer>
-  </div>
-
-
-<!-- Footer ==== -->
-   
-    <button class="back-to-top fa fa-chevron-up" ></button>
-
+    <div class="w-5/6 mx-auto lg:mx-0 lg:w-1/6 flex mt-10 lg:mt-0 flex-col">
+        <h4 class="font-bold text-center font-darker-grotesque">Join Us</h4>
+        <ul class="flex justify-between mt-3">
+            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-facebook"></i></a></li>
+            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-youtube-play"></i></a></li>
+            <li><a href=""><i class="text-red-primary text-3xl fa-brands fa-instagram"></i></a></li>
+            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-twitter"></i></a></li>
+            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-linkedin"></i></a></li>
+        </ul>
+    </div>
 </div>
+<div class="container mt-12 lg:mt-24 pb-8 px-5 lg:px-20 mx-auto relative">
+    <p class="text-center font-darker-grotesque">&copy; ABCDEFG. All rights reserved.</p>
+    <p class="lg:absolute flex justify-center mt-1 lg:mt-0 lg:justify-end items-center top-0 right-0">
+        <a class="font-darker-grotesque" href="">Terms of use</a>
+        <span class="mx-1">|</span>
+        <a class="font-darker-grotesque" href="">Privacy policy</a>
+        <span class="mx-1">|</span>
+        <a class="font-darker-grotesque" href="">Cookie policy</a>
+    </p>
+</div>
+</div>
+    </div>
 
-<!-- External JavaScripts -->
-<script src="<?php echo base_url()?>assets/frontand/js/jquery.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/bootstrap/js/popper.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/bootstrap/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/magnific-popup/magnific-popup.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/counter/waypoints-min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/counter/counterup.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/imagesloaded/imagesloaded.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/masonry/masonry.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/masonry/filter.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/owl-carousel/owl.carousel.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/js/functions.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/js/contact.js"></script>
-<!-- <script src='<?php echo base_url()?>assets/frontand/vendors/switcher/switcher.js'></script> -->
-<!-- Revolution JavaScripts Files -->
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="<?php echo base_url()?>assets/frontand/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            fontFamily: {
+                'darker-grotesque': ['Darker Grotesque', 'sans-serif']
+            },
+            extend: {
+                backgroundColor: {
+                    'red-primary': "#EE1C25"
+                },
+                colors: {
+                    'red-primary': "#EE1C25"
+                }
+            }
 
-
-<script>
-jQuery(document).ready(function() {
-$(".goog-te-banner").hide();
-  var ttrevapi;
-  var tpj =jQuery;
-  if(tpj("#rev_slider_486_1").revolution == undefined){
-    revslider_showDoubleJqueryError("#rev_slider_486_1");
-  }else{
-    ttrevapi = tpj("#rev_slider_486_1").show().revolution({
-      sliderType:"standard",
-      jsFileLocation:"<?php echo base_url()?>assets/frontand/vendors/revolution/js/",
-      sliderLayout:"fullwidth",
-      dottedOverlay:"none",
-      delay:9000,
-      navigation: {
-        keyboardNavigation:"on",
-        keyboard_direction: "horizontal",
-        mouseScrollNavigation:"off",
-        mouseScrollReverse:"default",
-        onHoverStop:"on",
-        touch:{
-          touchenabled:"on",
-          swipe_threshold: 75,
-          swipe_min_touches: 1,
-          swipe_direction: "horizontal",
-          drag_block_vertical: false
         }
-        ,
-        arrows: {
-          style: "uranus",
-          enable: true,
-          hide_onmobile: false,
-          hide_onleave: false,
-          tmp: '',
-          left: {
-            h_align: "left",
-            v_align: "center",
-            h_offset: 10,
-            v_offset: 0
-          },
-          right: {
-            h_align: "right",
-            v_align: "center",
-            h_offset: 10,
-            v_offset: 0
-          }
-        },
-        
-      },
-      viewPort: {
-        enable:true,
-        outof:"pause",
-        visible_area:"80%",
-        presize:false
-      },
-      
-      visibilityLevels:[1240,1024,778,480],
-      gridwidth:[1240,1024,778,480],
-      gridheight:[768,600,600,600],
-      lazyType:"none",
-      parallax: {
-        type:"scroll",
-        origo:"enterpoint",
-        speed:400,
-        levels:[5,10,15,20,25,30,35,40,45,50,46,47,48,49,50,55],
-        type:"scroll",
-      },
-      shadow:0,
-      spinner:"off",
-      stopLoop:"off",
-      stopAfterLoops:-1,
-      stopAtSlide:-1,
-      shuffle:"off",
-      autoHeight:"off",
-      hideThumbsOnMobile:"off",
-      hideSliderAtLimit:0,
-      hideCaptionAtLimit:0,
-      hideAllCaptionAtLilmit:0,
-      debugMode:false,
-      fallbacks: {
-        simplifyAll:"off",
-        nextSlideOnWindowFocus:"off",
-        disableFocusListener:false,
-      }
-    });
-  }
-}); 
-
-$(".goog-te-banner").hide();
+    }
 </script>
+<script src="./assets/new/js/script.js?ver=1.1"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function() {
+            new Flickity('.hero-wrapper', {
+                wrapAround: true,
+                pageDots: false,
+                prevNextButtons: false,
+                autoPlay: 1500
+            });
+
+            $('#companies-loved-wrapper').slick({
+                slidesToShow: 4,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                responsive: [{
+                    breakpoint: 1023,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }]
+            });
+
+            $('#testimonial-wrap').slick({
+                slidesToShow: 2,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                responsive: [{
+                    breakpoint: 1023,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }]
+            });
+        });
+    </script>
+
 </body>
 
 </html>

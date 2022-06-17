@@ -1,25 +1,7 @@
-<!doctype html>
-<html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- META ============================================= -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="keywords" content="" />
-  <meta name="author" content="" />
-  <meta name="robots" content="" />
-  
-  <!-- DESCRIPTION -->
-  <meta name="description" content="Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia." />
-  
-  <!-- OG -->
-  <meta property="og:title" content="Indonesia Cyber Education Institute" />
-  <meta property="og:description" content="Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia." />
-  <meta property="og:image" content="<?php echo base_url()?>assets/frontand/images/ice.png" />
-  <meta name="format-detection" content="telephone=0812 5050 4200">
-    <link rel="stylesheet" href="./assets/new/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,5 +11,5 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/new/css/style.css?ver=1.2">
+    <link rel="stylesheet" href="./assets/css/style.css?ver=1.2">
 </head>
