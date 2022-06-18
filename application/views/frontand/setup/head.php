@@ -20,7 +20,7 @@
   <meta property="og:image" content="<?php echo base_url()?>assets/frontand/images/ice.png" />
   <meta name="format-detection" content="telephone=0812 5050 4200">
   <title>ICE Institute</title>
-    <link rel="stylesheet" href="./assets/new/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/new/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,6 +30,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/new/css/style.css?ver=1.2">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/new/css/style.css?ver=1.2">
     <link rel="shortcut icon" type="image/x-icon" href="https://info.icei.ac.id/assets/frontend/images/ice.png">
 </head>

@@ -1,7 +1,7 @@
 <nav class="w-full fixed bg-white z-20 shadow">
         <div class="flex container mx-auto px-5 lg:px-20 py-1 justify-center lg:justify-between">
             <div class="logo flex-initial w-full lg:w-2/6 flex justify-center lg:justify-start items-center ">
-                <img src="./assets/new/images/logo.png" class="w-12 lg:w-16" alt="">
+                <img src="<?php echo base_url()?>assets/new/images/logo.png" class="w-12 lg:w-16" alt="">
                 <h4 class="text-red-600 text-sm font-medium ml-2">ABCDEFG</h4>
             </div>
             <ul id="navbar-mobile" class="flex-initial nav-hidden w-full lg:w-4/6 fixed lg:relative bg-white left-0 top-14 lg:top-0 shadow-md lg:shadow-none lg:flex justify-between items-center nav-links py-4 lg:py-0">

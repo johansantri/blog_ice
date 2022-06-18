@@ -15,8 +15,9 @@
                 <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">Berita</h3>
             </div>
             <div class=" w-full">
-                <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
-                    <div class="hero-slide w-full h-40 lg:h-[100vh] rounded-[17px] lg:rounded-[25px] bg-cover" style="background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>')"></div>
+                
+                <div class="mb-5 lg:mb-8 my-8 hero-wrapper ">
+                    <div  class="hero-slide w-full h-40 lg:h-[100vh] rounded-[17px] lg:rounded-[25px] bg-cover" style="background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
                 </div>
             </div>
             <hr>
@@ -210,47 +211,20 @@
                     <div class="mt-12">
                         <h4 class="font-darker-grotesque text-red-primary font-semibold text-2xl">Populer Now</h4>
                         <div class="mt-5">
-                                                            <div class="flex gap-x-4 mb-7">
+                        <?php foreach ($unduh as $key ) {?>
+                                <div class="flex gap-x-4 mb-7">
                                     <div class="w-5/12 relative">
-                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="./assets/images/image-gray-college.png" alt="">
+                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
                                         <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
                                     </div>
                                     <div class="w-7/12">
-                                        <a href="" class="font-darker-grotesque text-red-primary leading-5 block">Lorem ipsum dolor sit amet consectetur </a>
-                                        <span class="font-darker-grotesque block mt-1 text-sm">April 02, 2002</span>
+                                        <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="font-darker-grotesque text-red-primary leading-5 block"><?php echo $key->title;?> </a>
+                                        <span class="font-darker-grotesque block mt-1 text-sm"><?php echo $key->create_ad;?></span>
                                     </div>
                                 </div>
-                                                            <div class="flex gap-x-4 mb-7">
-                                    <div class="w-5/12 relative">
-                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="./assets/images/image-gray-college.png" alt="">
-                                        <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
-                                    </div>
-                                    <div class="w-7/12">
-                                        <a href="" class="font-darker-grotesque text-red-primary leading-5 block">Lorem ipsum dolor sit amet consectetur </a>
-                                        <span class="font-darker-grotesque block mt-1 text-sm">April 02, 2002</span>
-                                    </div>
-                                </div>
-                                                            <div class="flex gap-x-4 mb-7">
-                                    <div class="w-5/12 relative">
-                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="./assets/images/image-gray-college.png" alt="">
-                                        <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
-                                    </div>
-                                    <div class="w-7/12">
-                                        <a href="" class="font-darker-grotesque text-red-primary leading-5 block">Lorem ipsum dolor sit amet consectetur </a>
-                                        <span class="font-darker-grotesque block mt-1 text-sm">April 02, 2002</span>
-                                    </div>
-                                </div>
-                                                            <div class="flex gap-x-4 mb-7">
-                                    <div class="w-5/12 relative">
-                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="./assets/images/image-gray-college.png" alt="">
-                                        <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
-                                    </div>
-                                    <div class="w-7/12">
-                                        <a href="" class="font-darker-grotesque text-red-primary leading-5 block">Lorem ipsum dolor sit amet consectetur </a>
-                                        <span class="font-darker-grotesque block mt-1 text-sm">April 02, 2002</span>
-                                    </div>
-                                </div>
-                                                    </div>
+                          <?php };?>
+                               
+                            </div>
                     </div>
                 </div>
             </div>
