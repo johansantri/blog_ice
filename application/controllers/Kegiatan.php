@@ -45,6 +45,7 @@ class Kegiatan extends CI_Controller {
 			  $partner= $this->Blog_m->getAwal();
 			   $event= $this->Blog_m->getEvent();*/
 			     $profilmenu= $this->Blog_m->getProfil();
+				 $unduh= $this->Blog_m->getUnduh();
 			     $berita= $this->Blog_m->getBerita();
 			      $people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
@@ -61,10 +62,11 @@ class Kegiatan extends CI_Controller {
 				                             'people'=>$people,
 				                              'berita'=>$berita,
 				                             'about'=>$about,
+											 'unduh'=>$unduh,
 				                             'profilmenu'=>$profilmenu,
 				                             'slug'=>$slug,
 				                                'kegiatanmenu'=>$kegiatanmenu,
-				                            'isi'=>'frontand/page/kegiatan_detail' );
+				                            'isi'=>'frontand/page/berita_detail' );
 				                             
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);

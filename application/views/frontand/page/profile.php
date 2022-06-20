@@ -1,93 +1,71 @@
-	
 
-
-	   <div class="page-content">
-        <!-- Page Heading Box ==== -->
-        <div class="page-banner ovbl-dark" style="background-image:url(<?php echo base_url()?>assets/images/banner/banner2.jpg);">
-            <div class="container">
-                <div class="page-banner-entry">
-                    <h1 class="text-white"></h1>
-				 </div>
+            <!-- Hamburger -->
+            <div onclick="toggleNavbar()" id="hamburger" class="fixed flex flex-col items-end gap-y-1 top-4 cursor-pointer nav-hidden right-4 z-30 w-9 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
             </div>
+            <!-- End of Hamburger -->
         </div>
-		<div class="breadcrumb-row">
-			<div class="container">
-				<ul class="list-inline">
-					<li><a href="<?php echo base_url()?>">Rumah</a></li>
-					<li><?php echo $slug['title'];?></li>
-				</ul>
-			</div>
-		</div>
-		<!-- Page Heading Box END ==== -->
-		<!-- Page Content Box ==== -->
-		<div class="content-block">
-            <!-- About Us ==== -->
-			
-			<!-- About Us END ==== -->
-            <!-- Our Story ==== -->
-			<div class="section-area bg-gray section-sp1 our-story">
-				<div class="container">
-					<div class="row align-items-center d-flex">
-						
-						
-						<div class="col-md-12 heading-bx">
-							<h2 class="m-b10"><?php echo $slug['title'];?></h2>
-						
-							<p><?php echo $slug['description'];?></p>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Our Story END ==== -->
-
-			<!-- About Content ==== -->
-			<div class="section-area section-sp2 bg-fix ovbl-dark join-bx text-center" style="background-image:url(assets/images/background/bg1.jpg);">
-                <div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="join-content-bx text-white">
-								<h2>Pelajari Keterampilan baru <br/> Dengan berbagai waktu</h2>
-								<h4><span class="counter">57,000 </span> Kursus Online </h4>
-								<p>Untuk mendapatkan pengalaman baru, ilmu baru dan sesuai dengan ke butuhan anda saat ini, segera bergabung bersama Indonesia Cyber Eduction Institute (ICE-I).</p>
-								<a href="https://icei.ac.id/" class="btn button-md">Bergabung Sekarang</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- About Content END ==== -->
-			<!-- Testimonials ==== -->
-			<div class="section-area section-sp2">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 heading-bx left">
-							   <h2 class="title-head text-uppercase">Apa Kata Mereka Tentang <span>ICE-I</span></h2>
-              <p>ICE-I itu adalah</p>
-						</div>
-					</div>
-					<div class="testimonial-carousel owl-carousel owl-btn-1 col-12 p-lr0">
-					 <?php foreach ($people as $key ) {?>
-              
-            <div class="item">
-              <div class="testimonial-bx">
-                <div class="testimonial-thumb">
-                  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
-                </div>
-                <div class="testimonial-info">
-                  <h5 class="name"><?php echo $key->title;?></h5>
-                  
-                </div>
-                <div class="testimonial-content">
-                  <p><?php echo $key->description;?></p>
-                </div>
-              </div>
+    </nav>
+    <div class="pt-12">
+        <div class="container px-5 lg:px-20 mx-auto mt-10 lg:mt-12 lg:mt-16">
+            <div class="w-full w-full self-start">
+                <h4 class="text-red-primary font-darker-grotesque text-xl">Profile</h4>
+                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">ICE Institute</h3>
             </div>
-          <?php };?>
-					</div>
-				</div>
-			</div>
-			<!-- Testimonials END ==== -->
-		</div>
-		<!-- Page Content Box END ==== -->
-    </div>
+            <div class=" w-full">
+                
+                <div class="mb-5 lg:mb-8 my-8 hero-wrapper ">
+                    <div  class="hero-slide w-full h-40 lg:h-[100vh] rounded-[17px] lg:rounded-[25px] bg-cover" style="background-size: 100% 100%; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container px-5 mx-auto lg:px-20 mt-6 lg:mt-12">
+            <div class="flex flex-col lg:flex-row gap-x-20">
+                <div class="w-full lg:w-fit">
+                    <div class="relative">
+                        <div class="flex justify-between">
+                            <span class="font-darker-grotesque"><?php echo $slug['create_ad'];?></span>
+                            <span class="font-darker-grotesque">oleh <span class="font-bold">admin</span></span>
+                        </div>
+                        <h1 class="font-darker-grotesque text-4xl text-red-primary font-bold mt-4 lg:mt-12"><?php echo $slug['title'];?></h1>
+
+                        <div class="flex items-center justify-between mt-8 lg:mt-24">
+                            <ul class="flex items-center gap-x-4 lg:gap-x-5 mt-3">
+                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-facebook"></i></a></li>
+                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-youtube-play"></i></a></li>
+                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-twitter"></i></a></li>
+                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-linkedin"></i></a></li>
+                            </ul>
+                            <ul class="flex items-center gap-x-4">
+                                <li><img class="h-4" src="<?php echo base_url()?>assets/new/images/bookmart-icon.png" alt=""></li>
+                                <li><img class="h-4" src="<?php echo base_url()?>/assets/new/images/flag-icon.png" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="-mt-3 font-darker-grotesque">
+                            <p class="mt-8"><?php echo $slug['description'];?>.</p>
+                           
+             
+                           
+                         
+
+                    
+                                      
+                                           
+                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end bg-red-primary h-20 w-10 absolute top-0 rounded-3xl -left-16 translate-y-0" style="z-index: 1">
+                            <span class="w-6/12 h-full bg-white"></span>
+                        </div>
+                        <div class="bg-red-primary h-32 w-24 absolute rounded-full -left-44 translate-y-20 top-0"></div>
+                    </div>
+                </div>
+			
+        </div>

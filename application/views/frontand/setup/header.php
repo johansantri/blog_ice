@@ -9,7 +9,7 @@
             </div>
             <ul id="navbar-mobile" class="flex-initial nav-hidden w-full lg:w-4/6 fixed lg:relative bg-white left-0 top-14 lg:top-0 shadow-md lg:shadow-none lg:flex justify-between items-center nav-links py-4 lg:py-0">
                 <li>
-                    <a href="./index.php" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Beranda</a>
+                    <a href="<?php echo base_url()?>" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Beranda</a>
                 </li>
                 <li>
                     <div class="dropdown inline-block relative w-full">
@@ -63,7 +63,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="https://info.icei.ac.id/unduh/panduan-pendaftaran-beasiswa" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Panduan</a>
+                    <a href="<?php echo base_url()?>panduan" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Panduan</a>
                 </li>
                 <li>
                     <a href="https://info.icei.ac.id/berita/pakta-integritas" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Fakta Integritas</a>

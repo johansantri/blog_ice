@@ -57,7 +57,7 @@ $route['keluar'] = 'auth/logout';
 $route['about/(:any)'] = 'home/about/$1';
 $route['profile/(:any)'] = 'home/profile/$1';
 $route['kegiatan/(:any)'] = 'kegiatan/kegiatan_read/$1';
-
+$route['profile/tags/(:any)'] = 'home/tags/$1';
 $route['berita/(:any)'] = 'berita/berita_read/$1';
 
 $route['unduh/(:any)'] = 'unduh/unduh_read/$1';

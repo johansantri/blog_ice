@@ -2,11 +2,11 @@
         <div class="flex container mx-auto px-5 lg:px-20 py-1 justify-center lg:justify-between">
             <div class="logo flex-initial w-full lg:w-2/6 flex justify-center lg:justify-start items-center ">
                 <img src="<?php echo base_url()?>assets/new/images/logo.png" class="w-12 lg:w-16" alt="">
-                <h4 class="text-red-600 text-sm font-medium ml-2">ABCDEFG</h4>
+                <h4 class="text-red-600 text-sm font-medium ml-2">ICE Institute</h4>
             </div>
             <ul id="navbar-mobile" class="flex-initial nav-hidden w-full lg:w-4/6 fixed lg:relative bg-white left-0 top-14 lg:top-0 shadow-md lg:shadow-none lg:flex justify-between items-center nav-links py-4 lg:py-0">
                 <li>
-                    <a href="./index.php" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Beranda</a>
+                    <a href="<?php echo base_url()?>home" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Beranda</a>
                 </li>
                 <li>
                     <div class="dropdown inline-block relative w-full">

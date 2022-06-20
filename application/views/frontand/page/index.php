@@ -12,7 +12,7 @@
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
-            <div class="hero-slide h-40 lg:h-[85vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[90%]" style="background-image: url('upload/slide/<?php echo $key->image;?>') "></div>
+            <div class="hero-slide h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[90%]" style="background-image: url('upload/slide/<?php echo $key->image;?>') "></div>
             <?php };?>    
          </div>
      

@@ -15,7 +15,8 @@ class Unduh extends CI_Controller {
 	{
 
 			 $slide= $this->Slide_m->getAktif();
-			  $unduh= $this->Blog_m->getUnduh();
+			 // $unduh= $this->Blog_m->getUnduh();
+			  $unduhAll= $this->Blog_m->getUnduhALL();
     			 $new= $this->Blog_m->getNew();
    			  $berita= $this->Blog_m->getBerita();
 			   $event= $this->Blog_m->getEvent();
@@ -25,7 +26,8 @@ class Unduh extends CI_Controller {
 			        	 $kegiatanmenu= $this->Blog_m->getKegiatan();
 	  $data  = array('x' => 'Dasbord',
 	  	 					'slide'=>$slide,
-                             'unduh'=>$unduh,
+                            // 'unduh'=>$unduh,
+							 'unduhAll'=>$unduhAll,
                              'event'=>$event,
                              'people'=>$people,
                      		 'berita'=>$berita,

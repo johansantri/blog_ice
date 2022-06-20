@@ -134,6 +134,47 @@ class Home extends CI_Controller {
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);
 					}
+
+
+					public function tags($tags)
+					{
+							if (empty($tags))
+									{
+									redirect(site_url().'berita');
+									}
+					
+								   $tag= $this->Blog_m->get_tg($tags);
+								   $slide= $this->Slide_m->getAktif();
+									$unduh= $this->Blog_m->getUnduh();
+									 $profilmenu= $this->Blog_m->getProfil();
+									$berita= $this->Blog_m->getBerita();
+									$event= $this->Blog_m->getEvent();
+									  $people= $this->Blog_m->getPeople();
+									$about= $this->Blog_m->getAbout();
+								//	$pages=$this->pages();
+									$kegiatanmenu= $this->Blog_m->getKegiatan();
+									if (empty($tags))
+									{
+									show_404();
+									}
+									  $data  = array('x' => 'kegiatan',
+															   /*'slide'=>$slide,
+															 'partner'=>$partner,*/
+															 'event'=>$event,
+															 'people'=>$people,
+															  'berita'=>$berita,
+															  'slide'=>$slide,
+															 'about'=>$about,
+															// 'pages'=>$pages,
+															 'profilmenu'=>$profilmenu,
+															 'tag'=>$tag,
+																 'unduh'=>$unduh,
+															  'kegiatanmenu'=>$kegiatanmenu,
+															'isi'=>'frontand/page/tags' );
+															 
+										 $this->load->view('frontand/setup/konek',$data);
+									}
+				
 		public function contact()
 	{
 				        $about= $this->Blog_m->getAbout();

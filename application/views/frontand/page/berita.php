@@ -12,7 +12,7 @@
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
-            <div class="hero-slide h-40 lg:h-[85vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[90%]" style="background-image: url('upload/slide/<?php echo $key->image;?>') "></div>
+            <div class="hero-slide h-40 lg:h-[85vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[90%]" style="background-image: url('<?php echo base_url()?>upload/slide/<?php echo $key->image;?>') "></div>
             <?php };?>    
          </div>
      
@@ -30,18 +30,41 @@
                 <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">Berita</h3>
             </div>
             <div class="w-full lg:w-7/12 grid grid-cols-1 mt-4 lg:mt-0 lg:grid-cols-3 gap-x-4 flex-col">
-                <?php for ($i = 0; $i < 3; $i++) { ?>
+                
                     <div class="w-6/6 mb-6 lg:mb-0">
                         <div class="gap-x-4 flex items-center">
                             <div class="flex items-center">
-                                <img src="./assets/new/images/user-icon.jpg" class="h-4 mr-3" alt="user-icon">
+                                <img src="<?php echo base_url()?>assets/new/images/user-icon.jpg" class="h-4 mr-3" alt="user-icon">
                                 <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
                             </div>
                         </div>
                         <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore.</p>
                     </div>
-                <?php } ?>
+
+                    <div class="w-6/6 mb-6 lg:mb-0">
+                        <div class="gap-x-4 flex items-center">
+                            <div class="flex items-center">
+                                <img src="<?php echo base_url()?>assets/new/images/book-1k.png" class="h-4 mr-3" alt="user-icon">
+                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
+                            </div>
+                        </div>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    </div>
+
+
+                    <div class="w-6/6 mb-6 lg:mb-0">
+                        <div class="gap-x-4 flex items-center">
+                            <div class="flex items-center">
+                                <img src="<?php echo base_url()?>assets/new/images/lecture-computer.png" class="h-4 mr-3" alt="user-icon">
+                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
+                            </div>
+                        </div>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    </div>
+             
             </div>
 
             <div class="flex justify-end bg-red-primary h-10 lg:h-20 top-10 lg:top-5 w-7 lg:w-10 absolute rounded-3xl -left-1 lg:left-7 -translate-y-6" style="z-index: 1">
@@ -58,35 +81,83 @@
                       
                      
 
-                          <?php foreach ($berita as $key ) {?>
-
+                         
+                            <?php foreach ($data->result() as $row) :?>
                           <div>
                             <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
-                                <span class="font-darker-grotesque"><?php echo $key->create_ad;?></span>
-                                <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
-                                    <h5 class="h-20"><?php echo substr($key->title, 0,80). '...'?></h5>
+                                <span class="font-darker-grotesque"><?php echo $row->create_ad;?></span>
+                                <a href="<?php echo base_url()?>berita/<?php echo $row->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
+                                    <h5 class="h-20"><?php echo substr($row->title, 0,80). '...'?></h5>
                                 </a>
                                 <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin</span></span>
                             </div>
                             <div class="-mt-7">
-                                <img class="w-full h-48 rounded-[20px] object-cover object-center" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                                <img class="w-full h-48 rounded-[20px] object-cover object-center" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt="">
                             </div>
                             <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
-                                <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,80). '...'?></p>
-                                <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya <img src="chevron-right-icon.png" alt=""></a>
+                                <p class="font-darker-grotesque h-24"><?php echo substr($row->meta, 0,80). '...'?></p>
+                                <a href="<?php echo base_url()?>berita/<?php echo $row->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya <img src="chevron-right-icon.png" alt=""></a>
                             </div>
                         </div>
                       
 
-                        <?php };?>
+                        <?php endforeach; ?>
                     </div>
 
-                    <div class="flex justify-center gap-x-8 mt-8 items-center">
-                        <span class="border-b-2 border-gray-600 font-semibold pb-1 font-darker-grotesque">01</span>
-                        <span class="border-gray-600 font-semibold pb-1 font-darker-grotesque">03</span>
-                        <span class="border-gray-600 font-semibold pb-1 font-darker-grotesque">02</span>
-                        <span class="w-20 h-0.5 bg-black"></span>
-                        <span><img class="w-4" src="./assets/new/images/code-icon.png" alt=""></span>
+
+                    <style>
+    
+
+        /* class to hide content visually leaving it available to screenreaders.
+        See notes in cookbook recipe. 
+        https://github.com/h5bp/html5-boilerplate/issues/1985#issuecomment-394096182
+        https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939 
+        */
+        .visuallyhidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: auto;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+            white-space: nowrap;
+        }
+
+      
+
+        .pagination {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .pagination li {
+            margin: 0 1px;
+        }
+
+        .pagination a {
+            display: block;
+            padding: .5em 1em;
+            border: 1px solid #999;
+            border-radius: .2em;
+            text-decoration: none;
+        }
+
+        .pagination a[aria-current="page"] {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+
+
+                    <div class="flex justify-center gap-x-8 mt-8 items-center">                   
+                  
+                       
+                        <?php echo $pagination; ?>
+
                     </div>
                 </div>
                 <div class="w-full lg:w-3/12">
@@ -166,10 +237,10 @@
                 <div class="flex flex-col lg:flex-row items-center">
                     <div class="w-full lg:w-5/12 self-start">
                         <h4 class="text-red-primary font-darker-grotesque text-xl">Kegiatan</h4>
-                        <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">ABCDEFG</h3>
+                        <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">ICE Institute</h3>
                     </div>
                     <div class="w-full lg:w-7/12">
-                        <p class="font-darker-grotesque mt-3 lg:mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="font-darker-grotesque mt-3 lg:mt-0">ICE Institute sebagai marketplace matakuliah daring menjadi wadah para pakar, peneliti, pengajar dan pelajar untuk berbagi wawasan sesuai dengan keahlian mereka untuk disampaikan kepada kepada khalayak umum. </p>
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-y-3 gap-x-3 mt-12">
@@ -204,7 +275,7 @@
                                         <p class="w-6/12 text-lg text-white font-bold font-darker-grotesque leading-6"> <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"> <?php echo $key->title;?></a></p>
                                     </div>
                                     <div class="w-full lg:w-4/12 flex items-center justify-end">
-                             <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" class="rounded-[2rem] object-cover object-center" style="width: 100%; height: 100%;" alt="">
+                           <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" >  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" class="rounded-[2rem] object-cover object-center" style="width: 100%; height: 100%;" alt=""></a>
                                     </div>
                                 </div>
                             </div>
