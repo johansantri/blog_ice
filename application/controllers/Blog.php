@@ -79,4 +79,7 @@ $this->load->model('Blog_m');
             redirect(site_url('blog'));
         }
     }
+
+
+    
 }

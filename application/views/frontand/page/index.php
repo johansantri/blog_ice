@@ -12,7 +12,7 @@
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
-            <div class="hero-slide h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[90%]" style="background-image: url('upload/slide/<?php echo $key->image;?>') "></div>
+            <div class="hero-slide h-40 lg:h-[95vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[90%]" style="background-image: url('upload/slide/<?php echo $key->image;?>') "></div>
             <?php };?>    
          </div>
      
@@ -249,7 +249,8 @@
                     </div>
                             </div>
             <div class="flex items-center justify-center my-10 lg:my-12">
-                <button class="py-2 px-8 flex items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[.8rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Lihat Selebihnya</button>
+                <a href="https://icei.ac.id/courses" class="py-2 px-8 flex items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[.8rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF" type="button">Selengkapnya</a>
+              
             </div>
         </div>
 

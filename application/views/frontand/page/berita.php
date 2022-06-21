@@ -38,19 +38,17 @@
                                 <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
                             </div>
                         </div>
-                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">mereka sudah ikut serta dalam mengikuti kampus merdeka, merdeka belajar.</p>
                     </div>
 
                     <div class="w-6/6 mb-6 lg:mb-0">
                         <div class="gap-x-4 flex items-center">
                             <div class="flex items-center">
                                 <img src="<?php echo base_url()?>assets/new/images/book-1k.png" class="h-4 mr-3" alt="user-icon">
-                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
+                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">1K</h3>
                             </div>
                         </div>
-                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Tersedia berbagai macam pilihan matakuliah di ICE Institute.</p>
                     </div>
 
 
@@ -58,11 +56,10 @@
                         <div class="gap-x-4 flex items-center">
                             <div class="flex items-center">
                                 <img src="<?php echo base_url()?>assets/new/images/lecture-computer.png" class="h-4 mr-3" alt="user-icon">
-                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
+                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">600K</h3>
                             </div>
                         </div>
-                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Diampu oleh dosen-dosen profesioanl dari kampus-kampus terbaik..</p>
                     </div>
              
             </div>

@@ -30,7 +30,7 @@ Tangerang Selatan </li>
     </div>
 </div>
 <div class="container mt-12 lg:mt-24 pb-8 px-5 lg:px-20 mx-auto relative">
-    <p class="text-center font-darker-grotesque">&copy; ABCDEFG. All rights reserved.</p>
+    <p class="text-center font-darker-grotesque">2022 &copy; ICE Institute. All rights reserved.</p>
     <p class="lg:absolute flex justify-center mt-1 lg:mt-0 lg:justify-end items-center top-0 right-0">
         <a class="font-darker-grotesque" href="">Terms of use</a>
         <span class="mx-1">|</span>

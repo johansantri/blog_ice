@@ -3,7 +3,7 @@
 class Blog_m extends CI_Model
 {
     private $_table = "tb_blog";
-
+    private $_tc = "tb_comment";
     public $id_blog;
     public $title;
     public $meta;
@@ -14,6 +14,7 @@ class Blog_m extends CI_Model
 
     public $image = "default.jpg";
     public $status="draft";
+    public $status_comment="0";
     //public $create_ad=date("Y-m-d h:i:s");
  
     public function rules()
@@ -404,11 +405,13 @@ class Blog_m extends CI_Model
                 return $query->result_array();
         }
 
-           $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+           $this->db->select('tb_comment.id_comment,tb_blog.id_blog,tb_comment.nama_comment,tb_comment.description_comment,tb_comment.created_comment,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
         
 
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
+       $this->db->join('tb_comment','tb_comment.id_blog=tb_blog.id_blog','left');
+     
        // $this->db->from('tb_blog');
         $query = $this->db->get_where('tb_blog', array('slug_title' => $slug_title,'status'=>'post'));
         return $query->row_array();
@@ -449,5 +452,19 @@ function get_berita_list($limit, $start){
             return $query;
 }
 
+    public function addcomment()
+        {
+            $this->load->helper('url');
+            $data = array('nama_comment' 		=>	$this->input->post('nama_comment',true) ,
+                          'email_comment'       => $this->input->post('email_comment',true),
+                          'description_comment'  => $this->input->post('description_comment',true),
+                          'id_blog'             => $this->input->post('id_blog',true),
+                          'status_comment'      => $this->status_comment);
+
+            return $this->db->insert('tb_comment',$data);
+           
+        }
+
+    
 
 }

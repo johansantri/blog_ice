@@ -47,6 +47,7 @@ class Berita extends CI_Controller {
 			  $partner= $this->Blog_m->getAwal();
 			   $event= $this->Blog_m->getEvent();*/
 			     $profilmenu= $this->Blog_m->getProfil();
+				
 			     $berita= $this->Blog_m->getBerita();
      			 $unduh= $this->Blog_m->getUnduh();
 			      $people= $this->Blog_m->getPeople();
@@ -64,6 +65,7 @@ class Berita extends CI_Controller {
 				                             'people'=>$people,
 				                                  'berita'=>$berita,
 				                             'about'=>$about,
+											
                                     		 'unduh'=>$unduh,
 				                             'profilmenu'=>$profilmenu,
 				                               'kegiatanmenu'=>$kegiatanmenu,
@@ -167,6 +169,31 @@ class Berita extends CI_Controller {
 						
 					
 						 // var_dump($data);
+					}
+
+
+					public function addcom()
+					{
+					
+						$this->load->helper('form');
+						$this->load->library('form_validation');										
+					
+						$this->form_validation->set_rules('nama_comment', 'nama_comment', 'trim|required|min_length[5]|max_length[50]');
+						$this->form_validation->set_rules('email_comment', 'email_comment', 'trim|required|min_length[5]|max_length[50]|valid_email');
+						$this->form_validation->set_rules('description_comment', 'description_comment', 'trim|required|min_length[5]|max_length[200]');
+					
+						if ($this->form_validation->run() === FALSE)
+						{
+							redirect('/berita/'.$this->uri->segment(3));
+					
+						}
+						else
+						{
+							
+							$this->Blog_m->addcomment();
+							redirect('/berita/'.$this->uri->segment(3));
+						}
+					
 					}
 	
 }

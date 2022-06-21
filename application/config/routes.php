@@ -54,6 +54,7 @@ $route['masuk'] = 'auth/login';
 $route['daftar'] = 'auth/sigup';
 $route['lupa'] = 'auth/forgot';
 $route['keluar'] = 'auth/logout';
+$route['berita/addcom'] = 'berita/addcom';
 $route['about/(:any)'] = 'home/about/$1';
 $route['profile/(:any)'] = 'home/profile/$1';
 $route['kegiatan/(:any)'] = 'kegiatan/kegiatan_read/$1';
