@@ -9,19 +9,7 @@
         </div>
     </nav>
     <div class="pt-12">
-        <div class="container px-5 lg:px-20 mx-auto mt-10 lg:mt-12 lg:mt-16">
-            <div class="w-full w-full self-start">
-                <h4 class="text-red-primary font-darker-grotesque text-xl">Mitra</h4>
-                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">ICE Institute</h3>
-            </div>
-            <div class=" w-full">
-                
-                <div class="mb-5 lg:mb-8 my-8 hero-wrapper ">
-                    <div  class="hero-slide w-full h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover" style="background-size: 100% 100%; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
-                </div>
-            </div>
-            <hr>
-        </div>
+     
 
         <div class="container px-5 mx-auto lg:px-20 mt-6 lg:mt-12">
             <div class="flex flex-col lg:flex-row gap-x-20">
@@ -29,7 +17,7 @@
                     <div class="relative">
                         <div class="flex justify-between">
                             <span class="font-darker-grotesque"><?php echo $slug['create_ad'];?></span>
-                            <span class="font-darker-grotesque">oleh <span class="font-bold">admin</span></span>
+                           
                         </div>
                         <h1 class="font-darker-grotesque text-4xl text-red-primary font-bold mt-4 lg:mt-12"><?php echo $slug['title'];?></h1>
 
