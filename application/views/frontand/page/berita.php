@@ -89,7 +89,7 @@
                                 <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin </span></span>
                             </div>
                             <div class="-mt-7">
-                                <img class="w-full h-48 rounded-[20px] object-cover object-center" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt="">
+                                <img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt="">
                             </div>
                             <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
                                 <p class="font-darker-grotesque h-24"><?php echo substr($row->meta, 0,80). '...'?></p>
