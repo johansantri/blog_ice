@@ -206,18 +206,24 @@ class Blog_m extends CI_Model
 
    //forntend berita
         public function getUnduh()
-    {
-      $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-          $this->db->where('tb_blog.status = "post"');
-          $this->db->where('tb_blog.id_kategori= "11"');
-          $this->db->limit(6);
-             $this->db->order_by('tb_blog.create_ad', 'DESC');
+        {
+ 
+        $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+        $this->db->where('tb_blog.status = "post"');
+        // $this->db->where('tb_blog.id_kategori= "11"');
+        $this->db->limit(6);
+        $this->db->order_by('tb_blog.visit', 'DESC');
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
-       // $this->db->from('tb_blog');
+        // $this->db->from('tb_blog');
         $query=$this->db->get('tb_blog');
         return $query->result();
-    }
+        }
+
+  
+
+
+    
 
     public function getPanduan()
     {
@@ -396,61 +402,61 @@ class Blog_m extends CI_Model
         }
     }
 
-    public function get_news($slug_title = FALSE)
-{
-        if ($slug_title === FALSE)
-        {       
+            public function get_news($slug_title = FALSE)
+        {
+                if ($slug_title === FALSE)
+                {       
 
-                $query = $this->db->get('tb_blog');
-                return $query->result_array();
+                        $query = $this->db->get('tb_blog');
+                        return $query->result_array();
+                }
+
+                $this->db->select('tb_comment.id_comment,tb_blog.id_blog,tb_comment.nama_comment,tb_comment.description_comment,tb_comment.created_comment,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+                
+
+                $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
+                $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
+            $this->db->join('tb_comment','tb_comment.id_blog=tb_blog.id_blog','left');
+            
+            // $this->db->from('tb_blog');
+                $query = $this->db->get_where('tb_blog', array('slug_title' => $slug_title,'status'=>'post'));
+                return $query->row_array();
         }
 
-           $this->db->select('tb_comment.id_comment,tb_blog.id_blog,tb_comment.nama_comment,tb_comment.description_comment,tb_comment.created_comment,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-        
+                public function get_tg($tags = null)
+            {
+                
+                
+                
+                $this->db->select('*');
+                    
+                    $this->db->where("tb_blog.status = 'post'");// 
+                
+                    $this->db->like('tb_blog.title',$tags);
+                    $this->db->or_like('tb_blog.description',$tags);
+                    $this->db->or_like('tb_blog.tags',$tags);
+                    $this->db->from('tb_blog');
+                
+                    $query=$this->db->get();
+                    return $query->result();
+                
+                    
 
-        $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
-        $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
-       $this->db->join('tb_comment','tb_comment.id_blog=tb_blog.id_blog','left');
-     
-       // $this->db->from('tb_blog');
-        $query = $this->db->get_where('tb_blog', array('slug_title' => $slug_title,'status'=>'post'));
-        return $query->row_array();
-}
+                
+            }
 
-    public function get_tg($tags = null)
-{
-      
-    
-    
-       $this->db->select('*');
-        
-        $this->db->where("tb_blog.status = 'post'");// 
-      
-        $this->db->like('tb_blog.title',$tags);
-        $this->db->or_like('tb_blog.description',$tags);
-     	$this->db->or_like('tb_blog.tags',$tags);
-        $this->db->from('tb_blog');
-       
-        $query=$this->db->get();
-        return $query->result();
-       
-        
+        function get_berita_list($limit, $start){
+                $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+                $this->db->where('tb_blog.status = "post"');
+                $this->db->where('tb_blog.id_kategori= "8"');
 
-    
-}
-
-function get_berita_list($limit, $start){
-        $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-        $this->db->where('tb_blog.status = "post"');
-        $this->db->where('tb_blog.id_kategori= "8"');
-
-        $this->db->order_by('tb_blog.create_ad', 'DESC');
-        $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
-        $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
-        //$this->db->from('tb_blog');
-            $query = $this->db->get('tb_blog', $limit, $start);
-            return $query;
-}
+                $this->db->order_by('tb_blog.create_ad', 'DESC');
+                $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
+                $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
+                //$this->db->from('tb_blog');
+                    $query = $this->db->get('tb_blog', $limit, $start);
+                    return $query;
+        }
 
     public function addcomment()
         {
@@ -465,6 +471,22 @@ function get_berita_list($limit, $start){
            
         }
 
-    
+        function update_counter($slug_title)
+        {
+       
+             //return current article views
+            $this->db->where('slug_title', urldecode($slug_title));
+            $this->db->select('visit'); $count = $this->db->get('tb_blog')->row();
+            // then increase by one
+            if (empty($count)) {
+               redirect(404);
+            }
+            $this->db->where('slug_title', urldecode($slug_title));
+            $this->db->set('visit', ($count->visit + 1));
+            $this->db->update('tb_blog');   
+              
+           
+            
+        }
 
 }

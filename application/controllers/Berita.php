@@ -14,26 +14,29 @@ class Berita extends CI_Controller {
 	public function index()
 	{
 
-			 $slide= $this->Slide_m->getAktif();
-			  $berita= $this->Blog_m->getBeritaa();
-			   $event= $this->Blog_m->getEvent();
-			      $people= $this->Blog_m->getPeople();
-      		$unduh= $this->Blog_m->getUnduh();
-			       $about= $this->Blog_m->getAbout();
-			        $profilmenu= $this->Blog_m->getProfil();
-			        	 $kegiatanmenu= $this->Blog_m->getKegiatan();
-						 $pages=$this->pages();
-	  $data  = array('x' => 'Dasbord',
-	  	 					'slide'=>$slide,
-                             'berita'=>$berita,
-                             'event'=>$event,
-                             'people'=>$people,
-                     		 'unduh'=>$unduh,
-                             'about'=>$about,
-							 'pages'=>$pages,
-                              'kegiatanmenu'=>$kegiatanmenu,
-                              'profilmenu'=>$profilmenu,
-                            'isi'=>'frontand/page/berita' );
+			$slide = $this->Slide_m->getAktif();
+			$berita = $this->Blog_m->getBeritaa();
+			$event = $this->Blog_m->getEvent();
+			$people = $this->Blog_m->getPeople();
+			$unduh = $this->Blog_m->getUnduh();
+			
+			$about = $this->Blog_m->getAbout();
+			$profilmenu = $this->Blog_m->getProfil();
+			$kegiatanmenu = $this->Blog_m->getKegiatan();
+			$pages = $this->pages();
+
+			$data  = array(			'x' => 'Dasbord',
+									'slide'=>$slide,
+									'berita'=>$berita,
+									'event'=>$event,
+									'people'=>$people,
+									'unduh'=>$unduh,
+									'about'=>$about,
+								
+									'pages'=>$pages,
+									'kegiatanmenu'=>$kegiatanmenu,
+									'profilmenu'=>$profilmenu,
+									'isi'=>'frontand/page/berita' );
                              
             $this->load->view('frontand/setup/konek',$data);
 	}
@@ -47,7 +50,7 @@ class Berita extends CI_Controller {
 			  $partner= $this->Blog_m->getAwal();
 			   $event= $this->Blog_m->getEvent();*/
 			     $profilmenu= $this->Blog_m->getProfil();
-				
+			
 			     $berita= $this->Blog_m->getBerita();
      			 $unduh= $this->Blog_m->getUnduh();
 			      $people= $this->Blog_m->getPeople();
@@ -65,7 +68,7 @@ class Berita extends CI_Controller {
 				                             'people'=>$people,
 				                                  'berita'=>$berita,
 				                             'about'=>$about,
-											
+										
                                     		 'unduh'=>$unduh,
 				                             'profilmenu'=>$profilmenu,
 				                               'kegiatanmenu'=>$kegiatanmenu,
@@ -74,6 +77,7 @@ class Berita extends CI_Controller {
 				                             
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);
+					  $this->add_count($slug_title);
 					}
 
 	public function tags($tags)
@@ -91,6 +95,7 @@ class Berita extends CI_Controller {
 					$event= $this->Blog_m->getEvent();
 			      	$people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
+			
 				//	$pages=$this->pages();
 			        $kegiatanmenu= $this->Blog_m->getKegiatan();
 					if (empty($tags))
@@ -105,6 +110,7 @@ class Berita extends CI_Controller {
 				                              'berita'=>$berita,
 											  'slide'=>$slide,
 				                             'about'=>$about,
+										
 											// 'pages'=>$pages,
 				                             'profilmenu'=>$profilmenu,
 				                             'tag'=>$tag,
@@ -196,4 +202,21 @@ class Berita extends CI_Controller {
 					
 					}
 	
+
+					function add_count($slug_title)
+					{
+						// load cookie helper
+						$this->load->helper('cookie');
+						// this line will return the cookie which has slug name
+						$check_visitor = $this->input->cookie(urldecode($slug_title), FALSE);
+						// this line will return the visitor ip address
+						$ip = $this->input->ip_address();
+					   
+						if ($check_visitor == false) {
+							$cookie = array("name" => urldecode($slug_title), "value" => "$ip", "expire" => time() + 300, "secure" => false);
+							$this->input->set_cookie($cookie);
+							$this->Blog_m->update_counter(urldecode($slug_title));
+						}
+					}
+				
 }

@@ -86,7 +86,7 @@
                                 <a href="<?php echo base_url()?>berita/<?php echo $row->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
                                     <h5 class="h-20"><?php echo substr($row->title, 0,80). '...'?></h5>
                                 </a>
-                                <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin</span></span>
+                                <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin </span></span>
                             </div>
                             <div class="-mt-7">
                                 <img class="w-full h-48 rounded-[20px] object-cover object-center" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt="">
@@ -177,11 +177,11 @@
         <input type="text" class="w-full font-darker-grotesque focus:outline-0 placeholder:text-left" name="" id="" placeholder="Cari apa ingin kamu ketahui">
     </div>
 
-    <?php if ($SearchInputButton == true) { ?>
-        <div>
-            <button class="py-2 px-8 flex items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[.8rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Cari</button>
-        </div>
-    <?php } ?>
+                <?php if ($SearchInputButton == true) { ?>
+                    <div>
+                        <button class="py-2 px-8 flex items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[.8rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Cari</button>
+                    </div>
+                <?php } ?>
 </div>
 
 
@@ -201,7 +201,7 @@
                                 </div>
                                 <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="./assets/new/images/book.png" class="w-full" alt="book">
+                                    <img src="<?php echo base_url()?>assets/new/images/book.png" class="w-full" alt="book">
                                 </div>
                                 <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
                                 <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>
@@ -225,7 +225,7 @@
                                         <span class="font-darker-grotesque block mt-1 text-sm"><?php echo $key->create_ad;?></span>
                                     </div>
                                 </div>
-                            <?php } ;?>
+                                <?php }; ?>
                         </div>
                     </div>
                 </div>
@@ -257,7 +257,6 @@
 
         <div class="container px-5 mx-auto lg:px-20 mt-20 mb-16">
             <div class="news-wrap px-5">
-
 
             <?php foreach ($event as $key ) {?>
                 
