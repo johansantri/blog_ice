@@ -39,7 +39,7 @@
                 <div class="mt-6 px-3 lg:px-0" id="companies-loved-wrapper">
                 <?php foreach ($partner as $key ) {?>
                         <div class="bg-none-200 w-3/12 mx-2 lg:mx-5 rounded-[.7rem] h-11">
-                        <a href="<?php echo base_url()?>home/about/<?php echo $key->slug_title;?>"><img src="<?php echo base_url()?>upload/<?php echo $key->image; ?>" style="width: 50px;" alt="<?php echo $key->title;?>"></a>
+                        <a href="<?php echo base_url()?>about/<?php echo $key->slug_title;?>"><img src="<?php echo base_url()?>upload/<?php echo $key->image; ?>" style="width: 50px;" alt="<?php echo $key->title;?>"></a>
                             
                         </div>
                 <?php }; ?>
@@ -155,9 +155,7 @@
                 <div class="mb-3 mt-6 w-4/6 lg:w-3/12">
                     <select class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 rounded-full px-5 font-darker-grotesque bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
                         <option selected disabled>Mata Kuliah Paling Populer</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                       
                     </select>
                 </div>
             </div>
@@ -172,7 +170,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Data Science</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -181,7 +179,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Business</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -190,7 +188,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Art & Humanities</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -199,7 +197,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Social Science</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -208,7 +206,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Information Technology</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -217,7 +215,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Maths & Logics</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -226,7 +224,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Language Learning</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -235,7 +233,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Computer Science</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                                     <div class="rounded-lg flex items-center p-4 bg-gradient-to-r from-red-primary to-red-100">
@@ -244,7 +242,7 @@
                         </div>
                         <div class="w-5/6">
                             <h4 class="font-darker-grotesque text-white font-bold text-xl">Biology</h4>
-                            <p class="font-darker-grotesque text-white">000 lorem ipsum</p>
+                            <p class="font-darker-grotesque text-white"></p>
                         </div>
                     </div>
                             </div>
