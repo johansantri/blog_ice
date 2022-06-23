@@ -42,6 +42,18 @@ Tangerang Selatan </li>
 </div>
     </div>
 
+
+ <!--Your Splash Screen-->
+ <div id="splash" class="flex-container" style="background: #ffffff;">
+  
+  <!--Center align Splash contents in all screen sizes-->
+  <div id="flex-item">
+    <img src="https://icei.ac.id/static/comprehensive/images/logo.3a535928f907.png" alt="app_icon" style="width:300px ; height :150px" />
+
+  </div>
+</div>
+
+
     <script>
     tailwind.config = {
         theme: {
@@ -126,6 +138,28 @@ Tangerang Selatan </li>
                 }]
             });
         })
+    </script>
+    <script>
+            function fade(element) {
+            var op = 1; // initial opacity
+            var timer = setInterval(function() {
+            if (op <= 0.1) {
+            clearInterval(timer);
+
+            element.style.display = 'none';
+            }
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op -= op * 0.1;
+            }, 50);
+            }
+
+            setTimeout(function() {
+            //Display splash
+            setTimeout(function() {
+            fade(document.getElementById('splash'));
+            }, 3000);
+            }, 0);
     </script>
 </body>
 
