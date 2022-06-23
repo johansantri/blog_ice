@@ -3,7 +3,6 @@
 class Blog_m extends CI_Model
 {
     private $_table = "tb_blog";
-    private $_tc = "tb_comment";
     public $id_blog;
     public $title;
     public $meta;
@@ -14,7 +13,6 @@ class Blog_m extends CI_Model
 
     public $image = "default.jpg";
     public $status="draft";
-    public $status_comment="0";
     //public $create_ad=date("Y-m-d h:i:s");
  
     public function rules()
@@ -45,7 +43,6 @@ class Blog_m extends CI_Model
             'rules' => 'required']
         ];
     }
-
     public function getAll()
     {
       $this->db->select('tb_blog.id_blog,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');

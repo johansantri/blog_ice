@@ -1,4 +1,4 @@
-    <main class="app-content">
+<main class="app-content">
       <div class="app-title">
         <div>
           <h1><i class="fa fa-th-list"></i> Data Table</h1>
