@@ -48,7 +48,7 @@ Tangerang Selatan </li>
   
   <!--Center align Splash contents in all screen sizes-->
   <div id="flex-item">
-    <img src="https://icei.ac.id/static/comprehensive/images/logo.3a535928f907.png" alt="app_icon" style="width:150px ; height :50px" />
+    <img src="https://icei.ac.id/static/comprehensive/images/logo.3a535928f907.png" alt="app_icon" style="width:250px ; height :100px; display:block" />
 
   </div>
 </div>

@@ -89,7 +89,7 @@
                                 <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin </span></span>
                             </div>
                             <div class="-mt-7">
-                                <img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt="">
+                              <a href="<?php echo base_url()?>berita/<?php echo $row->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt=""></a>  
                             </div>
                             <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
                                 <p class="font-darker-grotesque h-24"><?php echo substr($row->meta, 0,80). '...'?></p>
@@ -217,7 +217,7 @@
                            
                                 <div class="flex gap-x-4 mb-7">
                                     <div class="w-5/12 relative">
-                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                                        <img class="rounded-lg w-full h-16 object-center object-cover"  style="width: 100%; height: auto;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
                                         <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
                                     </div>
                                     <div class="w-7/12">
