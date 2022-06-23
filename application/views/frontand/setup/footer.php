@@ -39,7 +39,7 @@ Tangerang Selatan </li>
         <a class="font-darker-grotesque" href="">Cookie policy</a>
     </p>
 </div>
-</div>
+
     </div>
 
 
@@ -48,7 +48,7 @@ Tangerang Selatan </li>
   
   <!--Center align Splash contents in all screen sizes-->
   <div id="flex-item">
-    <img src="https://icei.ac.id/static/comprehensive/images/logo.3a535928f907.png" alt="app_icon" style="width:300px ; height :100px" />
+    <img src="https://icei.ac.id/static/comprehensive/images/logo.3a535928f907.png" alt="app_icon" style="width:150px ; height :50px" />
 
   </div>
 </div>
