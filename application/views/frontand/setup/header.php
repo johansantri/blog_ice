@@ -77,7 +77,7 @@
                         </button>
                         <ul class="dropdown-menu absolute left-3 lg:left-[50%] lg:translate-x-[-50%] border hidden text-gray-700 z-10 pt-1 lg:w-[12rem]">
                         <?php foreach ($kegiatanmenu as $key ) {?>
-                        <li class=""><a class="rounded-t bg-white hover:bg-gray-200 py-2 font-darker-grotesque text-lg px-4 block whitespace-no-wrap" href="<?php echo base_url()?>kegiatan/<?php echo $key->slug_title;?>"><?php echo $key->title;?></a></li>
+                        <li class=""><a class="rounded-t bg-white hover:bg-gray-200 py-2 font-darker-grotesque text-lg px-4 block whitespace-no-wrap" href="<?php echo base_url()?>kegiatan/<?php echo $key->slug_sub;?>"><?php echo $key->nama_sub;?></a></li>
                         <?php };?>    
                         </ul>
                     </div>
