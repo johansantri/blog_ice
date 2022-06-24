@@ -224,7 +224,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                                     <div class="w-full lg:w-8/12 flex py-8 px-4 items-start">
                                         <span class="w-4/12 text-white font-darker-grotesque"><?php echo $key->create_ad;?></span>
                                         <span class="w-1/12 text-white font-darker-grotesque">|</span>
-                                        <p class="w-6/12 text-lg text-white font-bold font-darker-grotesque leading-6"> <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"> <?php echo $key->title;?></a></p>
+                                        <p class="w-6/12 text-lg text-white font-bold font-darker-grotesque leading-6"> <a href="<?php echo base_url()?><?php echo $key->slug_title;?>"> <?php echo $key->title;?></a></p>
                                     </div>
                                     <div class="w-full lg:w-4/12 flex items-center justify-end">
                            <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" >  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" class="rounded-[2rem] object-cover object-center" style="width: 100%; height: 100%;" alt=""></a>
