@@ -17,7 +17,7 @@
             <div class=" w-full">
                 
                 <div class="mb-5 lg:mb-8 my-8 hero-wrapper ">
-                    <div  class="hero-slide w-full h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover" style="background-size: 100% 100%; display:block; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
+                    <div  class="hero-slide w-full h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover w-[80%]" style="background-size: 100% 100%; display:block; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
                 </div>
             </div>
             <hr>
