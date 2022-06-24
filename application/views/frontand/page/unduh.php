@@ -111,7 +111,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                         <tr>
                           <td><?php echo $tx++?></td>
                           <td><?php echo $key->title;?></td>
-                          <td> <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" type="button"  class="mt-4 rounded-xl bg-red-primary text-white font-bold px-5 py-2">klik</a> </td>
+                          <td> <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" type="button"  class="mt-4 rounded-xl bg-red-primary text-white font-bold px-5 py-2">klik</a> </td>
                         
                         </tr>
                         <?php } ;?>
@@ -227,7 +227,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                                         <p class="w-6/12 text-lg text-white font-bold font-darker-grotesque leading-6"> <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"> <?php echo $key->title;?></a></p>
                                     </div>
                                     <div class="w-full lg:w-4/12 flex items-center justify-end">
-                           <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" >  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" class="rounded-[2rem] object-cover object-center" style="width: 100%; height: 100%;" alt=""></a>
+                           <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" >  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" class="rounded-[2rem] object-cover object-center" style="width: 100%; height: 100%;" alt=""></a>
                                     </div>
                                 </div>
                             </div>
