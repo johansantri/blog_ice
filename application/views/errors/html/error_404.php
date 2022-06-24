@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>404 Page Not Found</title>
+<title>404</title>
 <style type="text/css">
 
 ::selection { background-color: #E13300; color: white; }
@@ -44,21 +44,54 @@ code {
 	padding: 12px 10px 12px 10px;
 }
 
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
+
 
 p {
 	margin: 12px 15px 12px 15px;
 }
+
+.ball {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background: #c00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
 </style>
+<meta http-equiv="refresh" content="7;url=https://info.icei.ac.id/" />
 </head>
 <body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
+
+	<h1>Tendang bola ke bagian bawah </h1>
+	
+
+
+	<div class="footer">
+  <p>ICE Institute</p>
+</div>
+
+<div id="foo" class="ball"></div>
+
+<script>
+	var f = document.getElementById('foo');
+document.addEventListener('click', function(ev){
+    f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
+    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+},false);
+</script>
 </body>
 </html>
