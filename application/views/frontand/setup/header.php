@@ -106,6 +106,6 @@
                     <a href="<?php echo base_url()?>panduan" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Panduan</a>
                 </li>
                 <li>
-                    <a href="https://info.icei.ac.id/berita/pakta-integritas" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Pakta Integritas</a>
+                    <a href="<?php echo base_url()?>pakta-integritas" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Pakta Integritas</a>
                 </li>
             </ul>
