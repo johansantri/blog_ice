@@ -48,7 +48,7 @@ Tangerang Selatan </li>
   
   <!--Center align Splash contents in all screen sizes-->
   <div id="flex-item">
-    <img src="https://icei.ac.id/static/comprehensive/images/logo.3a535928f907.png" alt="ICE Institute" style="width:250px ; height :100px display:block" />
+    <img src="<?php echo base_url()?>assets/Logo ICE-I.png" alt="ICE Institute" style="width:200px ; height :100px display:block" />
 
   </div>
 </div>
