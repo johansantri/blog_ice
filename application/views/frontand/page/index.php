@@ -272,11 +272,11 @@
                     <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin</span></span>
                 </div>
                 <div class="-mt-7">
-                   <a href="<?php echo base_url()?>about/<?php echo $key->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="<?php echo $key->title;?>"></a> 
+                   <a href="<?php echo base_url()?><?php echo $key->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="<?php echo $key->title;?>"></a> 
                 </div>
                 <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
                     <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,80). '...'?></p>
-                    <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya </a>
+                    <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya </a>
                 </div>          
             
             </div>    
@@ -312,7 +312,8 @@
                                         </div>
                                         <div class="relative mt-2">
                                             <h4 class="font-semibold text-xl font-darker-grotesque text-red-primary"><?php echo $key->title;?></h4>
-                                            <p class="mt-1 leading-5 font-darker-grotesque"><?php echo $key->description;?></p>
+                                            
+                                            <small class="mt-1 leading-5 font-darker-grotesque"><?php echo $key->description;?></small>
                                             
 
                                             <img src="./assets/new/images/kutip.png" class="absolute top-0 right-0 w-6" alt="">
