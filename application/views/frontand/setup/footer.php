@@ -21,11 +21,11 @@ Tangerang Selatan </li>
     <div class="w-5/6 mx-auto lg:mx-0 lg:w-1/6 flex mt-10 lg:mt-0 flex-col">
         <h4 class="font-bold text-center font-darker-grotesque">Join Us</h4>
         <ul class="flex justify-between mt-3">
-            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-facebook"></i></a></li>
-            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-youtube-play"></i></a></li>
-            <li><a href=""><i class="text-red-primary text-3xl fa-brands fa-instagram"></i></a></li>
-            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-twitter"></i></a></li>
-            <li><a href=""><i class="text-red-primary text-3xl zmdi zmdi-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/ice.institut"><i class="text-red-primary text-3xl zmdi zmdi-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC2tFtypIqAUXk3FK6V4a5cg"><i class="text-red-primary text-3xl zmdi zmdi-youtube-play"></i></a></li>
+            <li><a href="https://www.instagram.com/accounts/login/?next=/ice.institute/"><i class="text-red-primary text-3xl fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/ice_institute_"><i class="text-red-primary text-3xl zmdi zmdi-twitter"></i></a></li>
+            <li><a href="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_color-128.png"><i class="text-red-primary text-3xl zmdi zmdi-linkedin"></i></a></li>
         </ul>
     </div>
 </div>
