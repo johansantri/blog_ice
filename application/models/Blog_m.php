@@ -87,16 +87,25 @@ class Blog_m extends CI_Model
        //forntend kategori kegiatan menu
         public function getKegiatan()
     {
-      $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-          $this->db->where('tb_blog.status = "post"');
-          $this->db->where('tb_blog.id_kategori = "7"');
-            $this->db->order_by('rand()');
+    //   $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+    //       $this->db->where('tb_blog.status = "post"');
+    //       $this->db->where('tb_blog.id_kategori = "7"');
+    //         $this->db->order_by('rand()');
 
-        $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
-        $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
-       // $this->db->from('tb_blog');
-        $query=$this->db->get('tb_blog');
-        return $query->result();
+    //     $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
+    //     $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
+    //    // $this->db->from('tb_blog');
+    //     $query=$this->db->get('tb_blog');
+    //     return $query->result();
+   
+    $this->db->select('tb_sub_kategori.id_sub,tb_sub_kategori.nama_sub,tb_sub_kategori.slug_sub,tb_sub_kategori.id_kategori,tb_kategori.nama_kategori');	
+    $this->db->join('tb_kategori','tb_sub_kategori.id_kategori=tb_kategori.id_kategori');	
+    $this->db->where('tb_kategori.id_kategori = "7"');
+    $this->db->from('tb_sub_kategori');
+    
+    $query=$this->db->get();
+    return $query->result();
+
     }
 
         //forntend events
