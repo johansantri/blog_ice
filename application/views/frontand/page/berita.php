@@ -83,17 +83,17 @@
                           <div>
                             <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
                                 <span class="font-darker-grotesque"><?php echo $row->create_ad;?></span>
-                                <a href="<?php echo base_url()?>berita/<?php echo $row->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
+                                <a href="<?php echo base_url()?><?php echo $row->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
                                     <h5 class="h-20"><?php echo substr($row->title, 0,80). '...'?></h5>
                                 </a>
                                 <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin </span></span>
                             </div>
                             <div class="-mt-7">
-                              <a href="<?php echo base_url()?>berita/<?php echo $row->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt=""></a>  
+                              <a href="<?php echo base_url()?><?php echo $row->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt=""></a>  
                             </div>
                             <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
                                 <p class="font-darker-grotesque h-24"><?php echo substr($row->meta, 0,80). '...'?></p>
-                                <a href="<?php echo base_url()?>berita/<?php echo $row->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya <img src="chevron-right-icon.png" alt=""></a>
+                                <a href="<?php echo base_url()?><?php echo $row->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya <img src="chevron-right-icon.png" alt=""></a>
                             </div>
                         </div>
                       
@@ -221,7 +221,7 @@
                                         <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
                                     </div>
                                     <div class="w-7/12">
-                                        <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="font-darker-grotesque text-red-primary leading-5 block"><?php echo $key->title;?> </a>
+                                        <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="font-darker-grotesque text-red-primary leading-5 block"><?php echo $key->title;?> </a>
                                         <span class="font-darker-grotesque block mt-1 text-sm"><?php echo $key->create_ad;?></span>
                                     </div>
                                 </div>
@@ -268,10 +268,10 @@
                                     <div class="w-full lg:w-8/12 flex py-8 px-4 items-start">
                                         <span class="w-4/12 text-white font-darker-grotesque"><?php echo $key->create_ad;?></span>
                                         <span class="w-1/12 text-white font-darker-grotesque">|</span>
-                                        <p class="w-6/12 text-lg text-white font-bold font-darker-grotesque leading-6"> <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>"> <?php echo $key->title;?></a></p>
+                                        <p class="w-6/12 text-lg text-white font-bold font-darker-grotesque leading-6"> <a href="<?php echo base_url()?><?php echo $key->slug_title;?>"> <?php echo $key->title;?></a></p>
                                     </div>
                                     <div class="w-full lg:w-4/12 flex items-center justify-end">
-                           <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" >  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" class="rounded-[2rem] object-cover object-center" style="width: 100%; height: 100%;" alt=""></a>
+                           <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" >  <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" class="rounded-[2rem] object-cover object-center" style="width: 100%; height: 100%;" alt=""></a>
                                     </div>
                                 </div>
                             </div>
