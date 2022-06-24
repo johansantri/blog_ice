@@ -48,7 +48,9 @@
                         </div>
                         <div class="-mt-3 font-darker-grotesque">
                             <p class="mt-8"><?php echo $slug['description'];?>.</p>
-                           
+                            <style>
+  iframe { width: 100%; height: 400px; }
+    </style>
                             <hr class="mt-12 lg:mt-24">
                              <!-- <a href="#"><?php echo $slug['tags'];?></a>  -->
 
@@ -171,7 +173,7 @@
                                         <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
                                     </div>
                                     <div class="w-7/12">
-                                        <a href="<?php echo base_url()?>berita/<?php echo $key->slug_title;?>" class="font-darker-grotesque text-red-primary leading-5 block"><?php echo $key->title;?> </a>
+                                        <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="font-darker-grotesque text-red-primary leading-5 block"><?php echo $key->title;?> </a>
                                         <span class="font-darker-grotesque block mt-1 text-sm"><?php echo $key->create_ad;?></span>
                                     </div>
                                 </div>
