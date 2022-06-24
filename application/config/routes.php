@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 $route['masuk'] = 'auth/login';
+$route['auth'] = 'auth/index';
 $route['daftar'] = 'auth/sigup';
 $route['lupa'] = 'auth/forgot';
 $route['keluar'] = 'auth/logout';
