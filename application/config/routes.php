@@ -77,6 +77,7 @@ $route['profile/tags/(:any)'] = 'home/tags/$1';
 //$route['berita/(:any)'] = 'berita/berita_read/$1';
 $route['(:any)'] = 'berita/berita_read/$1';
 $route['tags/(:any)'] = 'berita/tags/$1';
+$route['kegiatan/(:any)'] = 'berita/kegiatan/$1';
 $route['unduh/(:any)'] = 'unduh/unduh_read/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
