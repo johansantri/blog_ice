@@ -54,13 +54,29 @@ $route['masuk'] = 'auth/login';
 $route['daftar'] = 'auth/sigup';
 $route['lupa'] = 'auth/forgot';
 $route['keluar'] = 'auth/logout';
+$route['dasbord'] = 'dasbord/index';
+$route['kategori'] = 'kategori/index';
+$route['slide'] = 'slide/index';
+$route['sub'] = 'sub/index';
+$route['blog'] = 'blog/index';
+
+
+
+
+
+
+$route['berita'] = 'berita/index';
+$route['unduh'] = 'unduh/index';
+$route['panduan'] = 'panduan/index';
 $route['berita/addcom'] = 'berita/addcom';
 $route['about/(:any)'] = 'home/about/$1';
 $route['profile/(:any)'] = 'home/profile/$1';
-$route['kegiatan/(:any)'] = 'kegiatan/kegiatan_read/$1';
+//$route['kegiatan/(:any)'] = 'kegiatan/kegiatan_read/$1';
+$route['(:any)'] = 'kegiatan/kegiatan_read/$1';
 $route['profile/tags/(:any)'] = 'home/tags/$1';
-$route['berita/(:any)'] = 'berita/berita_read/$1';
-
+//$route['berita/(:any)'] = 'berita/berita_read/$1';
+$route['(:any)'] = 'berita/berita_read/$1';
+$route['tags/(:any)'] = 'berita/tags/$1';
 $route['unduh/(:any)'] = 'unduh/unduh_read/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
