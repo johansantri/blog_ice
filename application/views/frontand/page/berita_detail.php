@@ -53,7 +53,7 @@
     </style>
                             <hr class="mt-12 lg:mt-24">
                              <!-- <a href="#"><?php echo $slug['tags'];?></a>  -->
-
+<p>
                   <?php
                         $str = $slug['tags'];
                         $people= (explode(",",$str));
@@ -63,7 +63,7 @@
                         echo "&nbsp;";
                         }
 
-                        ?> 
+                        ?> </p>
                             <div class="bg-gray-50 rounded-2xl mt-10 py-4 px-4 lg:px-12">
                                 <h4 class="font-bold text-red-primary text-xl font-darker-grotesque">Beri Komentar</h4>
                                 <?php echo validation_errors(); ?>
