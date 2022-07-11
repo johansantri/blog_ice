@@ -12,7 +12,7 @@
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
-            <div class="hero-slide h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[75%]" style="background-image: url('<?php echo base_url()?>upload/slide/<?php echo $key->image;?>') "></div>
+            <div class="hero-slide h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[75%]" style=" background-image: url('<?php echo base_url()?>upload/slide/<?php echo $key->image;?>') "></div>
             <?php };?>    
          </div>
      
@@ -21,7 +21,7 @@
 
     
 
-
+ <p hidden id="apa"><?php echo base_url()?></p>
 
 
         <div class="container relative flex flex-col-reverse bg-white lg:flex-row items-center px-5 lg:px-20 mx-auto mt-10 lg:mt-12 lg:mt-16">
@@ -169,16 +169,14 @@ tr:nth-child(even){background-color: #f2f2f2}
                             </div>
                             <div class="border-2 border-gray-200 bg-gray-50 p-6 rounded-b-3xl">
                                 <div class="pt-2">
-                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Giveaway</span> xxxxxx xx xxxxx</p>
-                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">buku</h5>
+                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Berikut Merupakan </span> dokument</p>
+                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">panduan</h5>
                                 </div>
-                                <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
+                                <p class="text-center font-darker-grotesque mt-3 leading-5">anda dapat melihat panduan yang telah ICE Institute buat</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="./assets/new/images/book.png" class="w-full" alt="book">
+                                    <img src="<?php echo base_url()?>assets/new/images/Unduh.png" class="w-full" alt="book">
                                 </div>
-                                <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
-                                <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>
-                                <p class="font-darker-grotesque text-center text-gray-600 mt-1">Aturan dan ketentuan giveaway</p>
+                               
                             </div>
                         </div>
                     </div>

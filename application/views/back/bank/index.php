@@ -17,7 +17,7 @@
               <div class="table-responsive">
                 <div class="button" style="text-align: right;">
                
-               <a href="<?php echo site_url('slide/add') ?>" class="btn btn-outline-success"><i class="fa fa-plus"></i> Add Slide</a>
+               <a href="<?php echo site_url('bank/add') ?>" class="btn btn-outline-success"><i class="fa fa-plus"></i> Add Slide</a>
                 </div>
                 <br>
                    <!-- DataTables -->
@@ -32,9 +32,9 @@
                 <thead>
                   <tr>
                     <th>Nama Slide</th>
-                    <th>Deksripsi Slide</th>
+               
                     <th>Photo</th>
-                    <th>Kategori</th>
+                  
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -42,21 +42,18 @@
                   <?php foreach ($personal as $person): ?>
                   <tr>
                     <td width="150">
-                      <?php echo $person->nama_slide ?>
+                      <?php echo $person->nama_galery ?>
                     </td>
-                    <td>
-                      <?php echo substr($person->deskripsi_slide, 0, 120) ?>...
-                    </td>
+                 
                    
                     <td>
-                      <img src="<?php echo base_url('upload/slide/'.$person->image) ?>" width="64" />
+                      <img src="<?php echo base_url('upload/'.$person->image) ?>" width="64" />
                     </td>
-                    <td class="small">
-                     <?php echo $person->nama_kategori ?>
+                 
                     <td width="250">
-                      <a href="<?php echo site_url('slide/edit/'.$person->id_slide) ?>"
+                      <a href="<?php echo site_url('bank/edit/'.$person->id_galery) ?>"
                        class="btn btn-small"><i class="fa fa-edit"></i> Edit</a>
-                      <a onclick="deleteConfirm('<?php echo site_url('slide/delete/'.$person->id_slide) ?>')"
+                      <a onclick="deleteConfirm('<?php echo site_url('bank/delete/'.$person->id_galery) ?>')"
                        href="#!" class="btn btn-small text-danger"><i class="fa fa-trash"></i> Hapus</a>
                     </td>
                   </tr>

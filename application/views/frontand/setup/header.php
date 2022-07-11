@@ -1,3 +1,4 @@
+
 <style>
  .viewport {
   width: 100%;
@@ -38,7 +39,15 @@
   justify-content: center;
   align-items: center;
 }   
+iframe {
+ max-width: 100%;
+  height: 360px;
+  width: 100%;
+}
+
 </style>
+
+
 <body class="overflow-x-hidden" id="main">
     
     <nav class="w-full fixed bg-white z-20 shadow">
@@ -86,7 +95,7 @@
                     <a href="<?php echo base_url()?>berita" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Berita</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url()?>unduh" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Unduh</a>
+                    <a href="https://icei.ac.id/courses" class="px-4 py-2 w-full block lg:py-0 lg:px-0 font-darker-grotesque text-lg text-black">Galeri Matakuliah</a>
                 </li>
                 <li>
                     <div class="dropdown inline-block relative w-full">

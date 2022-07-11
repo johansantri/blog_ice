@@ -196,16 +196,17 @@
                             </div>
                             <div class="border-2 border-gray-200 bg-gray-50 p-6 rounded-b-3xl">
                                 <div class="pt-2">
-                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Giveaway</span> xxxxxx xx xxxxx</p>
-                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">buku</h5>
+                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Unduhan</span> Dokument</p>
+                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">Panduan</h5>
                                 </div>
-                                <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
+                                <p class="text-center font-darker-grotesque mt-3 leading-5">Anda dapat mengunduh dokument panduan terkait ICE Insitute</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="<?php echo base_url()?>assets/new/images/book.png" class="w-full" alt="book">
+                                    <img src="<?php echo base_url()?>assets/new/images/Unduh.png" alt="book">
                                 </div>
-                                <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
-                                <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>
-                                <p class="font-darker-grotesque text-center text-gray-600 mt-1">Aturan dan ketentuan giveaway</p>
+                                <p class="font-darker-grotesque text-center">Dengan cara mengklik </p>
+                                
+                                <a href="<?php echo base_url()?>unduh" class= "py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Unduh</a>
+                              
                             </div>
                         </div>
                     </div>

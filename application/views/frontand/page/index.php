@@ -12,14 +12,14 @@
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
-            <div class="hero-slide h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[80%]" style="background-size: 100% 100%; background-image: url('upload/slide/<?php echo $key->image;?>') "></div>
+            <div class="hero-slide h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[85%]" style="background-size: 100% 100%; background-image: url('upload/slide/<?php echo $key->image;?>') "></div>
             <?php };?>    
          </div>
      
             </div>
         </div>
 
-    
+     <p hidden id="apa"><?php echo base_url()?></p>
 
         <div class="container mt-5 lg:mt-24 mx-auto px-5 lg:px-40">
             <div class="w-6/6 flex flex-col lg:flex-row items-center">
@@ -266,7 +266,7 @@
                         
                 <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
                     <span class="font-darker-grotesque"><small> <?php echo $key->create_ad;?></small></span>
-                    <a href="" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
+                    <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
                         <h4 class="h-20"><?php echo substr($key->title, 0,80). '...'?></h4>
                     </a>
                     <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin</span></span>

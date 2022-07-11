@@ -7,7 +7,7 @@
         <ul class="app-breadcrumb breadcrumb side">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
           <li class="breadcrumb-item">Tables</li>
-          <li class="breadcrumb-item active"><a href="<?php echo site_url('slide') ?>">Data Table</a></li>
+          <li class="breadcrumb-item active"><a href="<?php echo site_url('bank') ?>">Data Table</a></li>
 
         </ul>
       </div>
@@ -27,18 +27,18 @@
           </div>
           <div class="card-body">
 
-               <form action="<?php base_url("slide/edit") ?>" method="post"
+               <form action="<?php base_url("bank/edit") ?>" method="post"
               enctype="multipart/form-data" >
 
-              <input type="hidden" name="id" value="<?php echo $personal->id_slide?>" />
+              <input type="hidden" name="id" value="<?php echo $personal->id_galery?>" />
               <div class="row">
                 <div class="col-md-6"> 
               <div class="form-group">
-                <label for="nama_slide">Name*</label>
-                <input class="form-control <?php echo form_error('nama_slide') ? 'is-invalid':'' ?>"
-                 type="text" name="nama_slide" placeholder="Product name" value="<?php echo $personal->nama_slide ?>" />
+                <label for="nama_galery">Name*</label>
+                <input class="form-control <?php echo form_error('nama_galery') ? 'is-invalid':'' ?>"
+                 type="text" name="nama_galery" placeholder="Product name" value="<?php echo $personal->nama_galery ?>" />
                 <div class="invalid-feedback">
-                  <?php echo form_error('nama_slide') ?>
+                  <?php echo form_error('nama_galery') ?>
                 </div>
               </div>
               </div>
@@ -49,24 +49,6 @@
             
 
 
-               <div class="col-md-2">
-              <div class="form-group">
-                <label for="id_kategori">Gender</label>
-                <select class="form-control <?php echo form_error('id_kategori') ? 'is-invalid':'' ?> " type="text" name="id_kategori">
-                  <option value="<?php echo $personal->id_kategori?>"><?php echo $personal->nama_kategori ?></option>
-                    <?php foreach ($kategori as $key => $value) {?>
-                    
-                  <option value="<?php echo $value['id_kategori']?>"><?php echo $value['nama_kategori']?></option>
-                <?php }; ?>
-                
-                </select>
-               
-                <div class="invalid-feedback">
-                  <?php echo form_error('id_kategori') ?>
-                </div>
-              </div>
-              </div>
-
 
 
             </div>
@@ -74,14 +56,6 @@
            
            
 
-              <div class="form-group">
-                <label for="name">Profile*</label>
-                <textarea class="form-control <?php echo form_error('deskripsi_slide') ? 'is-invalid':'' ?>"
-                 name="deskripsi_slide" placeholder="Description..."><?php echo $personal->deskripsi_slide ?></textarea>
-                <div class="invalid-feedback">
-                  <?php echo form_error('deskripsi_slide') ?>
-                </div>
-              </div>
 
 
                  <div class="form-group">

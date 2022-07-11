@@ -1,5 +1,5 @@
 
-
+ <p hidden id="apa"><?php echo base_url()?>kegiatan/</p>
             <!-- Hamburger -->
             <div onclick="toggleNavbar()" id="hamburger" class="fixed flex flex-col items-end gap-y-1 top-4 cursor-pointer nav-hidden right-4 z-30 w-9 lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -12,7 +12,7 @@
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
-            <div class="hero-slide h-40 lg:h-[65vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[85%]" style="background-size: 100% 100%; background-image: url('<?php echo base_url()?>upload/slide/<?php echo $key->image;?>') "></div>
+            <div class="hero-slide h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[80%]" style="background-size: 100% 100%; background-image: url('<?php echo base_url()?>upload/slide/<?php echo $key->image;?>') "></div>
             <?php };?>    
          </div>
      
@@ -100,7 +100,7 @@
 </div>
 
 
-                        <div class="rounded-3xl shadow-lg mt-8">
+                     <div class="rounded-3xl shadow-lg mt-8">
                             <div class="grid grid-cols-3">
                                 <?php for ($i = 0; $i < 3; $i++) { ?>
                                     <div class="font-darker-grotesque py-3 px-2 <?= $i == 1 ? 'border-x-2 border-gray-300' : '' ?> <?= $i == 0 ? 'rounded-tl-3xl' : '' ?> <?= $i == 2 ? 'rounded-tr-3xl' : '' ?> bg-gray-200">
@@ -111,16 +111,17 @@
                             </div>
                             <div class="border-2 border-gray-200 bg-gray-50 p-6 rounded-b-3xl">
                                 <div class="pt-2">
-                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Giveaway</span> xxxxxx xx xxxxx</p>
-                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">buku</h5>
+                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Unduhan</span> Dokument</p>
+                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">Panduan</h5>
                                 </div>
-                                <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
+                                <p class="text-center font-darker-grotesque mt-3 leading-5">Anda dapat mengunduh dokument panduan terkait ICE Insitute</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="<?php echo base_url()?>assets/new/images/book.png" class="w-full" alt="book">
+                                    <img src="<?php echo base_url()?>assets/new/images/Unduh.png" alt="book">
                                 </div>
-                                <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
-                                <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>
-                                <p class="font-darker-grotesque text-center text-gray-600 mt-1">Aturan dan ketentuan giveaway</p>
+                                <p class="font-darker-grotesque text-center">Dengan cara mengklik </p>
+                                
+                                <a href="<?php echo base_url()?>unduh" class= "py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Unduh</a>
+                              
                             </div>
                         </div>
                     </div>

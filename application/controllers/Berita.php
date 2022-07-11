@@ -75,7 +75,7 @@ class Berita extends CI_Controller {
 				                             'slug'=>$slug,
 				                            'isi'=>'frontand/page/berita_detail' );
 				                             
-				         $this->load->view('frontand/setup/konek',$data);
+				         $this->load->view('frontand/setup/konek_detail',$data);
 					  //var_dump($data);
 					  $this->add_count($slug_title);
 					}

@@ -144,7 +144,7 @@
                                 </div>
                                 <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="./assets/images/book.png" class="w-full" alt="book">
+                                    <img src="./assets/images/Unduh.png" class="w-full" alt="book">
                                 </div>
                                 <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
                                 <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>

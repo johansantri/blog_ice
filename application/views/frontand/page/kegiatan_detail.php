@@ -36,9 +36,6 @@
                   </ul>
                   <h5 class="post-title"><a href="#"><?php echo $slug['title'];?>.</a></h5>
                   <p><?php echo $slug['description'];?></p>
-                               <style>
-  iframe { width: 100%; height: 400px; }
-    </style>
                   <div class="ttr-divider bg-gray"><i class="icon-dot c-square"></i></div>
                   <div class="widget_tag_cloud">
                     <h6>TAGS</h6>
@@ -61,7 +58,7 @@
                   <div class="ttr-divider bg-gray"><i class="icon-dot c-square"></i></div>
                     <h6>SHARE </h6>
                     <ul class="list-inline contact-social-bx">
-                     <li><a href="https://www.facebook.com/ice.institut" class="btn outline radius-xl"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="https://www.facebook.com/ice.institut" class="btn outline radius-xl"><i class="fa fa-facebook"></i></a></li>
                       <li><a href="https://twitter.com/ice_institute_" class="btn outline radius-xl"><i class="fa fa-twitter"></i></a></li>
                       <li><a href="#" class="btn outline radius-xl"><i class="fa fa-linkedin"></i></a></li>
                       <li><a href="https://www.instagram.com/ice.institute/" class="btn outline radius-xl"><i class="fa fa-instagram"></i></a></li>
@@ -93,7 +90,7 @@
                   <h6 class="widget-title">New Posts</h6>
                   <div class="widget-post-bx">
 
-                     <?php foreach ($unduh as $key ) {?>
+                     <?php foreach ($kegiatanmenu as $key ) {?>
 
                     <div class="widget-post clearfix">
                       <div class="ttr-post-media"> <img src="<?php echo base_url()?>upload/<?php echo $key->image;?>" width="200" height="143" alt=""> </div>
@@ -121,7 +118,7 @@
                       <div class="ajax-message"></div>
                       <div class="input-group">
                         <input name="dzEmail" required="required" type="email" class="form-control" placeholder="email"/>
-                        <button name="submit" value="Submit" type="submit"  class="btn black radius-no disabled">
+                        <button name="submit" href="https://info.icei.ac.id/pakta-integritas" value="Submit" type="submit" class="btn black radius-no disabled">
                           <i class="fa fa-paper-plane-o"></i>
                         </button>
                       </div>

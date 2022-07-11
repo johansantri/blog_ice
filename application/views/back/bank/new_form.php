@@ -27,15 +27,15 @@
           </div>
           <div class="card-body">
 
-            <form action="<?php base_url('slide/add') ?>" method="post" enctype="multipart/form-data" >
+            <form action="<?php base_url('bank/add') ?>" method="post" enctype="multipart/form-data" >
               <div class="row">
                 <div class="col-md-6">
               <div class="form-group">
-                <label for="nama_slide">Nama slide</label>
-                <input class="form-control <?php echo form_error('nama_slide') ? 'is-invalid':'' ?>"
-                 type="text" name="nama_slide" placeholder="Personal name" />
+                <label for="nama_galery">Nama galery</label>
+                <input class="form-control <?php echo form_error('nama_galery') ? 'is-invalid':'' ?>"
+                 type="text" name="nama_galery" placeholder="Personal name" />
                 <div class="invalid-feedback">
-                  <?php echo form_error('nama_slide') ?>
+                  <?php echo form_error('nama_galery') ?>
                 </div>
               </div>
               </div>
@@ -43,23 +43,6 @@
            
 
 
-              <div class="col-md-2">
-              <div class="form-group">
-                <label for="jk">Kategori</label>
-                <select class="form-control <?php echo form_error('id_kategori') ? 'is-invalid':'' ?>" name="id_kategori" id="id_kategori">
-                  <option ></option>
-                  <?php foreach ($kategori as $key => $value) {?>
-                    
-                  <option value="<?php echo $value['id_kategori']?>"><?php echo $value['nama_kategori']?></option>
-                <?php }; ?>
-                  
-                </select>
-                
-                <div class="invalid-feedback">
-                  <?php echo form_error('id_kategori') ?>
-                </div>
-              </div>
-            </div>
 
 
             </div>
@@ -71,14 +54,7 @@
 
          
 
-                 <div class="form-group">
-                <label for="deskripsi_slide">Deskripsi Slide</label>
-                <textarea class="form-control <?php echo form_error('deskripsi_slide') ? 'is-invalid':'' ?>"
-                 name="deskripsi_slide" placeholder="deskripsi_slide..."></textarea>
-                <div class="invalid-feedback">
-                  <?php echo form_error('deskripsi_slide') ?>
-                </div>
-              </div>
+              
 
               <div class="form-group">
                 <label for="image">Photo<small> max : 5 Mb</small></label>

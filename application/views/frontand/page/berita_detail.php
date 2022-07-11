@@ -8,6 +8,116 @@
             <!-- End of Hamburger -->
         </div>
     </nav>
+    
+    
+    <style>
+    *, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+.share-container {
+  border-radius: 15px;
+  display: flex;
+  padding-right: 0;
+  text-align: center;
+  transition: width 0.5s;
+  width: 80px;
+  background-color: #eeeeee;
+}
+
+.share-container.active {
+  width: 100%;
+}
+
+.share-btn {
+  width: 90px;
+  padding: 5px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #f50a0a;
+  border-radius: 15px;
+  background-color: #eeeeee;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.share-btn:hover {
+  color: #343a40;
+  cursor: pointer;
+}
+
+.share-btn.active {
+  color: #ffffff;
+  background-color: #dc3545;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 5px 5px 5px 12px;
+}
+
+.share-btn.active:hover {
+  background-color: #cf2838;
+}
+
+.share-url {
+  width: 0;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 10px;
+  color: #eeeeee;
+  transition: all 0.2s;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.share-url.active {
+  width: 50%;
+  color: #343a40;
+  padding: 6px;
+}
+
+/*fade*/
+.animate {
+  opacity: 0;
+  transition: all 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.slide-in-down {
+  transform: translateY(-100%) translateX(-50%);
+}
+
+/*notification*/
+.notification-button {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  padding: 10px 20px;
+  background: #343a40;
+  color: #eeeeee;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
+}
+</style>
+    
+    
+    
     <div class="pt-12">
         <div class="container px-5 lg:px-20 mx-auto mt-10 lg:mt-12 lg:mt-16">
             <div class="w-full w-full self-start">
@@ -17,7 +127,7 @@
             <div class=" w-full">
                 
                 <div class="mb-5 lg:mb-8 my-8 hero-wrapper ">
-                    <div  class="hero-slide w-full h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover w-[80%]" style="background-size: 100% 100%; display:block; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
+                    <div class="hero-slide h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[80%]" style="background-size: 100% 100%; display:block; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
                 </div>
             </div>
             <hr>
@@ -32,14 +142,26 @@
                             <span class="font-darker-grotesque">oleh <span class="font-bold">admin</span></span>
                         </div>
                         <h1 class="font-darker-grotesque text-4xl text-red-primary font-bold mt-4 lg:mt-12"><?php echo $slug['title'];?></h1>
+                          <p hidden id="apa"><?php echo base_url()?><?php echo $slug['slug_title'];?></p>
 
                         <div class="flex items-center justify-between mt-8 lg:mt-24">
                             <ul class="flex items-center gap-x-4 lg:gap-x-5 mt-3">
-                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-facebook"></i></a></li>
-                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-youtube-play"></i></a></li>
-                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl fa-brands fa-instagram"></i></a></li>
-                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-twitter"></i></a></li>
-                                <li><a href=""><i class="text-red-primary text-xl lg:text-2xl zmdi zmdi-linkedin"></i></a></li>
+                                <li>         
+                                <!--button share -->
+                                <div class="animate slide-in-down notification-button">
+                                <i class="fa fa-files-o"></i> Link Copied to Clipboard
+                                </div>
+
+                                <div class="container">
+                                <div class="share-container">
+                                <div class="share-btn btn-danger">Share</div>
+                                <div contenteditable="true" class="share-url"></div>
+                                </div>
+                                </div>
+
+                                <!--end-->
+                                </li>
+                                
                             </ul>
                             <ul class="flex items-center gap-x-4">
                                 <li><img class="h-4" src="<?php echo base_url()?>assets/new/images/bookmart-icon.png" alt=""></li>
@@ -63,7 +185,8 @@
                         echo "&nbsp;";
                         }
 
-                        ?> </p>
+                        ?> 
+                        </p>
                             <div class="bg-gray-50 rounded-2xl mt-10 py-4 px-4 lg:px-12">
                                 <h4 class="font-bold text-red-primary text-xl font-darker-grotesque">Beri Komentar</h4>
                                 <?php echo validation_errors(); ?>
@@ -133,33 +256,28 @@
         <input type="text" class="w-full font-darker-grotesque focus:outline-0 placeholder:text-left" name="" id="" placeholder="Cari apa ingin kamu ketahui">
     </div>
 
-    </div>                        <div class="rounded-3xl shadow-lg mt-8">
+    </div>                      <div class="rounded-3xl shadow-lg mt-8">
                             <div class="grid grid-cols-3">
-                                                                    <div class="font-darker-grotesque py-3 px-2  rounded-tl-3xl  bg-gray-200">
+                                <?php for ($i = 0; $i < 3; $i++) { ?>
+                                    <div class="font-darker-grotesque py-3 px-2 <?= $i == 1 ? 'border-x-2 border-gray-300' : '' ?> <?= $i == 0 ? 'rounded-tl-3xl' : '' ?> <?= $i == 2 ? 'rounded-tr-3xl' : '' ?> bg-gray-200">
                                         <h4 class="text-center">0</h4>
                                         <p class="font-darker-grotesque px-0 mx-0 text-center">Total Entries</p>
                                     </div>
-                                                                    <div class="font-darker-grotesque py-3 px-2 border-x-2 border-gray-300   bg-gray-200">
-                                        <h4 class="text-center">0</h4>
-                                        <p class="font-darker-grotesque px-0 mx-0 text-center">Total Entries</p>
-                                    </div>
-                                                                    <div class="font-darker-grotesque py-3 px-2   rounded-tr-3xl bg-gray-200">
-                                        <h4 class="text-center">0</h4>
-                                        <p class="font-darker-grotesque px-0 mx-0 text-center">Total Entries</p>
-                                    </div>
-                                                            </div>
+                                <?php } ?>
+                            </div>
                             <div class="border-2 border-gray-200 bg-gray-50 p-6 rounded-b-3xl">
                                 <div class="pt-2">
-                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Giveaway</span> xxxxxx xx xxxxx</p>
-                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">ttttttttttttt</h5>
+                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Unduhan</span> Dokument</p>
+                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">Panduan</h5>
                                 </div>
-                                <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
+                                <p class="text-center font-darker-grotesque mt-3 leading-5">Anda dapat mengunduh dokument panduan terkait ICE Insitute</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="<?php echo base_url()?>assets/new/images/book.png" class="w-full" alt="book">
+                                    <img src="<?php echo base_url()?>assets/new/images/Unduh.png" alt="book">
                                 </div>
-                                <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
-                                <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>
-                                <p class="font-darker-grotesque text-center text-gray-600 mt-1">Aturan dan ketentuan giveaway</p>
+                                <p class="font-darker-grotesque text-center">Dengan cara mengklik </p>
+                                
+                                <a href="<?php echo base_url()?>unduh" class= "py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Unduh</a>
+                              
                             </div>
                         </div>
                     </div>

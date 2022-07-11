@@ -3,25 +3,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!doctype html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- META ============================================= -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="keywords" content="" />
-  <meta name="author" content="" />
-  <meta name="robots" content="" />
+  <meta name="keywords" content="<?php echo $slug['title'];?>" />
+  <meta name="author" content="admin" />
+  <meta name="robots" content="<?php echo $slug['meta'];?>" />
   
-  <!-- DESCRIPTION -->
-  <meta name="description" content="Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia." />
+ 
+  
   
   <!-- OG -->
-  <meta property="og:title" content="Indonesia Cyber Education Institute" />
-  <meta property="og:description" content="Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia." />
-  <meta property="og:image" content="<?php echo base_url()?>assets/frontand/images/ice.png" />
+  <meta property="og:title" content="<?php echo $slug['title'];?>" />
+  <meta property="og:description" content="<?php echo $slug['meta'];?>" />
+  <meta property="og:image" content="<?php echo base_url()?>upload/<?php echo $slug['image']; ?>" />
+  <meta property="og:url" content="<?php echo base_url()?><?php echo $slug['slug_title']; ?>" />
   <meta name="format-detection" content="telephone=0812 5050 4200">
+
+  <!-- tw -->
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="<?php echo $slug['meta'];?>" />
+<meta name="twitter:image" content="<?php echo base_url()?>upload/<?php echo $slug['image']; ?>" />
+<meta name="twitter:image:src" content="<?php echo base_url()?>upload/<?php echo $slug['image']; ?>" />
+	<meta name="twitter:title" content="<?php echo $slug['title'];?>" />
+
+
   <title>ICE Institute</title>
     <link rel="stylesheet" href="<?php echo base_url()?>assets/new/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -12,7 +12,7 @@
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
-            <div class="hero-slide w-full h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover w-[80%]" style="background-size: 100% 100%; background-image: url('<?php echo base_url()?>upload/slide/<?php echo $key->image;?>') "></div>
+           <div class="hero-slide h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[80%]" style="background-size: 100% 100%; background-image: url('<?php echo base_url()?>upload/slide/<?php echo $key->image;?>') "></div>
             <?php };?>    
          </div>
      
@@ -38,19 +38,17 @@
                                 <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
                             </div>
                         </div>
-                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Mereka telah sukses mengikuti merdeka belajar</p>
                     </div>
 
                     <div class="w-6/6 mb-6 lg:mb-0">
                         <div class="gap-x-4 flex items-center">
                             <div class="flex items-center">
                                 <img src="<?php echo base_url()?>assets/new/images/book-1k.png" class="h-4 mr-3" alt="user-icon">
-                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
+                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">1K</h3>
                             </div>
                         </div>
-                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Tersedia berbagai macam pilihan matakuliah di ICE Institute.</p>
                     </div>
 
 
@@ -58,11 +56,10 @@
                         <div class="gap-x-4 flex items-center">
                             <div class="flex items-center">
                                 <img src="<?php echo base_url()?>assets/new/images/lecture-computer.png" class="h-4 mr-3" alt="user-icon">
-                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">20K</h3>
+                                <h3 class="text-red-primary font-darker-grotesque font-bold text-4xl">600K</h3>
                             </div>
                         </div>
-                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p class="font-darker-grotesque mt-1 lg:mt-3 leading-5">Diampu oleh dosen-dosen profesional dari kampus-kampus terbaik.</p>
                     </div>
              
             </div>
