@@ -37,7 +37,7 @@ class Slide extends CI_Controller
         if ($validation->run()) {
             $personal->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
-            redirect(site_url('slide'));
+            redirect(site_url('Slide'));
         }
 
         $data  = array('x' => 'slide',
@@ -60,7 +60,7 @@ class Slide extends CI_Controller
         if ($validation->run()) {
             $personal->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
-            redirect(site_url('slide'));
+            redirect(site_url('Slide'));
         }
 
         $person = $personal->getById($id);
@@ -80,7 +80,7 @@ class Slide extends CI_Controller
         if (!isset($id)) show_404();
         
         if ($this->Slide_m->delete($id)) {
-            redirect(site_url('slide'));
+            redirect(site_url('Slide'));
         }
     }
 }

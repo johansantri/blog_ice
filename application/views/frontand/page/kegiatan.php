@@ -29,7 +29,11 @@
                         <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">ICE Institute</h3>
                     </div>
                     <div class="w-full lg:w-7/12">
-                        <p class="font-darker-grotesque mt-3 lg:mt-0">ICE Institute sebagai marketplace matakuliah daring menjadi wadah para pakar, peneliti, pengajar dan pelajar untuk berbagi wawasan sesuai dengan keahlian mereka untuk disampaikan kepada kepada khalayak umum. </p>
+                        <p class="font-darker-grotesque mt-3 lg:mt-0"> Untuk menyebarluaskan gagasan tentang ICE Institute dan berbagai programnya, kami mengadakan webinar dengan topik utama Cyber Education Forum. Dalam setiap serinya, penyelenggara mengangkat tema yang mengacu pada penelitian yang sedang berlangsung di ICE Institute.
+                        </p>
+                        <p class="font-darker-grotesque mt-3 lg:mt-0">Narasumber untuk kegiatan merupakan pakar atau Ketua Peneliti dari berbagai Universitas yang berkolaborasi dengan ICE Insititute dan pakar atau praktisi dari berbagai Institusi yang berada di luar negeri.</p>
+                        <p class="font-darker-grotesque mt-3 lg:mt-0">.Untuk mengenal lebih lanjut mengenai ICE Institute, silakan klik <b style="color: blue;"><a href=https://sway.office.com/kc5V3NfCTc2KHUHA?ref=Link>Disini</a></b></p>
+                        
                     </div>
                 </div>
               
@@ -47,18 +51,18 @@
                     <?php foreach ($tag as $key ) {?>
                         <div>
                             <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
-                                <span class="font-darker-grotesque"><?php echo $key->create_ad;?></span>
+                                <span class="font-darker-grotesque"><?php echo $key->create_ad;?></span>  <small>admin</small>
                                 <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
-                                    <h5 class="h-20"><?php echo substr($key->title, 0,80). '...'?></h5>
+                                    <h5 class="h-20"><?php echo substr($key->title, 0,100). '...'?></h5>
                                 </a>
-                                <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin </span></span>
+                               
                             </div>
                             <div class="-mt-7">
-                              <a href="<?php echo base_url()?><?php echo $key->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt=""></a>  
+                              <a href="<?php echo base_url()?><?php echo $key->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="<?php echo $key->title;?>"></a>  
                             </div>
                             <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
-                                <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,80). '...'?></p>
-                                <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya <img src="chevron-right-icon.png" alt=""></a>
+                                <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,125). '...'?> <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="font-bold ">Baca Selengkapnya</a></p>
+                               
                             </div>
                         </div>
                       
@@ -133,7 +137,7 @@
                            
                                 <div class="flex gap-x-4 mb-7">
                                     <div class="w-5/12 relative">
-                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                                        <img class="rounded-lg w-full h-16 object-center object-cover" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="<?php echo $key->title;?>">
                                         <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
                                     </div>
                                     <div class="w-7/12">

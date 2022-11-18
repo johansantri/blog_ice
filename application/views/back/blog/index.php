@@ -62,7 +62,24 @@
                    <!--  <td>
                       <?php echo substr($person->deskripsi_slide, 0, 120) ?>...
                     </td> -->
-                   <td> <?php echo $person->status ?></td>
+                   <td>
+                       
+                      
+                       
+                       <?php  $person->status ?>
+                   
+                       <?php $sat=$person->status ?>
+                        
+                      <?php  if ($sat ==="draft") {?>
+                      <button class="btn btn-small text-warning"> <i class="fa fa-eye-slash" aria-hidden="true"> </i></button>
+
+                       <?php  } else {?>
+                        <button class="btn btn-small text-success"><i class="fa fa-eye" aria-hidden="true"> </i></button> 
+
+                       <?php  }
+                        ?>
+                   
+                   </td>
 
                     <td >
                       <?php echo $person->create_ad ?>

@@ -134,6 +134,33 @@ class Home extends CI_Controller {
 				         $this->load->view('frontand/setup/konek',$data);
 					  //var_dump($data);
 					}
+					
+						//profile detail
+	public function kusus($slug_title=NULL)
+	{
+
+			
+			      $people= $this->Blog_m->getPeople();
+			        $about= $this->Blog_m->getAbout();
+			          $kegiatanmenu= $this->Blog_m->getKegiatan();
+			          $profilmenu= $this->Blog_m->getProfil();
+			       $slug= $this->Blog_m->get_news($slug_title);
+					if (empty($slug))
+					{
+					show_404();
+					}
+					  $data  = array('x' => 'ICE-I',
+					  	 					
+				                             'people'=>$people,
+				                             'about'=>$about,
+				                             'slug'=>$slug,
+				                             'profilmenu'=>$profilmenu,
+				                             'kegiatanmenu'=>$kegiatanmenu,
+				                            'isi'=>'frontand/page/kusus_detail' );
+				                             
+				         $this->load->view('frontand/setup/konek',$data);
+					  //var_dump($data);
+					}
 
 
 					public function tags($tags)

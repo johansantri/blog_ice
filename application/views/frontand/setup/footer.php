@@ -14,8 +14,8 @@ Tangerang Selatan </li>
 
         <ul class="mt-3">
             <li class="-mt-1 font-darker-grotesque"><i class="mr-2 zmdi zmdi-phone"></i> 0812 5050 4200</li>
-            <li class="-mt-1 underline font-darker-grotesque"><a href=""><i class="mr-2 zmdi zmdi-email"></i>sekretariat@icei.ac.id</a></li>
-            <li class="-mt-1 font-darker-grotesque"><a href=""><i class="mr-2 zmdi zmdi-globe-alt"></i> www.icei.ac.id</a></li>
+            <li class="-mt-1 underline font-darker-grotesque"><a href="mailto:sekretariat@icei.ac.id"><i class="mr-2 zmdi zmdi-email"></i>sekretariat@icei.ac.id</a></li>
+            <li class="-mt-1 font-darker-grotesque"><a href="https://www.icei.ac.id" target="_blank"><i class="mr-2 zmdi zmdi-globe-alt"></i> www.icei.ac.id</a></li>
         </ul>
     </div>
     <div class="w-5/6 mx-auto lg:mx-0 lg:w-1/6 flex mt-10 lg:mt-0 flex-col">
@@ -32,11 +32,12 @@ Tangerang Selatan </li>
 <div class="container mt-12 lg:mt-24 pb-8 px-5 lg:px-20 mx-auto relative">
     <p class="text-center font-darker-grotesque">2022 &copy; ICE Institute. All rights reserved.</p>
     <p class="lg:absolute flex justify-center mt-1 lg:mt-0 lg:justify-end items-center top-0 right-0">
-        <a class="font-darker-grotesque" href="">Terms of use</a>
+        <a class="font-darker-grotesque" href="<?php echo base_url()?>terms">Terms of use</a>
         <span class="mx-1">|</span>
-        <a class="font-darker-grotesque" href="">Privacy policy</a>
+        <a class="font-darker-grotesque" href="<?php echo base_url()?>privacy">Privacy policy</a>
         <span class="mx-1">|</span>
-        <a class="font-darker-grotesque" href="">Cookie policy</a>
+        <a class="font-darker-grotesque" href="<?php echo base_url()?>sitemap.xml">Sitemap</a>
+        
     </p>
 </div>
 
@@ -73,8 +74,8 @@ Tangerang Selatan </li>
     }
 </script>
 <script src="<?php echo base_url()?>assets/new/js/script.js?ver=1.1"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -158,7 +159,7 @@ Tangerang Selatan </li>
             //Display splash
             setTimeout(function() {
             fade(document.getElementById('splash'));
-            }, 3000);
+            }, 1000);
             }, 0);
     </script>
     
@@ -233,7 +234,36 @@ function fadeOutNotification(){
 $shareBtn.on('click', shareLink);
 $notificationButton.on('transitionend', fadeOutNotification);
 </script>
-    
+    <script>
+      $(function () {
+
+        $('form').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: '/berita/addcom',
+            data: $('form').serialize(),
+            success: function () {
+                
+             
+                  
+             alert('thanks, your comment audit');
+              $('[name="nama_comment"]').val("");
+              
+              $('[name="email_comment"]').val("");
+              $('[name="description_comment"]').val("");
+              $('#ok').hide();
+
+            }
+          });
+
+        });
+
+      });
+    </script>
+
 </body>
 
 </html>

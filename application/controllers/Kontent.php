@@ -259,13 +259,21 @@ $this->form_validation->set_rules('description', 'description', 'required');
              //$data = $this->upload->data();
               $gambar=$gbr['file_name'];
               $id=$this->session->userdata('id_user');
-              $this->Kontent_m->upload($gambar,$id);
+              
+              $data=array('image'=>$gambar,
+                        'id_user'=>$id);
+            $this->load->model('Kontent_m');
+            $this->Kontent_m->uploadGb($data);
+              echo json_encode($data);
            echo "success, go to image info -> browser server";
+           
+           exit();
            
         }
                  
     }else{
         echo "not found";
+        exit();
     }
             
 }

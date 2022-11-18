@@ -14,7 +14,7 @@ class Blog_m extends CI_Model
     public $image = "default.jpg";
     public $status="draft";
     //public $create_ad=date("Y-m-d h:i:s");
- 
+    //public $status_comment="0";
     public function rules()
     {
         return [
@@ -83,6 +83,19 @@ class Blog_m extends CI_Model
         $query=$this->db->get('tb_blog');
         return $query->result();
     }
+    
+    //sitemap
+    
+         public function getSite()
+    {
+      $this->db->select('tb_blog.title,tb_blog.slug_title,tb_blog.create_ad');
+          $this->db->where('tb_blog.status = "post"');
+     
+        $query=$this->db->get('tb_blog');
+        return $query->result_array();
+    }
+    
+    
 
        //forntend kategori kegiatan menu
         public function getKegiatan()
@@ -113,7 +126,7 @@ class Blog_m extends CI_Model
     {
       $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
           $this->db->where('tb_blog.status = "post"');
-          $this->db->where('tb_blog.id_kategori = "7"');
+          $this->db->where('tb_blog.id_sub = "10"');
           $this->db->order_by('tb_blog.create_ad', 'DESC');
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
@@ -198,7 +211,7 @@ class Blog_m extends CI_Model
 
        public function getNew()
     {
-      $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+      $this->db->select('tb_sub_kategori.nama_sub,tb_sub_kategori.slug_sub,tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
           $this->db->where('tb_blog.status = "post"');
          // $this->db->where('tb_blog.id_kategori= "8"');
           $this->db->limit(6);
@@ -325,7 +338,7 @@ class Blog_m extends CI_Model
         $this->id_user=$this->session->userdata('id_user');
         
         
-        if (!empty($_FILES["image"]["name"])) {
+        if ($_FILES["image"]["name"]) {
             $this->image = $this->_uploadImage();
         } else {
             $this->image = $post["old_image"];
@@ -417,18 +430,27 @@ class Blog_m extends CI_Model
                         return $query->result_array();
                 }
 
-                $this->db->select('tb_comment.id_comment,tb_blog.id_blog,tb_comment.nama_comment,tb_comment.description_comment,tb_comment.created_comment,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-                
-
+                $this->db->select('tb_sub_kategori.nama_sub,tb_sub_kategori.slug_sub,tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+                 $this->db->order_by("tb_blog.id_blog", "asc");
+               // $this->db->group_by("tb_blog.id_blog");
+                      // $this->db->where('tb_comment.status_comment = "0"');
                 $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
                 $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
-            $this->db->join('tb_comment','tb_comment.id_blog=tb_blog.id_blog','left');
-            
+               // $this->db->join('tb_comment','tb_blog.id_blog=tb_comment.id_blog','left');
+          
             // $this->db->from('tb_blog');
-                $query = $this->db->get_where('tb_blog', array('slug_title' => $slug_title,'status'=>'post'));
+                $query = $this->db->get_where('tb_blog', array('slug_title' => $slug_title,
+                                                                'status'=>'post'));
                 return $query->row_array();
         }
-
+        
+        
+            
+            
+        
+        
+        
+        
                 public function get_tg($tags = null)
             {
                 
@@ -436,13 +458,13 @@ class Blog_m extends CI_Model
                 
                 $this->db->select('*');
                     
-                    $this->db->where("tb_blog.status = 'post'");// 
+                  
                 
-                    $this->db->like('tb_blog.title',$tags);
-                    $this->db->or_like('tb_blog.description',$tags);
+                   // $this->db->like('tb_blog.title',$tags);
+                    $this->db->or_like('tb_blog.title',$tags);
                     $this->db->or_like('tb_blog.tags',$tags);
                     $this->db->from('tb_blog');
-                
+                      $this->db->where("tb_blog.status = 'post'");// 
                     $query=$this->db->get();
                     return $query->result();
                 
@@ -463,6 +485,22 @@ class Blog_m extends CI_Model
                     $query = $this->db->get('tb_blog', $limit, $start);
                     return $query;
         }
+        
+        
+          //forntend kategori profile menu
+        public function getKusus()
+    {
+      $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+          $this->db->where('tb_blog.status = "post"');
+          $this->db->where('tb_blog.id_kategori = "12"');
+            $this->db->order_by('rand()');
+
+        $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
+        $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
+       // $this->db->from('tb_blog');
+        $query=$this->db->get('tb_blog');
+        return $query->result();
+    }
 
     public function addcomment()
         {
@@ -471,7 +509,7 @@ class Blog_m extends CI_Model
                           'email_comment'       => $this->input->post('email_comment',true),
                           'description_comment'  => $this->input->post('description_comment',true),
                           'id_blog'             => $this->input->post('id_blog',true),
-                          'status_comment'      => $this->status_comment);
+                          'status_comment'      => $this->status_comment="0");
 
             return $this->db->insert('tb_comment',$data);
            
@@ -482,17 +520,70 @@ class Blog_m extends CI_Model
        
              //return current article views
             $this->db->where('slug_title', urldecode($slug_title));
+                 $this->db->where('tb_blog.status = "post"');
             $this->db->select('visit'); $count = $this->db->get('tb_blog')->row();
             // then increase by one
             if (empty($count)) {
                redirect(404);
             }
             $this->db->where('slug_title', urldecode($slug_title));
+                 $this->db->where('tb_blog.status = "post"');
             $this->db->set('visit', ($count->visit + 1));
             $this->db->update('tb_blog');   
               
            
             
         }
+        
+             public function getComment()
+                {
+                  $this->db->select('tb_comment.id_blog,tb_comment.id_comment,tb_comment.nama_comment,tb_comment.email_comment,tb_comment.description_comment,tb_comment.status_comment,tb_comment.created_comment, tb_blog.title,tb_blog.slug_title');
+                     $this->db->join('tb_blog','tb_blog.id_blog=tb_comment.id_blog');
+                    $query=$this->db->get('tb_comment');
+                    return $query->result();
+                }
+                
+                
+           public function getCo()
+                {
+                  $this->db->select('tb_comment.id_blog,tb_comment.id_comment,tb_comment.nama_comment,tb_comment.email_comment,tb_comment.description_comment,tb_comment.status_comment,tb_comment.created_comment, tb_blog.title');
+                      $this->db->where('tb_comment.status_comment = "1"');
+                     $this->db->join('tb_blog','tb_blog.id_blog=tb_comment.id_blog');
+                    $query=$this->db->get('tb_comment');
+                    return $query->result();
+                }
+                
+                
+            public function getId($id=null){
+            if ($id) {
+            
+            
+            $this->db->where('tb_comment.id_comment',$id);
+            $this->db->select('*');		
+            $this->db->from('tb_comment');
+            $query=$this->db->get();
+            return $query->row_array();
+            if ($query===true) {
+            return true;
+            }else{
+            return false;
+            }
+            }
+            }
+
+        public function updateComment($id=null){
+        		if ($id) {
+        	
+        			$data = array('status_comment' 		=> $this->input->post('status_comment',true));
+        			$this->db->where('id_comment', $id);
+        			$sql=$this->db->update('tb_comment',$data);
+        			if($sql===true){
+        				return true;
+        
+        			}else{
+        				return false;
+        			}
+        		}
+        	}
 
 }

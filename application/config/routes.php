@@ -55,26 +55,24 @@ $route['auth'] = 'auth/index';
 $route['daftar'] = 'auth/sigup';
 $route['lupa'] = 'auth/forgot';
 $route['keluar'] = 'auth/logout';
+$route['sitemap\.xml'] = 'sitemap/index';
 $route['dasbord'] = 'dasbord/index';
 $route['bank'] = 'bank/index';
-$route['bank/add'] = 'bank/add';
-$route['bank/delete/(:any)'] = 'bank/delete/$1';
 $route['kategori'] = 'kategori/index';
 $route['slide'] = 'slide/index';
 $route['sub'] = 'sub/index';
 $route['blog'] = 'blog/index';
-
-
-
-
-
-
+$route['blog/add'] = 'blog/add';
 $route['berita'] = 'berita/index';
+
+$route['terms'] = 'terms/index';
+$route['privacy'] = 'terms/privacy';
 $route['unduh'] = 'unduh/index';
 $route['panduan'] = 'panduan/index';
 $route['berita/addcom'] = 'berita/addcom';
 $route['about/(:any)'] = 'home/about/$1';
 $route['profile/(:any)'] = 'home/profile/$1';
+$route['kusus/(:any)'] = 'home/kusus/$1';
 //$route['kegiatan/(:any)'] = 'kegiatan/kegiatan_read/$1';
 $route['(:any)'] = 'kegiatan/kegiatan_read/$1';
 $route['profile/tags/(:any)'] = 'home/tags/$1';
@@ -83,5 +81,6 @@ $route['(:any)'] = 'berita/berita_read/$1';
 $route['tags/(:any)'] = 'berita/tags/$1';
 $route['kegiatan/(:any)'] = 'berita/kegiatan/$1';
 $route['unduh/(:any)'] = 'unduh/unduh_read/$1';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

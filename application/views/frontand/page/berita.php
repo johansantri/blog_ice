@@ -27,7 +27,7 @@
         <div class="container relative flex flex-col-reverse bg-white lg:flex-row items-center px-5 lg:px-20 mx-auto mt-10 lg:mt-12 lg:mt-16">
             <div class="w-full w-full lg:w-5/12 mt-8 -mb-3 lg:mb-0 lg:mt-0 z-10 self-start">
                 <h4 class="text-red-primary font-darker-grotesque text-xl">Info</h4>
-                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">Berita</h3>
+                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl"><a href="<?php echo base_url()?>berita" > Berita</a></h3>
             </div>
             <div class="w-full lg:w-7/12 grid grid-cols-1 mt-4 lg:mt-0 lg:grid-cols-3 gap-x-4 flex-col">
                 
@@ -82,18 +82,18 @@
                             <?php foreach ($data->result() as $row) :?>
                           <div>
                             <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
-                                <span class="font-darker-grotesque"><?php echo $row->create_ad;?></span>
+                                <span class="font-darker-grotesque"><?php echo $row->create_ad;?></span> || <small>admin</small>
                                 <a href="<?php echo base_url()?><?php echo $row->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
-                                    <h5 class="h-20"><?php echo substr($row->title, 0,80). '...'?></h5>
+                                    <h5 class="h-20"><?php echo substr($row->title, 0,100). '...'?></h5>
                                 </a>
-                                <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin </span></span>
+                               
                             </div>
                             <div class="-mt-7">
-                              <a href="<?php echo base_url()?><?php echo $row->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt=""></a>  
+                              <a href="<?php echo base_url()?><?php echo $row->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $row->image;?>" alt="<?php echo $row->slug_title;?>"></a>  
                             </div>
                             <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
-                                <p class="font-darker-grotesque h-24"><?php echo substr($row->meta, 0,80). '...'?></p>
-                                <a href="<?php echo base_url()?><?php echo $row->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya <img src="chevron-right-icon.png" alt=""></a>
+                                <p class="font-darker-grotesque h-24"><?php echo substr($row->meta, 0,125). '...'?> <a href="<?php echo base_url()?><?php echo $row->slug_title;?>" class=" font-bold ">Baca Selengkapnya </a></p>
+                               
                             </div>
                         </div>
                       
@@ -218,7 +218,7 @@
                            
                                 <div class="flex gap-x-4 mb-7">
                                     <div class="w-5/12 relative">
-                                        <img class="rounded-lg w-full h-16 object-center object-cover"  style="width: 100%; height: auto;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                                        <img class="rounded-lg w-full h-16 object-center object-cover"  style="width: 100%; height: auto;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="<?php echo $key->title;?>">
                                         <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
                                     </div>
                                     <div class="w-7/12">
@@ -242,7 +242,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-y-3 gap-x-3 mt-12">
-                    <?php for ($i = 2016; $i < 2023; $i++) { ?>
+                    <?php for ($i = 2020; $i < 2023; $i++) { ?>
                         <div class="rounded-xl border py-1 <?= $i != 2022 ? 'border-gray-600' : 'border-red-primary border-2' ?> px-4">
                             <span class="font-darker-grotesque"><?= $i ?></span>
                         </div>

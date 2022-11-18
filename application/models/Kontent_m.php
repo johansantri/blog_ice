@@ -202,9 +202,14 @@ public function __construct(){
         // $query = $this->db->query($sql);
         // return $query->result_array();
     }
-      public function upload($gambar,$id){
-    $hasil=$this->db->query("INSERT INTO tb_galery(image,id_user) VALUES ('$gambar','$id')");
-        return $hasil;
+      public function uploadGb($data){
+         $sql= $this->db->insert('tb_galery', $data);
+            if($sql===true){
+                return true;
+
+            }else{
+                return false;
+            }
    }
 }
 

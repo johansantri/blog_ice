@@ -104,7 +104,7 @@
 /*notification*/
 .notification-button {
   position: fixed;
-  top: 40px;
+  top: 100px;
   left: 50%;
   padding: 10px 20px;
   background: #343a40;
@@ -121,14 +121,14 @@
     <div class="pt-12">
         <div class="container px-5 lg:px-20 mx-auto mt-10 lg:mt-12 lg:mt-16">
             <div class="w-full w-full self-start">
-                <h4 class="text-red-primary font-darker-grotesque text-xl">Info</h4>
-                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">Berita</h3>
+                <h4 class="text-red-primary font-darker-grotesque text-xl"><a href="<?php echo base_url()?>"> Info</a> </h4> 
+                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl"> <a href="<?php echo base_url()?>tags/<?php echo strtolower ($slug['slug_sub']);?>" target="_blank"><?php echo $slug['nama_sub'];?></a> </h3>
             </div>
             <div class=" w-full">
                 
-                <div class="mb-5 lg:mb-8 my-8 hero-wrapper ">
-                    <div class="hero-slide h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[80%]" style="background-size: 100% 100%; display:block; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
-                </div>
+            <div class="mb-5 lg:mb-8 my-8 hero-wrapper ">
+                <div class="hero-slide h-40 lg:h-[50vh] rounded-[17px] lg:rounded-[25px] bg-cover mx-4 w-[80%]" alt="<?php echo $slug['title'];?>" style="background-size: 100% 100%; display:block; background-image: url('<?php echo base_url()?>upload/<?php echo $slug['image']; ?>') "></div>
+            </div>
             </div>
             <hr>
         </div>
@@ -164,41 +164,115 @@
                                 
                             </ul>
                             <ul class="flex items-center gap-x-4">
-                                <li><img class="h-4" src="<?php echo base_url()?>assets/new/images/bookmart-icon.png" alt=""></li>
-                                <li><img class="h-4" src="<?php echo base_url()?>/assets/new/images/flag-icon.png" alt=""></li>
+                                <li><img class="h-4" src="<?php echo base_url()?>assets/new/images/bookmart-icon.png" alt="ice institute"></li>
+                                <li><img class="h-4" src="<?php echo base_url()?>/assets/new/images/flag-icon.png" alt="ice institute"></li>
                             </ul>
                         </div>
-                        <div class="-mt-3 font-darker-grotesque">
+                        <div class="-mt-3 font-darker-grotesque" >
+                            <div style="overflow-x:auto;">
                             <p class="mt-8"><?php echo $slug['description'];?>.</p>
+                         
                             <style>
-  iframe { width: 100%; height: 400px; }
-    </style>
+                              iframe { width: 100%; height: 400px; }
+                                 .tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.tags li {
+  float: left; 
+}
+
+.tag {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: crimson; 
+   
+}
+
+                         </style>
                             <hr class="mt-12 lg:mt-24">
+                            &nbsp;
                              <!-- <a href="#"><?php echo $slug['tags'];?></a>  -->
-<p>
+ <ul class="tags">
                   <?php
                         $str = $slug['tags'];
                         $people= (explode(",",$str));
-                        for($i = 0; $i < count($people); ++$i) {
-                        echo "&nbsp;";
-                        echo "<a href='tags/$people[$i]' class='tag-blue tag'>#".$people[$i]."</a>";  
-                        echo "&nbsp;";
-                        }
+                        for($i = 0; $i < count($people); ++$i) {?>
+                
+                  
+               
+                       
+  <li><a href="tags/<?php 
+            
+            $asa= explode(" ",$people[$i]);
 
-                        ?> 
-                        </p>
+$satu = implode("-",$asa);
+$ye= strtolower($satu);
+echo ($ye);
+            
+            ?> " class="tag"><?php echo  $people[$i]?></a></li>
+
+
+           <?php }   ?>   
+           </ul>
+                         </div>
                             <div class="bg-gray-50 rounded-2xl mt-10 py-4 px-4 lg:px-12">
                                 <h4 class="font-bold text-red-primary text-xl font-darker-grotesque">Beri Komentar</h4>
                                 <?php echo validation_errors(); ?>
                                
-                                <?php echo form_open('berita/addcom'); ?>
+                                <form>
                                 <input type="hidden" name="id_blog"  value="<?php echo $slug['id_blog']?>">
-                                <input type="text" name="nama_comment"   placeholder="name" style="box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .25);" class="h-10 mt-4  p-3 focus:outline-none font-darker-grotesque placeholder:font-darker-grotesque rounded-sm">
-                                <input type="email" name="email_comment"  placeholder="email" style="box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .25);" class="h-10 mt-4  p-3 focus:outline-none font-darker-grotesque placeholder:font-darker-grotesque rounded-sm">                               
-                                <textarea name="description_comment"  style="box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .25);" class="h-36 mt-4 w-full p-3 focus:outline-none font-darker-grotesque placeholder:font-darker-grotesque rounded-xl" placeholder="Tulis tanggapan anda..." cols="30" rows="10"></textarea>
-                                <input type="submit" name="submit" value="kirim" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);" class="mt-4 rounded-xl bg-red-primary text-white font-bold px-10 py-2" id="ok">
+                                <input required  type="text" name="nama_comment"   placeholder="name" style="box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .25);" class="h-10 mt-4  p-3 focus:outline-none font-darker-grotesque placeholder:font-darker-grotesque rounded-sm">
+                                <input required  type="email" name="email_comment"  placeholder="email" style="box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .25);" class="h-10 mt-4  p-3 focus:outline-none font-darker-grotesque placeholder:font-darker-grotesque rounded-sm">                               
+                                <textarea required  name="description_comment"  style="box-shadow: inset 0px 1px 2px rgba(0, 0, 0, .25);" class="h-36 mt-4 w-full p-3 focus:outline-none font-darker-grotesque placeholder:font-darker-grotesque rounded-xl" placeholder="Tulis tanggapan anda..." cols="30" rows="10"></textarea>
+                                <input  type="submit" name="submit" id="oww" value="kirim" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);" class="mt-4 rounded-xl bg-red-primary text-white font-bold px-10 py-2" id="ok">
+                                
                                
-                                <?php form_close(); ?>
+                               </form>
+                              
                             </div>
 
                             <div class="mt-10">
@@ -206,29 +280,52 @@
                                    
                                    
                                 </div>
+                                <hr>
                                 <div>
-
-                           
+                                    
+                                    <?php foreach ($comment as $person): ?>
+                                             
+                                             
+                                    <?php            
+                                    if ($person->id_blog === $slug['id_blog']) {?>
+                                    
+                                    
+                                    
+                                    
+                                    
                                         <div class="flex items-start gap-x-3 mt-12">
                                             <div class="w-10/12 flex gap-x-5 items-start">
                                    
                                                 <div>
-                                                    <h4 class="font-darker-grotesque" style="color:red;"><?php echo $slug['nama_comment'];?></h4>
-                                                    <p class="font-darker-grotesque"><?php echo $slug['description_comment']?></p>
+                                                    <h4 class="font-darker-grotesque" style="color:red;  font-weight: bold;  font-size: 25px"><i class="fa fa-user" aria-hidden="true"></i>
+<?php echo $person->nama_comment ?></h4>
+                                                    <p class="font-darker-grotesque"><?php echo $person->description_comment ?></p>
                                                     <div class="flex items-center gap-x-4 mt-2">
                                                   
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="w-2/12">
-                                                <span class="font-darker-grotesque text-sm"><?php echo $slug['created_comment']?></span>
+                                                <span class="font-darker-grotesque text-sm"> <?php echo $person->created_comment ?></span>
                                             </div>
                                         </div>
 
+
+                                         <hr>
+                                    
+                                    <?php } else {?>
+                                  
+                                    
+                                    <?php } ?>
+                                             
+                                                 
+                                                 <?php endforeach; ?>
+         
                                         
-                                   
+                                      
                                     </div>
-                                   
+                                 
+                                     &nbsp;
                             </div>
                         </div>
 
@@ -287,7 +384,7 @@
                         <?php foreach ($unduh as $key ) {?>
                                 <div class="flex gap-x-4 mb-7">
                                     <div class="w-5/12 relative">
-                                        <img class="rounded-lg  object-center object-cover" style="background-size: 100% 100%; display:block;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="">
+                                        <img class="rounded-lg  object-center object-cover" style="background-size: 100% 100%; display:block;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="<?php echo $key->title;?>">
                                         <span class="bg-red-primary w-5 rounded-full h-5 top-0 left-0 absolute"></span>
                                     </div>
                                     <div class="w-7/12">

@@ -194,7 +194,7 @@ tr:nth-child(even){background-color: #f2f2f2}
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-y-3 gap-x-3 mt-12">
-                    <?php for ($i = 2016; $i < 2023; $i++) { ?>
+                    <?php for ($i = 2019; $i < 2023; $i++) { ?>
                         <div class="rounded-xl border py-1 <?= $i != 2022 ? 'border-gray-600' : 'border-red-primary border-2' ?> px-4">
                             <span class="font-darker-grotesque"><?= $i ?></span>
                         </div>

@@ -43,6 +43,7 @@
                <div class="col-md-6">
               <div class="form-group">
                 <label for="meta">meta</label>
+                <small>merupakan kalimat singkat yang akan tampil di bawah Thumbnail</small>
                 <input class="form-control <?php echo form_error('meta') ? 'is-invalid':'' ?>"
                  type="text" name="meta" placeholder="key" />
                 <div class="invalid-feedback">

@@ -45,6 +45,10 @@ iframe {
   width: 100%;
 }
 
+
+
+
+
 </style>
 
 
@@ -107,6 +111,8 @@ iframe {
                         </button>
                         <ul class="dropdown-menu absolute left-3 lg:left-[50%] lg:translate-x-[-50%] border hidden text-gray-700 z-10 pt-1 lg:w-[12rem]">
                             <li class=""><a class="rounded-t bg-white hover:bg-gray-200 py-2 font-darker-grotesque text-lg px-4 block whitespace-no-wrap" href="https://gamedev.icei.ac.id/">Game Dev</a></li>
+                              <li class=""><a class="rounded-t bg-white hover:bg-gray-200 py-2 font-darker-grotesque text-lg px-4 block whitespace-no-wrap" href="https://pkbn.icei.ac.id/">Bela Negara</a></li>
+                                <li class=""><a class="rounded-t bg-white hover:bg-gray-200 py-2 font-darker-grotesque text-lg px-4 block whitespace-no-wrap" href="https://icei.ac.id/tracks/international-courses/">International courses</a></li>
                             
                         </ul>
                     </div>

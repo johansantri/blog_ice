@@ -10,8 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Vali Admin">
     <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme">
-    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
-    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
+  
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     <title>Dapur ICE Institute</title>
     <meta charset="utf-8">
@@ -30,6 +29,7 @@
     <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/dataTables.bootstrap.min.js"></script>
    
     <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery.tagsinput.js"></script>
+
 
   </head>
   <body class="app sidebar-mini">

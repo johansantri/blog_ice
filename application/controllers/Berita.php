@@ -56,6 +56,7 @@ class Berita extends CI_Controller {
 			      $people= $this->Blog_m->getPeople();
 			        $about= $this->Blog_m->getAbout();
 			       $slug= $this->Blog_m->get_news($slug_title);
+			      $comment=$this->Blog_m->getCo();
 			        $kegiatanmenu= $this->Blog_m->getKegiatan();
 					if (empty($slug))
 					{
@@ -73,6 +74,7 @@ class Berita extends CI_Controller {
 				                             'profilmenu'=>$profilmenu,
 				                               'kegiatanmenu'=>$kegiatanmenu,
 				                             'slug'=>$slug,
+				                            'comment'=>$comment,
 				                            'isi'=>'frontand/page/berita_detail' );
 				                             
 				         $this->load->view('frontand/setup/konek_detail',$data);
@@ -231,14 +233,24 @@ class Berita extends CI_Controller {
 					
 						if ($this->form_validation->run() === FALSE)
 						{
+						      $arr="pastikan anda memasukan nama,email dan deskripsi komen secara benar dan lengkap";
+							 header('Content-Type: application/json');
+                             echo json_encode( $arr );
+                             exit();
+						   // echo "helo";
 							redirect('/berita/'.$this->uri->segment(3));
 					
 						}
 						else
 						{
 							
-							$this->Blog_m->addcomment();
-							redirect('/berita/'.$this->uri->segment(3));
+					        $this->Blog_m->addcomment();
+					        $arr="ok terima kasih";
+							 header('Content-Type: application/json');
+                             echo json_encode( $arr );
+                             exit();
+						//	echo "success";
+						//	redirect('/berita/'.$this->uri->segment(3));
 						}
 					
 					}

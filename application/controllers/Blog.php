@@ -7,11 +7,11 @@ function __construct(){
 	if(empty($this->session->userdata['email'])){
                 redirect(site_url().'auth/login');
             }
-$this->load->model('Blog_m');
+$this->load->model('Blog_post');
 }
 	public function index()
 	{
-		$blog = $this->Blog_m->getAll();
+		$blog = $this->Blog_post->getAll();
 	  $data  = array('x' => 'Blog',
                              'blog'=>$blog,
                             'isi'=>'back/blog/index' );
@@ -21,7 +21,7 @@ $this->load->model('Blog_m');
 
 	public function add()
     {
-        $blog = $this->Blog_m;
+        $blog = $this->Blog_post;
         $validation = $this->form_validation;
         $validation->set_rules($blog->rules());
 
@@ -42,7 +42,7 @@ $this->load->model('Blog_m');
     {
         if (!isset($id)) redirect('blog');
        
-        $blog = $this->Blog_m;
+        $blog = $this->Blog_post;
         $validation = $this->form_validation;
         $validation->set_rules($blog->rules());
 
@@ -66,7 +66,7 @@ $this->load->model('Blog_m');
     {
         if (!isset($id)) show_404();
         
-        if ($this->Blog_m->delete($id)) {
+        if ($this->Blog_post->delete($id)) {
             redirect(site_url('blog'));
         }
     }
@@ -75,7 +75,7 @@ $this->load->model('Blog_m');
     {
         if (!isset($id)) show_404();
         
-        if ($this->Blog_m->postBlog($id)) {
+        if ($this->Blog_post->postBlog($id)) {
             redirect(site_url('blog'));
         }
     }

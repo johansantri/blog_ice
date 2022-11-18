@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="in">
 <head>
 <meta charset="utf-8">
 <title>404</title>
@@ -76,7 +76,7 @@ p {
 </head>
 <body>
 
-	<h1>Tendang bola ke bagian bawah </h1>
+	<h1>404 </h1>
 	
 
 

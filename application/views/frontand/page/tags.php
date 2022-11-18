@@ -27,7 +27,7 @@
         <div class="container relative flex flex-col-reverse bg-white lg:flex-row items-center px-5 lg:px-20 mx-auto mt-10 lg:mt-12 lg:mt-16">
             <div class="w-full w-full lg:w-5/12 mt-8 -mb-3 lg:mb-0 lg:mt-0 z-10 self-start">
                 <h4 class="text-red-primary font-darker-grotesque text-xl">Info</h4>
-                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">Berita</h3>
+                <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">#Hastag</h3>
             </div>
             <div class="w-full lg:w-7/12 grid grid-cols-1 mt-4 lg:mt-0 lg:grid-cols-3 gap-x-4 flex-col">
                 
@@ -84,7 +84,7 @@
                             <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
                                 <span class="font-darker-grotesque"><?php echo $key->create_ad;?></span>
                                 <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
-                                    <h5 class="h-20"><?php echo substr($key->title, 0,80). '...'?></h5>
+                                    <h5 class="h-20"><?php echo substr($key->title, 0,100). '...'?></h5>
                                 </a>
                                 <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin </span></span>
                             </div>
@@ -92,8 +92,8 @@
                               <a href="<?php echo base_url()?><?php echo $key->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt=""></a>  
                             </div>
                             <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
-                                <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,80). '...'?></p>
-                                <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya <img src="chevron-right-icon.png" alt=""></a>
+                                <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,125). '...'?>  <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class=" font-bold">Baca Selengkapnya</a></p>
+                              
                             </div>
                         </div>
                       
@@ -135,7 +135,7 @@
 </div>
 
 
-                        <div class="rounded-3xl shadow-lg mt-8">
+                       <div class="rounded-3xl shadow-lg mt-8">
                             <div class="grid grid-cols-3">
                                 <?php for ($i = 0; $i < 3; $i++) { ?>
                                     <div class="font-darker-grotesque py-3 px-2 <?= $i == 1 ? 'border-x-2 border-gray-300' : '' ?> <?= $i == 0 ? 'rounded-tl-3xl' : '' ?> <?= $i == 2 ? 'rounded-tr-3xl' : '' ?> bg-gray-200">
@@ -146,16 +146,17 @@
                             </div>
                             <div class="border-2 border-gray-200 bg-gray-50 p-6 rounded-b-3xl">
                                 <div class="pt-2">
-                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Giveaway</span> xxxxxx xx xxxxx</p>
-                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">buku</h5>
+                                    <p class="text-center font-darker-grotesque"><span class="font-bold">Unduhan</span> Dokument</p>
+                                    <h5 class="text-center -mt-1 font-bold font-darker-grotesque">Panduan</h5>
                                 </div>
-                                <p class="text-center font-darker-grotesque mt-3 leading-5">Satu orang yang beruntung akan mendapatkan kesempatan untuk memenangkan xxx ini</p>
+                                <p class="text-center font-darker-grotesque mt-3 leading-5">Anda dapat mengunduh dokument panduan terkait ICE Insitute</p>
                                 <div class="flex items-center justify-center my-3">
-                                    <img src="<?php echo base_url()?>assets/new/images/book.png" class="w-full" alt="book">
+                                    <img src="<?php echo base_url()?>assets/new/images/Unduh.png" alt="book">
                                 </div>
-                                <p class="font-darker-grotesque text-center">Masuk dan ikuti giveaway ini</p>
-                                <button class="py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Gunakan Emailmu</button>
-                                <p class="font-darker-grotesque text-center text-gray-600 mt-1">Aturan dan ketentuan giveaway</p>
+                                <p class="font-darker-grotesque text-center">Dengan cara mengklik </p>
+                                
+                                <a href="<?php echo base_url()?>unduh" class= "py-3 px-8 flex mx-auto my-2 items-center justify-center font-bold font-darker-grotesque text-white bg-red-primary text-white rounded-[1rem]" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, .25); color: #FFF">Unduh</a>
+                              
                             </div>
                         </div>
                     </div>
@@ -191,7 +192,7 @@
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-y-3 gap-x-3 mt-12">
-                    <?php for ($i = 2016; $i < 2023; $i++) { ?>
+                    <?php for ($i = 2020; $i < 2023; $i++) { ?>
                         <div class="rounded-xl border py-1 <?= $i != 2022 ? 'border-gray-600' : 'border-red-primary border-2' ?> px-4">
                             <span class="font-darker-grotesque"><?= $i ?></span>
                         </div>

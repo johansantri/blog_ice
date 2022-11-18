@@ -9,6 +9,10 @@
             <!-- End of Hamburger -->
         </div>
     </nav>
+    
+    
+     
+    
     <div class="pt-12 lg:pt-16">
         <div class="mb-5 lg:mb-8 my-8 hero-wrapper">
         <?php foreach ($slide as $key ) {?>
@@ -25,7 +29,7 @@
             <div class="w-6/6 flex flex-col lg:flex-row items-center">
                 <div class="w-full lg:w-4/12">
                     <h4 class="text-red-primary font-darker-grotesque text-xl">Tentang</h4>
-                    <h3 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">ICE Institute</h3>
+                    <h1 class="text-red-primary font-darker-grotesque -mt-2 font-bold text-4xl">ICE Institute</h1>
                 </div>
                 <div class="w-100 lg:w-8/12">
                     <p class="mt-1 lg:mt-0 font-darker-grotesque text-lg leading-5 lg:leading-6">ICE Institute adalah Indonesia Cyber Education Institute (ICE-I), merupakan pusat kuliah online yang terakreditasi oleh Kementerian Pendidikan dan Kebudayaan. Menyediakan bermacam kuliah online dari banyak Perguruan Tinggi dan penyedia pembelajaran daring di seluruh Indonesia. Tujuan utama dari ICE Institute adalah untuk memfasilitasi penyediaan pendidikan berkualitas sekaligus menjamin kualitas layanan pembelajaran daring dan pendidikan jarak jauh. Lewat ICE Institute, pengguna akan termudahkan dalam memilih kuliah online yang tepat untuk pengembangan karir di era Industri 4.0</p>
@@ -52,14 +56,14 @@
             <div class="w-full flex flex-col lg:flex-row mx-auto px-5 lg:px-20 container">
                 <div class="w-full pt-6 lg:pt-0 lg:w-3/6">
                     <div class="flex items-center justify-center">
-                        <img class="h-48 lg:-mt-12" src="./assets/new/images/visi-illustration.png" alt="visi">
+                        <img class="h-48 lg:-mt-12" src="./assets/new/images/visi-illustration.png" alt="visi ice Institute">
                     </div>
                     <h2 class="text-center text-red-primary font-bold font-darker-grotesque text-4xl mt-8">Visi</h2>
                     <p class="font-darker-grotesque text-lg leading-6 mt-5 w-full lg:w-9/12 mx-auto text-justify">Indonesia Cyber Education Institute atau bisa disebut ICE Institute, merupakan lokapasar digital untuk matakuliah daring berkualitas di Indonesia. Tujuan utama dari ICE Institute adalah untuk memfasilitasi penyediaan pendidikan berkualitas sekaligus menjamin kualitas layanan pembelajaran daring dan pendidikan jarak jauh.</p>
                 </div>
                 <div class="w-full pt-12 lg:pt-0 lg:w-3/6">
                     <div class="flex items-center justify-center">
-                        <img class="h-48 lg:-mt-12" src="./assets/new/images/misi-illustration.png" alt="misi">
+                        <img class="h-48 lg:-mt-12" src="./assets/new/images/misi-illustration.png" alt="misi ice Institute">
                     </div>
                     <h2 class="text-center text-red-primary font-bold font-darker-grotesque text-4xl mt-8">Misi</h2>
                     <p class="font-darker-grotesque text-lg leading-6 mt-5 w-full lg:w-9/12 mx-auto text-justify">ICE Institute diharapkan mampu berperan dalam peningkatan perluasan akses dan pemerataan kualitas pendidikan untuk mendorong Angka Partisipasi Pendidikan (APK) menjadi 40%. ICE Institute juga akan membantu pemenuhan kebutuhan lifelong learner melalui penyediaan sistem dan content pembelajaran bermutu yang dapat diakses kapanpun dan dimanapun.</p>
@@ -265,18 +269,18 @@
             <div>
                         
                 <div class="bg-gray-50 pt-6 pb-12 rounded-t-[1.35rem] px-6">
-                    <span class="font-darker-grotesque"><small> <?php echo $key->create_ad;?></small></span>
+                    <span class="font-darker-grotesque"><small> <?php echo $key->create_ad;?></small> || <small style="text-align:right;">admin</small></span>
                     <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="text-red-primary font-darker-grotesque mt-3 block font-bold leading-7 text-[1.3rem]">
-                        <h4 class="h-20"><?php echo substr($key->title, 0,80). '...'?></h4>
+                        <h4 class="h-20"><?php echo substr($key->title, 0,100). '...'?></h4>
                     </a>
-                    <span class="font-darker-grotesque mt-6 block">oleh <span class="font-bold">admin</span></span>
+                   
                 </div>
                 <div class="-mt-7">
                    <a href="<?php echo base_url()?><?php echo $key->slug_title;?>"><img style="width:100%; height:200px; border-radius: 5%;" src="<?php echo base_url()?>upload/<?php echo $key->image;?>" alt="<?php echo $key->title;?>"></a> 
                 </div>
                 <div class="px-6 bg-gray-50 -mt-4 pt-10 pb-6 rounded-b-[1.35rem]">
-                    <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,80). '...'?></p>
-                    <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class="font-darker-grotesque font-bold block mt-10">Baca Selengkapnya </a>
+                    <p class="font-darker-grotesque h-24"><?php echo substr($key->meta, 0,125). '...'?> <a href="<?php echo base_url()?><?php echo $key->slug_title;?>" class=" font-bold ">Baca Selengkapnya</a></p>
+                   
                 </div>          
             
             </div>    
@@ -294,7 +298,7 @@
                     <span class="w-6/12 h-full bg-white"></span>
                 </div>
                 <div class="bg-red-primary h-20 lg:h-28 w-16 lg:w-24 absolute rounded-full -left-12 lg:-left-12 translate-y-24 lg:translate-y-20"></div>
-                <div class="bg-red-primary h-16 lg:h-20 w-12 lg:w-16 absolute rounded-3xl -right-9 lg:-right-11 translate-y-60"></div>
+              
             </div>
         </div>
 
@@ -316,7 +320,7 @@
                                             <small class="mt-1 leading-5 font-darker-grotesque"><?php echo $key->description;?></small>
                                             
 
-                                            <img src="./assets/new/images/kutip.png" class="absolute top-0 right-0 w-6" alt="">
+                                            <img src="./assets/new/images/kutip.png" class="absolute top-0 right-0 w-6" alt="kutipan tentang ice Institute">
                                         </div>
                                 </div>
                             </div>
