@@ -10,6 +10,10 @@ class Slide extends CI_Controller
         if(empty($this->session->userdata['email'])){
                 redirect(site_url().'auth/login');
             }
+             if ($this->session->userdata['level']!='super') {
+            	echo "silahkan laporkan akun untuk membuat slide";
+            	exit();
+            }
         $this->load->model("Slide_m");
         $this->load->library('form_validation');
     }

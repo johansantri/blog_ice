@@ -13,24 +13,28 @@ class Berita extends CI_Controller {
 
 	public function index()
 	{
+	    //getBeritaanews
 
-			$slide = $this->Slide_m->getAktif();
+		//	$slide = $this->Slide_m->getAktif();
 			$berita = $this->Blog_m->getBeritaa();
+		//	$beritanews = $this->Blog_m->getBeritaanews();
 			$event = $this->Blog_m->getEvent();
 			$people = $this->Blog_m->getPeople();
 			$unduh = $this->Blog_m->getUnduh();
-			
+			$satu = $this->Blog_m->baru();
 			$about = $this->Blog_m->getAbout();
 			$profilmenu = $this->Blog_m->getProfil();
 			$kegiatanmenu = $this->Blog_m->getKegiatan();
 			$pages = $this->pages();
 
 			$data  = array(			'x' => 'Dasbord',
-									'slide'=>$slide,
+								//	'slide'=>$slide,
 									'berita'=>$berita,
+								//	'beritanew'=>$beritanews,
 									'event'=>$event,
 									'people'=>$people,
 									'unduh'=>$unduh,
+									'satu'=>$satu,
 									'about'=>$about,
 								
 									'pages'=>$pages,
@@ -39,6 +43,9 @@ class Berita extends CI_Controller {
 									'isi'=>'frontand/page/berita' );
                              
             $this->load->view('frontand/setup/konek',$data);
+//      	header('Content-Type: application/json');
+// 			echo json_encode($data);
+// 			exit();
 	}
 
 	
@@ -57,6 +64,7 @@ class Berita extends CI_Controller {
 			        $about= $this->Blog_m->getAbout();
 			       $slug= $this->Blog_m->get_news($slug_title);
 			      $comment=$this->Blog_m->getCo();
+			       $commentbl=$this->Blog_m->getComentbalas();
 			        $kegiatanmenu= $this->Blog_m->getKegiatan();
 					if (empty($slug))
 					{
@@ -75,6 +83,7 @@ class Berita extends CI_Controller {
 				                               'kegiatanmenu'=>$kegiatanmenu,
 				                             'slug'=>$slug,
 				                            'comment'=>$comment,
+				                             'commentbl'=>$commentbl,
 				                            'isi'=>'frontand/page/berita_detail' );
 				                             
 				         $this->load->view('frontand/setup/konek_detail',$data);
@@ -124,45 +133,45 @@ class Berita extends CI_Controller {
 					}
 
 					public function tags($tags)
-	{
-			if (empty($tags))
-					{
-					redirect(site_url().'berita');
-					}
-	
-			       $tag= $this->Blog_m->get_tg($tags);
-				   $slide= $this->Slide_m->getAktif();
-    				$unduh= $this->Blog_m->getUnduh();
-			     	$profilmenu= $this->Blog_m->getProfil();
-			    	$berita= $this->Blog_m->getBerita();
-					$event= $this->Blog_m->getEvent();
-			      	$people= $this->Blog_m->getPeople();
-			        $about= $this->Blog_m->getAbout();
-			
-				//	$pages=$this->pages();
-			        $kegiatanmenu= $this->Blog_m->getKegiatan();
-					if (empty($tags))
-					{
-					show_404();
-					}
-					  $data  = array('x' => 'kegiatan',
-					  	 					/*'slide'=>$slide,
-				                             'partner'=>$partner,*/
-				                             'event'=>$event,
-				                             'people'=>$people,
-				                              'berita'=>$berita,
-											  'slide'=>$slide,
-				                             'about'=>$about,
-										
-											// 'pages'=>$pages,
-				                             'profilmenu'=>$profilmenu,
-				                             'tag'=>$tag,
-                                   			  'unduh'=>$unduh,
-				                              'kegiatanmenu'=>$kegiatanmenu,
-				                            'isi'=>'frontand/page/tags' );
-				                             
-				         $this->load->view('frontand/setup/konek',$data);
-					}
+                            	{
+                            			if (empty($tags))
+                            					{
+                            					redirect(site_url().'berita');
+                            					}
+                            	
+                            			       $tag= $this->Blog_m->get_tg($tags);
+                            				   $slide= $this->Slide_m->getAktif();
+                                				$unduh= $this->Blog_m->getUnduh();
+                            			     	$profilmenu= $this->Blog_m->getProfil();
+                            			    	$berita= $this->Blog_m->getBerita();
+                            					$event= $this->Blog_m->getEvent();
+                            			      	$people= $this->Blog_m->getPeople();
+                            			        $about= $this->Blog_m->getAbout();
+                            			
+                            				//	$pages=$this->pages();
+                            			        $kegiatanmenu= $this->Blog_m->getKegiatan();
+                            					if (empty($tags))
+                            					{
+                            					show_404();
+                            					}
+                            					  $data  = array('x' => 'kegiatan',
+                            					  	 					/*'slide'=>$slide,
+                            				                             'partner'=>$partner,*/
+                            				                             'event'=>$event,
+                            				                             'people'=>$people,
+                            				                              'berita'=>$berita,
+                            											  'slide'=>$slide,
+                            				                             'about'=>$about,
+                            										
+                            											// 'pages'=>$pages,
+                            				                             'profilmenu'=>$profilmenu,
+                            				                             'tag'=>$tag,
+                                                               			  'unduh'=>$unduh,
+                            				                              'kegiatanmenu'=>$kegiatanmenu,
+                            				                            'isi'=>'frontand/page/tags' );
+                            				                             
+                            				         $this->load->view('frontand/setup/konek',$data);
+                            					}
 
 					public function pages()
 					{
@@ -204,7 +213,7 @@ class Berita extends CI_Controller {
 						
 					//  echo $data;
 					//load view mahasiswa view
-						$data ['slide']= $this->Slide_m->getAktif();
+						//$data ['slide']= $this->Slide_m->getAktif();
 						//$berita= $this->Blog_m->getBeritaa();
 						$data['event']= $this->Blog_m->getEvent();
 						$data['people']= $this->Blog_m->getPeople();
@@ -212,6 +221,7 @@ class Berita extends CI_Controller {
 						$data['about']= $this->Blog_m->getAbout();
 						$data['profilmenu']= $this->Blog_m->getProfil();
 						$data['kegiatanmenu']= $this->Blog_m->getKegiatan();
+						$data['satu'] = $this->Blog_m->baru();
 						$data['isi']='frontand/page/berita';
 				  
 				         $this->load->view('frontand/setup/konek',$data);
@@ -271,5 +281,39 @@ class Berita extends CI_Controller {
 							$this->Blog_m->update_counter(urldecode($slug_title));
 						}
 					}
-				
+					public function cari()
+                    	{
+                    		$data['keyword'] = $this->security->sanitize_filename ($this->input->get('keyword'), TRUE);
+                    		$this->load->model('Blog_m');
+                    		$slide= $this->Slide_m->getAktif();
+                    		$unduh= $this->Blog_m->getUnduh();
+                    		 $profilmenu= $this->Blog_m->getProfil();
+                    		$berita= $this->Blog_m->getBerita();
+                    		$event= $this->Blog_m->getEvent();
+                    		  $people= $this->Blog_m->getPeople();
+                    		$about= $this->Blog_m->getAbout();
+                    		$kegiatanmenu= $this->Blog_m->getKegiatan();
+                    		$search_result=$this->Blog_m->search($data['keyword']);
+                    
+                    		$data  = array('x' => 'cari ice institute',
+                    								/*'slide'=>$slide,
+                    							'partner'=>$partner,*/
+                    							'event'=>$event,
+                    							'people'=>$people,
+                    							'berita'=>$berita,
+                    							'slide'=>$slide,
+                    							'about'=>$about,
+                    						
+                    							'search_result'=>$search_result,
+                    							'profilmenu'=>$profilmenu,
+                    							//'tag'=>$tag,
+                    								'unduh'=>$unduh,
+                    							'kegiatanmenu'=>$kegiatanmenu,
+                    							'isi'=>'frontand/page/cari' );
+                    	  
+                    			$this->load->view('frontand/setup/konek',$data);
+                    		
+                    		
+                    	
+                    	}
 }

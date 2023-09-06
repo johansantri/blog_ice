@@ -2,10 +2,10 @@
         <div class="bg-gray-50 lg:rounded-t-[10rem] rounded-t-[4rem] pt-10">
 <div class="container px-5 lg:px-20 mx-auto flex flex-col lg:flex-row mt-12 lg:mt-24">
     <div class="w-full lg:w-5/6">
-        <h4 class="font-bold font-darker-grotesque">ICE Institute</h4>
+        <h4 class="inline text-red-primary font-darker-grotesque -mt-2 font-bold text-2xl">ICE Institute</h4>
         <ul class="mt-1">
             <li class="-mt-1 font-darker-grotesque">Universitas Terbuka</li>
-            <li class="-mt-1 font-darker-grotesque">Gedung Serba Guna 1st Floor
+            <li class="-mt-1 font-darker-grotesque">Gedung LPPMP Lantai 2
             </li>
             <li class="-mt-1 font-darker-grotesque">Jl. Cabe Raya Pondok Cabe, Pamulang,
 Tangerang Selatan </li>
@@ -44,15 +44,6 @@ Tangerang Selatan </li>
     </div>
 
 
- <!--Your Splash Screen-->
- <div id="splash" class="flex-container" style="background: #ffffff;">
-  
-  <!--Center align Splash contents in all screen sizes-->
-  <div id="flex-item">
-    <img src="<?php echo base_url()?>assets/Logo ICE-I.png" alt="ICE Institute" style="width:100px ; height :100px display:block" />
-
-  </div>
-</div>
 
 
     <script>
@@ -74,10 +65,10 @@ Tangerang Selatan </li>
     }
 </script>
 <script src="<?php echo base_url()?>assets/new/js/script.js?ver=1.1"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/jquery-3.6.1.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/flickity.pkgd.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
         $(document).ready(function() {
@@ -160,6 +151,7 @@ Tangerang Selatan </li>
             setTimeout(function() {
             fade(document.getElementById('splash'));
             }, 1000);
+            
             }, 0);
     </script>
     
@@ -237,7 +229,7 @@ $notificationButton.on('transitionend', fadeOutNotification);
     <script>
       $(function () {
 
-        $('form').on('submit', function (e) {
+        $('#form-id').on('submit', function (e) {
 
           e.preventDefault();
 

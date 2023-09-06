@@ -34,7 +34,7 @@
               <div class="row">
                 <div class="col-md-6"> 
               <div class="form-group">
-                <label for="nama_slide">Name*</label>
+                <label for="nama_slide">link slide*</label>
                 <input class="form-control <?php echo form_error('nama_slide') ? 'is-invalid':'' ?>"
                  type="text" name="nama_slide" placeholder="Product name" value="<?php echo $personal->nama_slide ?>" />
                 <div class="invalid-feedback">

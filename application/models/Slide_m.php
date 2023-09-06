@@ -107,7 +107,7 @@ class Slide_m extends CI_Model
        
         $this->db->like('nama_slide',$key);
         $this->db->or_like('deskripsi_slide',$key);
-       
+       $this->db->order_by('id_slide', 'DESC');
         $this->db->from('tb_slide');
         $hasil=$this->db->get();
         //return $query->result_array(); 
@@ -126,7 +126,7 @@ class Slide_m extends CI_Model
     {
         $this->db->select('tb_slide.id_slide,tb_slide.nama_slide,tb_slide.deskripsi_slide,tb_slide.image,tb_kategori.nama_kategori');
         $this->db->join('tb_kategori','tb_slide.id_kategori=tb_kategori.id_kategori');
-
+        $this->db->order_by('id_slide', 'DESC');
         return $this->db->get($this->_table)->result();
     }
     public function getAktif()
@@ -134,7 +134,7 @@ class Slide_m extends CI_Model
         $this->db->select('tb_slide.id_slide,tb_slide.nama_slide,tb_slide.deskripsi_slide,tb_slide.image,tb_kategori.nama_kategori');
         
         $this->db->join('tb_kategori','tb_slide.id_kategori=tb_kategori.id_kategori');
-
+        $this->db->order_by('tb_slide.id_slide', 'DESC');
         return $this->db->get($this->_table)->result();
     }
     public function getKategori()
@@ -149,6 +149,7 @@ class Slide_m extends CI_Model
     public function getById($id)
     {
         $this->db->select('tb_slide.id_slide,tb_slide.id_kategori,tb_slide.nama_slide,tb_slide.deskripsi_slide,tb_slide.image,tb_kategori.nama_kategori');
+        $this->db->order_by('id_slide', 'DESC');
         $this->db->join('tb_kategori','tb_slide.id_kategori=tb_kategori.id_kategori');
         return $this->db->get_where($this->_table, ["id_slide" => $id])->row();
     }

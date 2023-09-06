@@ -7,6 +7,10 @@ function __construct(){
 	if(empty($this->session->userdata['email'])){
                 redirect(site_url().'auth/login');
             }
+             if ($this->session->userdata['level']!='super') {
+            	echo "silahkan laporkan akun untuk membuat postingan";
+            	exit();
+            }
 $this->load->model('Blog_post');
 }
 	public function index()

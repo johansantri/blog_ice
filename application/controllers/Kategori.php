@@ -7,6 +7,10 @@ function __construct(){
 	if(empty($this->session->userdata['email'])){
                 redirect(site_url().'auth/login');
             }
+            if ($this->session->userdata['level']!='super') {
+            	echo "silahkan laporkan akun untuk membuat kategori";
+            	exit();
+            }
             $this->load->model('Kategori_m');
 
 }

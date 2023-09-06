@@ -22,7 +22,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta property="og:image" content="<?php echo base_url()?>upload/<?php echo $slug['image']; ?>" />
   <meta property="og:url" content="<?php echo base_url()?><?php echo $slug['slug_title']; ?>" />
   <meta name="format-detection" content="telephone=0812 5050 4200">
-
+  
+<meta name="robots" content="index, follow" />
+<meta name="language" content="id" />
+<meta name="geo.country" content="id" />
+<meta http-equiv="content-language" content="In-Id" />
+<meta name="geo.placename" content="Indonesia" />
+<meta name="googlebot-news" content="index, follow" />
+<meta  name="googlebot" content="index, follow" />
   <!-- tw -->
   <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="<?php echo $slug['meta'];?>" />
@@ -33,6 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <title><?php echo $slug['title'];?></title>
     <link rel="stylesheet" href="<?php echo base_url()?>assets/new/css/style.css">
+      <link rel="canonical" href="https://info.icei.ac.id/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -48,6 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134859780-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -56,6 +65,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   gtag('config', 'UA-134859780-1');
 </script>
+
+
 
     
         <style>

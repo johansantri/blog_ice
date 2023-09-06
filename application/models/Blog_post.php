@@ -43,10 +43,15 @@ class Blog_post extends CI_Model
             'rules' => 'required']
         ];
     }
-    public function getAll()
+     public function getAll($id=null)
     {
-      $this->db->select('tb_blog.id_blog,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-          $this->db->where('tb_blog.status != "delete"');
+      $id = $this->session->userdata['id_user'];
+      $this->db->where('tb_user.id_user', $id);//
+      $this->db->select('tb_user.id_user,tb_user.nama_user,tb_blog.id_blog,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+      $this->db->join('tb_user','tb_user.id_user=tb_blog.id_user'); 
+      
+      $this->db->where('tb_blog.status != "delete"');
+          
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
        // $this->db->from('tb_blog');

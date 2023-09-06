@@ -111,7 +111,8 @@ class Blog_m extends CI_Model
     //     $query=$this->db->get('tb_blog');
     //     return $query->result();
    
-    $this->db->select('tb_sub_kategori.id_sub,tb_sub_kategori.nama_sub,tb_sub_kategori.slug_sub,tb_sub_kategori.id_kategori,tb_kategori.nama_kategori');	
+    $this->db->select('tb_sub_kategori.id_sub,tb_sub_kategori.nama_sub,tb_sub_kategori.slug_sub,tb_sub_kategori.id_kategori,tb_kategori.nama_kategori');
+    
     $this->db->join('tb_kategori','tb_sub_kategori.id_kategori=tb_kategori.id_kategori');	
     $this->db->where('tb_kategori.id_kategori = "7"');
     $this->db->from('tb_sub_kategori');
@@ -124,13 +125,14 @@ class Blog_m extends CI_Model
         //forntend events
         public function getEvent()
     {
-      $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
-          $this->db->where('tb_blog.status = "post"');
+           $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+            $this->db->where('tb_blog.status = "post"');
           $this->db->where('tb_blog.id_sub = "10"');
           $this->db->order_by('tb_blog.create_ad', 'DESC');
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
-       // $this->db->from('tb_blog');
+      
+      // $this->db->from('tb_blog');
         $query=$this->db->get('tb_blog');
         return $query->result();
     }
@@ -192,6 +194,20 @@ class Blog_m extends CI_Model
         return $query->result();
     }
 
+       public function baru()
+         {
+           $this->db->select('tb_sub_kategori.nama_sub,tb_sub_kategori.slug_sub,tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
+               $this->db->where('tb_blog.status = "post"');
+               $this->db->where('tb_blog.id_kategori= "8"');
+               $this->db->limit(1);
+                $this->db->order_by('tb_blog.create_ad', 'DESC');
+             $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
+             $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
+            // $this->db->from('tb_blog');
+             $query=$this->db->get('tb_blog');
+             return $query->result();
+         }
+     
 
          //forntend berita
          public function getBeritaa()
@@ -230,7 +246,7 @@ class Blog_m extends CI_Model
         $this->db->select('tb_blog.id_blog,tb_blog.slug_title,tb_blog.title,tb_blog.status,tb_blog.create_ad,tb_blog.update_ad,tb_blog.description,tb_blog.tags,tb_kategori.nama_kategori,tb_blog.id_kategori,tb_blog.id_sub,tb_sub_kategori.nama_sub,tb_blog.image,tb_blog.meta');
         $this->db->where('tb_blog.status = "post"');
         // $this->db->where('tb_blog.id_kategori= "11"');
-        $this->db->limit(6);
+        $this->db->limit(3);
         $this->db->order_by('tb_blog.visit', 'DESC');
         $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
         $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
@@ -456,16 +472,19 @@ class Blog_m extends CI_Model
                 
                 
                 
-                $this->db->select('*');
+                $this->db->select('tb_blog.title,tb_blog.meta,tb_blog.image, tb_blog.create_ad,tb_blog.slug_title');
+
                     
-                  
-                
-                   // $this->db->like('tb_blog.title',$tags);
-                    $this->db->or_like('tb_blog.title',$tags);
-                    $this->db->or_like('tb_blog.tags',$tags);
-                    $this->db->from('tb_blog');
-                      $this->db->where("tb_blog.status = 'post'");// 
-                    $query=$this->db->get();
+                    
+                    // $this->db->like('tb_blog.title',$tags);
+                   // $this->db->like('title',$tags);
+                    $this->db->like('tags',$tags);
+                    // $this->db->from('tb_blog');
+                    
+                    $this->db->where('status="post"');// 
+                    $this->db->order_by('create_ad', 'DESC');
+                    $query=$this->db->get('tb_blog');
+                    
                     return $query->result();
                 
                     
@@ -514,6 +533,23 @@ class Blog_m extends CI_Model
             return $this->db->insert('tb_comment',$data);
            
         }
+        
+        
+        
+       public function balascomment()
+        {
+            //$this->load->helper('url');
+            $data = array('nama_comment' 		=>	$this->session->userdata('nama_user') ,
+                          'email_comment'       =>$this->session->userdata('email') ,
+                          'description_comment'  => $this->input->post('description_comment',true),
+                          'id_blog'             => $this->input->post('id_blog',true),
+                          'id_balas'             => $this->input->post('id_comment',true),
+                          'status_comment'      => $this->status_comment="1");
+
+            return $this->db->insert('tb_comment',$data);
+           
+        }
+        
 
         function update_counter($slug_title)
         {
@@ -538,6 +574,7 @@ class Blog_m extends CI_Model
              public function getComment()
                 {
                   $this->db->select('tb_comment.id_blog,tb_comment.id_comment,tb_comment.nama_comment,tb_comment.email_comment,tb_comment.description_comment,tb_comment.status_comment,tb_comment.created_comment, tb_blog.title,tb_blog.slug_title');
+                   $this->db->where('tb_comment.id_balas = "0"');
                      $this->db->join('tb_blog','tb_blog.id_blog=tb_comment.id_blog');
                     $query=$this->db->get('tb_comment');
                     return $query->result();
@@ -546,8 +583,20 @@ class Blog_m extends CI_Model
                 
            public function getCo()
                 {
-                  $this->db->select('tb_comment.id_blog,tb_comment.id_comment,tb_comment.nama_comment,tb_comment.email_comment,tb_comment.description_comment,tb_comment.status_comment,tb_comment.created_comment, tb_blog.title');
+                  $this->db->select('tb_comment.id_blog,tb_comment.id_comment,tb_comment.id_balas,tb_comment.nama_comment,tb_comment.email_comment,tb_comment.description_comment,tb_comment.status_comment,tb_comment.created_comment, tb_blog.title');
                       $this->db->where('tb_comment.status_comment = "1"');
+                      $this->db->where('tb_comment.id_balas = "0"');
+                     $this->db->join('tb_blog','tb_blog.id_blog=tb_comment.id_blog');
+                    $query=$this->db->get('tb_comment');
+                    return $query->result();
+                }
+                
+                
+                  public function getComentbalas()
+                {
+                  $this->db->select('tb_comment.id_blog,tb_comment.id_comment,tb_comment.id_balas,tb_comment.nama_comment,tb_comment.email_comment,tb_comment.description_comment,tb_comment.status_comment,tb_comment.created_comment, tb_blog.title');
+                      $this->db->where('tb_comment.status_comment = "1"');
+                     # $this->db->where('tb_comment.id_balas = "0"');
                      $this->db->join('tb_blog','tb_blog.id_blog=tb_comment.id_blog');
                     $query=$this->db->get('tb_comment');
                     return $query->result();
@@ -585,5 +634,22 @@ class Blog_m extends CI_Model
         			}
         		}
         	}
+     public function search($keyword)
+            {
+            if(!$keyword){
+            return null;
+            }
+            $this->db->select('tb_blog.title,tb_blog.meta,tb_blog.image,tb_blog.slug_title,tb_kategori.nama_kategori,tb_sub_kategori.nama_sub');
+            $this->db->where('tb_blog.status = "post"');
+            $this->db->join('tb_kategori','tb_kategori.id_kategori=tb_blog.id_kategori');
+            $this->db->join('tb_sub_kategori','tb_sub_kategori.id_sub=tb_blog.id_sub');
+            $this->db->like('title', $keyword);
+            $this->db->or_like('meta', $keyword);
+        
+            $query = $this->db->get_where('tb_blog',array('tb_blog.status' => 'post'));
+            return $query->result();
+            }
+            
+     
 
 }

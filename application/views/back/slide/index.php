@@ -31,7 +31,7 @@
               <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Nama Slide</th>
+                    <th>link Slide</th>
                     <th>Deksripsi Slide</th>
                     <th>Photo</th>
                     <th>Kategori</th>

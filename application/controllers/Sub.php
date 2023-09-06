@@ -8,6 +8,10 @@ class Sub extends CI_Controller {
 	  if(empty($this->session->userdata['email'])){
                 redirect(site_url().'auth/login');
             }
+             if ($this->session->userdata['level']!='super') {
+            	echo "silahkan laporkan akun untuk membuat sub kategori";
+            	exit();
+            }
 	
 	$this->load->model('Kategori_m');
 }

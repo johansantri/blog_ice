@@ -115,6 +115,8 @@
   font-weight: 800;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
 }
+
+
 </style>
     <div class="pt-12">
       
@@ -149,7 +151,7 @@
                                 <li><img class="h-4" src="<?php echo base_url()?>/assets/new/images/flag-icon.png" alt=""></li>
                             </ul>
                         </div>
-                        <div class="-mt-3 font-darker-grotesque">
+                        <div class="-mt-3 font-darker-grotesque ">
                             <p class="mt-8"><?php echo $slug['description'];?>.</p>
                            
              

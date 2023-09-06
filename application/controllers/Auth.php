@@ -34,7 +34,11 @@ class Auth extends CI_Controller {
             }
             
             
-            redirect(site_url().'dasbord');  
+           
+              redirect(site_url().'dasbord');  
+          
+            
+          
     }
        
        
@@ -219,8 +223,7 @@ class Auth extends CI_Controller {
                     $this->session->set_userdata($key, $val);
                 }
                 
-           
-           
+            
               redirect(site_url().'dasbord');            
                 } else {
                      $this->session->set_flashdata('flash_message', 'someting wrong, check mail or password');

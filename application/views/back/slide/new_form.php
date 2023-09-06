@@ -31,9 +31,9 @@
               <div class="row">
                 <div class="col-md-6">
               <div class="form-group">
-                <label for="nama_slide">Nama slide</label>
+                <label for="nama_slide">link slide  <small>http://</small></label>
                 <input class="form-control <?php echo form_error('nama_slide') ? 'is-invalid':'' ?>"
-                 type="text" name="nama_slide" placeholder="Personal name" />
+                 type="text" name="nama_slide" placeholder="link slide" />
                 <div class="invalid-feedback">
                   <?php echo form_error('nama_slide') ?>
                 </div>
